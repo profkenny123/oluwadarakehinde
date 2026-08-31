@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oluwadara Kehinde (Akan) | NDC Candidate for Yewa North/Imeko-Afon 2027</title>
   <meta name="description" content="Hon. Oluwadara Kehinde (Akan) — Chartered Accountant, Cybersecurity GRC professional, and NDC candidate for Federal House of Representatives, Yewa North/Imeko-Afon Federal Constituency 2027. OK is Okay!" />
+  <meta name="keywords" content="Oluwadara Kehinde, Akan, NDC, Yewa North, Imeko-Afon, Ogun State, House of Representatives 2027" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -13,9 +15,18 @@
       theme: {
         extend: {
           colors: {
-            ndc: { green: '#008751', 'green-dark': '#006b3f', 'green-light': '#00a86b', dark: '#0f172a', gold: '#f59e0b' }
+            ndc: {
+              green: '#008751',
+              'green-dark': '#006b3f',
+              'green-light': '#00a86b',
+              white: '#ffffff',
+              dark: '#0f172a',
+              gold: '#f59e0b',
+            }
           },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
         }
       }
     }
@@ -24,16 +35,415 @@
     html { scroll-behavior: smooth; }
     .hero-overlay { background: linear-gradient(135deg, rgba(0,135,81,0.92) 0%, rgba(15,23,42,0.88) 100%); }
     .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,135,81,0.15); }
+    .nav-scrolled { background: rgba(15,23,42,0.97); backdrop-filter: blur(12px); }
   </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
-  <!-- Full website content is in the artifacts folder and will be completed on next push -->
-  <div class="min-h-screen flex flex-col items-center justify-center p-8 text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">Oluwadara Kehinde (OK) is Okay!</h1>
-    <p class="text-xl text-slate-600 mb-2">NDC Candidate for Yewa North / Imeko-Afon</p>
-    <p class="text-lg text-slate-500 mb-8">Federal House of Representatives — 2027</p>
-    <p class="text-green-700 font-bold text-lg">OK is Okay | Obi-Kwankwaso is Okay | NDC is Okay | Nigeria will be Okay</p>
-    <p class="mt-10 text-sm text-slate-400">Full interactive website is ready in the project files. Deploy the complete index.html from the repository for the full experience.</p>
-  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ndc-dark/95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="/assets/ndc-logo.png" alt="NDC Logo" class="h-10 w-10 object-contain rounded-full bg-white p-0.5" onerror="this.style.display='none'" />
+          <div class="leading-tight">
+            <span class="block text-white font-bold text-lg tracking-tight">OK is Okay</span>
+            <span class="block text-ndc-green-light text-xs font-medium">Oluwadara Kehinde</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-white/90 hover:text-white font-medium text-sm transition">Home</a>
+          <a href="#about" class="text-white/90 hover:text-white font-medium text-sm transition">About Akan</a>
+          <a href="#pillars" class="text-white/90 hover:text-white font-medium text-sm transition">The 7 Pillars</a>
+          <a href="#experience" class="text-white/90 hover:text-white font-medium text-sm transition">Experience</a>
+          <a href="#join" class="inline-flex items-center px-5 py-2.5 rounded-full bg-ndc-green hover:bg-ndc-green-light text-white font-semibold text-sm shadow-lg transition">Volunteer Now</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Open menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-ndc-dark border-t border-white/10">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#home" class="block text-white py-2 font-medium">Home</a>
+        <a href="#about" class="block text-white py-2 font-medium">About Akan</a>
+        <a href="#pillars" class="block text-white py-2 font-medium">The 7 Pillars</a>
+        <a href="#experience" class="block text-white py-2 font-medium">Experience</a>
+        <a href="#join" class="block text-center mt-2 px-5 py-3 rounded-full bg-ndc-green text-white font-semibold">Volunteer Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0">
+      <img src="/assets/hero-bg.jpg" alt="Campaign background" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1600&q=80'" />
+      <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white">
+      <p class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide uppercase bg-white/15 backdrop-blur rounded-full border border-white/20">
+        NDC Candidate • 2027 General Elections
+      </p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+        Oluwadara Kehinde (OK)<br />
+        <span class="text-ndc-gold">is Okay</span> for<br />
+        Yewa North / Imeko-Afon!
+      </h1>
+      <p class="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10 font-medium">
+        Transparent Leadership. Digital Innovation. Community-Driven Representation.<br />
+        <span class="text-ndc-green-light">Tomorrow’s politics begins today.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#about" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-ndc-green-dark font-bold text-lg shadow-xl hover:bg-slate-100 transition">
+          Read My Vision
+        </a>
+        <a href="#join" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-ndc-green hover:bg-ndc-green-light text-white font-bold text-lg shadow-xl border-2 border-white/30 transition">
+          Join the Movement
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ndc-dark mb-3">About Akan</h2>
+        <div class="w-20 h-1.5 bg-ndc-green mx-auto rounded-full"></div>
+        <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Homegrown. Experienced. Digitally ready. The candidate Nigeria needs.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Image -->
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-slate-200">
+            <img src="/assets/candidate-profile.jpg" alt="Hon. Oluwadara Kehinde (Akan)" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80'" />
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-ndc-green text-white px-6 py-4 rounded-xl shadow-lg hidden sm:block">
+            <p class="font-bold text-lg">ICAN • NIM</p>
+            <p class="text-sm text-green-100">Chartered Accountant</p>
+          </div>
+        </div>
+
+        <!-- Bio text -->
+        <div class="space-y-5 text-slate-700 leading-relaxed">
+          <p class="text-lg">
+            <strong class="text-ndc-dark">Hon. Oluwadara Kehinde</strong>, popularly known as <strong>“Akan”</strong>, represents a new wave of competent, experienced, and technocratic young leadership in Nigerian politics.
+          </p>
+          <p>
+            Native to <strong>Owode Ketu</strong> and born and raised in <strong>Ayetoro</strong>, his connection to the people of Yewa North and Imeko-Afon is organic and lifelong. He understands firsthand the daily realities of local farmers, market women, artisans, and youths.
+          </p>
+          <p>
+            He spent <strong>10 years</strong> in the Ogun State Civil Service under the Office of the Accountant General (Ministry of Transportation and Ministry of Community Development & Cooperatives), giving him an insider’s understanding of public finance, budgeting, and constituency project delivery.
+          </p>
+          <p>
+            A Chartered Accountant (ICAN), member of the Nigerian Institute of Management (NIM), and certified in <strong>Cybersecurity Governance, Risk & Compliance (GRC)</strong>, he also brings international exposure from professional work in Maryland, USA.
+          </p>
+          <p class="text-ndc-green font-semibold text-lg">
+            Transparent, tech-driven, and youth-led governance for the National Assembly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7 PILLARS ========== -->
+  <section id="pillars" class="py-20 md:py-28 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ndc-dark mb-3">The 7 Pillars of OK</h2>
+        <div class="w-20 h-1.5 bg-ndc-green mx-auto rounded-full"></div>
+        <p class="mt-4 text-slate-600 max-w-2xl mx-auto">What makes Oluwadara Kehinde the right choice for Yewa North / Imeko-Afon.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Pillar 1 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">🏠</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Homegrown</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Native of Owode Ketu, born and bred in Ayetoro. Deep roots in the constituency — not a parachute candidate.</p>
+        </div>
+        <!-- Pillar 2 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">💻</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Digitally Inclined</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Professionally and digitally oriented with global tech experience and Cybersecurity GRC certification.</p>
+        </div>
+        <!-- Pillar 3 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">⚡</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Youthful Energy</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Young, strong, vibrant, and ready to serve with purpose and modern leadership.</p>
+        </div>
+        <!-- Pillar 4 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">📊</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Accountability</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Chartered Accountant (ICAN). Transparent and professional financial management you can trust.</p>
+        </div>
+        <!-- Pillar 5 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">🌍</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Experienced</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">10 years Ogun Civil Service + international exposure in Maryland, USA. Local + global perspective.</p>
+        </div>
+        <!-- Pillar 6 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">🤝</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">Team Player</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Bridges the gap between elders and youth. Respect for tradition, advocate for the next generation.</p>
+        </div>
+        <!-- Pillar 7 -->
+        <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border border-slate-100 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+          <div class="w-14 h-14 rounded-xl bg-ndc-green/10 flex items-center justify-center mb-4 text-3xl">🚀</div>
+          <h3 class="text-xl font-bold text-ndc-dark mb-2">The Trend</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Purposeful, modern leadership for a better tomorrow. Tomorrow’s politics begins today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE & VISION ========== -->
+  <section id="experience" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-ndc-dark mb-3">Experience & Vision</h2>
+        <div class="w-20 h-1.5 bg-ndc-green mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <!-- Public Service -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="text-xl font-bold text-ndc-green mb-4 flex items-center gap-2">
+            <span class="text-2xl">🏛️</span> A Decade of Public Service
+          </h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Ministry of Transportation — expenditure monitoring, budgeting compliance, financial reconciliation.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Ministry of Community Development & Cooperatives — worked with grassroots cooperatives, budget tracking, public sector audit compliance.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Insider knowledge of how to track and secure federal allocations for local projects.</li>
+          </ul>
+        </div>
+        <!-- Tech Vision -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="text-xl font-bold text-ndc-green mb-4 flex items-center gap-2">
+            <span class="text-2xl">💡</span> Tech-Forward Vision
+          </h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Community Innovation & ICT Hubs for youth in software, cybersecurity, data analytics & digital marketing.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Open-data transparency so constituents can track project funds in real time.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> E-learning tools and tech grants for secondary schools and tertiary students.</li>
+          </ul>
+        </div>
+        <!-- Agriculture -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="text-xl font-bold text-ndc-green mb-4 flex items-center gap-2">
+            <span class="text-2xl">🚜</span> Agriculture & Rural Economy
+          </h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Agro-processing & value addition to reduce post-harvest losses.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Support for farmers’ cooperatives — low-interest credit and grants.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">•</span> Border economy & trade infrastructure improvement.</li>
+          </ul>
+        </div>
+        <!-- Pledges -->
+        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 class="text-xl font-bold text-ndc-green mb-4 flex items-center gap-2">
+            <span class="text-2xl">🎯</span> Campaign Pledges
+          </h3>
+          <ul class="space-y-3 text-slate-700">
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">1.</span> Quarterly town halls + published audits of constituency funds.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">2.</span> Annual tech bootcamps, scholarships & skill centres in every ward.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">3.</span> Rural roads, irrigation, fertilizer & equipment for real farmers.</li>
+            <li class="flex gap-3"><span class="text-ndc-green font-bold">4.</span> Upgrade primary healthcare centres and public schools.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== JOIN THE MOVEMENT (FORM) ========== -->
+  <section id="join" class="py-20 md:py-28 bg-ndc-dark text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Join the Movement</h2>
+        <div class="w-20 h-1.5 bg-ndc-green mx-auto rounded-full"></div>
+        <p class="mt-4 text-white/80 text-lg">Volunteer, mobilize, or support. Every hand counts for 2027.</p>
+      </div>
+
+      <form id="volunteerForm" class="bg-white text-slate-800 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-6">
+        <div>
+          <label for="fullName" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-ndc-green focus:border-ndc-green outline-none transition"
+            placeholder="Enter your full name" />
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-ndc-green focus:border-ndc-green outline-none transition"
+            placeholder="e.g. 0803 123 4567" />
+        </div>
+
+        <div>
+          <label for="ward" class="block text-sm font-semibold text-slate-700 mb-1.5">Ward / LGA *</label>
+          <select id="ward" name="ward" required
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-ndc-green focus:border-ndc-green outline-none transition bg-white">
+            <option value="">Select your area</option>
+            <option value="Yewa North">Yewa North</option>
+            <option value="Imeko-Afon">Imeko-Afon</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="helpType" class="block text-sm font-semibold text-slate-700 mb-1.5">How would you like to help? *</label>
+          <select id="helpType" name="helpType" required
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-ndc-green focus:border-ndc-green outline-none transition bg-white">
+            <option value="">Select one</option>
+            <option value="Polling Agent">Polling Agent</option>
+            <option value="Ward Mobilizer">Ward Mobilizer</option>
+            <option value="Social Media Advocate">Social Media Advocate</option>
+            <option value="Donor">Donor</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn"
+          class="w-full py-4 rounded-xl bg-ndc-green hover:bg-ndc-green-dark text-white font-bold text-lg shadow-lg transition flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+          <span id="btnText">Submit & Join the Movement</span>
+          <svg id="btnSpinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        </button>
+
+        <p id="formMessage" class="text-center text-sm hidden"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-ndc-dark border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-2xl md:text-3xl font-extrabold text-white mb-4 leading-snug">
+        OK is Okay | Obi-Kwankwaso is Okay<br />
+        <span class="text-ndc-green-light">NDC is Okay | Nigeria will be Okay</span>
+      </p>
+      <p class="text-white/60 mb-6">Hon. Oluwadara Kehinde (Akan) — NDC Candidate for Yewa North / Imeko-Afon Federal Constituency, 2027</p>
+
+      <!-- Social links (update URLs when ready) -->
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" class="text-white/70 hover:text-ndc-green-light transition" aria-label="Twitter / X">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" class="text-white/70 hover:text-ndc-green-light transition" aria-label="Facebook">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="text-white/70 hover:text-ndc-green-light transition" aria-label="Instagram">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+
+      <p class="text-white/40 text-sm">
+        © 2027 Oluwadara Kehinde Campaign Organization. All rights reserved.<br />
+        Nigeria Democratic Congress (NDC)
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ========== MOBILE MENU ==========
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // ========== NAVBAR SCROLL EFFECT ==========
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('nav-scrolled', 'shadow-lg');
+      } else {
+        navbar.classList.remove('nav-scrolled', 'shadow-lg');
+      }
+    });
+
+    // ========== VOLUNTEER FORM → GOOGLE SHEET ==========
+    // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW (see instructions)
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXqgFn1BZv4vcuetNv9J7vF0bmU-PhJ9QIiG2ayVSsVqFZRExrs1IM5tRM13mFXGtu/exec';
+
+    const form = document.getElementById('volunteerForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnSpinner = document.getElementById('btnSpinner');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.textContent = 'Submitting...';
+      btnSpinner.classList.remove('hidden');
+      formMessage.classList.add('hidden');
+
+      const data = {
+        fullName: document.getElementById('fullName').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        ward: document.getElementById('ward').value,
+        helpType: document.getElementById('helpType').value,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        // If URL is still the placeholder, show friendly message and still "succeed" for demo
+        if (GOOGLE_SCRIPT_URL.includes('PASTE_YOUR')) {
+          console.log('Form data (ready for Google Sheet):', data);
+          // Simulate success so the site works immediately
+          await new Promise(r => setTimeout(r, 800));
+          formMessage.textContent = 'Thank you! Your details have been received. We will contact you soon. (Connect Google Script to save to the Sheet automatically.)';
+          formMessage.className = 'text-center text-sm text-green-600 font-medium';
+          form.reset();
+        } else {
+          const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Apps Script often needs this
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          formMessage.textContent = 'Thank you! You have successfully joined the movement. We will be in touch.';
+          formMessage.className = 'text-center text-sm text-green-600 font-medium';
+          form.reset();
+        }
+      } catch (err) {
+        console.error(err);
+        formMessage.textContent = 'Something went wrong. Please try again or contact the campaign directly.';
+        formMessage.className = 'text-center text-sm text-red-600 font-medium';
+      } finally {
+        formMessage.classList.remove('hidden');
+        submitBtn.disabled = false;
+        btnText.textContent = 'Submit & Join the Movement';
+        btnSpinner.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
