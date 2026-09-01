@@ -1,10 +1,29 @@
 [
   {
-    "id": "welcome",
-    "title": "Welcome to the OK Campaign News Hub",
-    "url": "",
-    "source": "Campaign Team",
+    "id": "News1",
+    "title": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon",
+    "url": "https://readership.ng/2027-oluwadara-kehinde-unveils-development-agenda-for-yewa-north-imeko-afon/",
+    "source": "Readership.ng",
     "date": "2026-09-01",
-    "summary": "Add news links in news.json on GitHub. Each entry appears here and can be opened inside the site."
+    "summary": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon."
+  },
+    {
+    "id": "News2",
+    "title": "Why NDC’s Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "url": "https://www.amebo9jafeed.com.ng/2026/08/why-ndcs-oluwadara-kehinde-is-man-to.html",
+    "source": "amebo9jafeed",
+    "date": "2026-08-31",
+    "summary": "Why NDC’s Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon"
+  },
+      {
+    "id": "News3",
+    "title": "Why NDC’s Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "url": "https://theencounter.com.ng/why-ndcs-oluwadara-kehinde-is-the-man-to-represent-yewa-north-imeko-afon/",
+    "source": "theencounter.com.ng",
+    "date": "2026-08-31",
+    "summary": "Why NDC’s Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon."
   }
 ]
+
+
+
