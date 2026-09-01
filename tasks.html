@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
-<style>.badge-gold{background:linear-gradient(135deg,#f59e0b,#d97706)}.badge-silver{background:linear-gradient(135deg,#94a3b8,#64748b)}.badge-bronze{background:linear-gradient(135deg,#d97706,#92400e)}</style>
+<style>.badge-gold{background:linear-gradient(135deg,#f59e0b,#d97706)}.badge-silver{background:linear-gradient(135deg,#94a3b8,#64748b)}.badge-bronze{background:linear-gradient(135deg,#d97706,#92400e)}.supporter-item:hover,.supporter-item.active{background:#f0fdf4;border-color:#008751}</style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 min-h-screen flex flex-col">
 <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
@@ -45,101 +45,87 @@
 <button id="doThisBtn" class="px-5 py-2.5 rounded-full bg-brand-red text-white font-semibold">I completed this — Log it</button>
 </div>
 <div id="logSection" class="bg-white rounded-2xl p-6 shadow-lg border mb-10 hidden">
-<h3 class="text-xl font-bold text-navy mb-4">Log your activity</h3>
+<h3 class="text-xl font-bold text-navy mb-2">Log your activity</h3>
+<p class="text-sm text-slate-500 mb-4">Find your name in the supporters list. If you are not registered yet, join as a supporter first.</p>
 <form id="activityForm" class="space-y-4">
-<input type="hidden" id="taskValue"/>
-<div><label class="block text-sm font-semibold mb-1">Full Name *</label>
-<input type="text" id="actName" required class="w-full px-4 py-3 rounded-xl border"/></div>
-<div><label class="block text-sm font-semibold mb-1">Phone *</label>
-<input type="tel" id="actPhone" required class="w-full px-4 py-3 rounded-xl border" placeholder="0803…"/></div>
+<input type="hidden" id="taskValue"/><input type="hidden" id="selectedName"/><input type="hidden" id="selectedPhone"/>
+<div class="relative">
+<label class="block text-sm font-semibold mb-1">Your name (from supporters list) *</label>
+<input type="text" id="nameSearch" autocomplete="off" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="Start typing your name…"/>
+<div id="nameDropdown" class="absolute z-20 left-0 right-0 mt-1 max-h-56 overflow-y-auto bg-white border rounded-xl shadow-lg hidden"></div>
+<p id="strangerBox" class="hidden mt-3 p-4 rounded-xl bg-amber-50 border border-amber-200 text-sm text-amber-900">
+<strong>Name not found.</strong> Please register as a supporter first, then come back to log tasks.<br/>
+<a href="index.html#join" class="inline-block mt-2 font-semibold text-brand-red underline">Register as a supporter →</a>
+</p>
+</div>
+<div id="phoneDisplay" class="hidden">
+<label class="block text-sm font-semibold mb-1">Phone (from your registration)</label>
+<input type="text" id="phoneShown" readonly class="w-full px-4 py-3 rounded-xl border bg-slate-50 text-slate-600"/>
+</div>
 <div><label class="block text-sm font-semibold mb-1">Optional note</label>
 <input type="text" id="actNote" class="w-full px-4 py-3 rounded-xl border" placeholder="e.g. Shared in 3 groups"/></div>
-<button type="submit" id="actSubmit" class="w-full py-3 rounded-xl bg-navy text-white font-bold">Submit activity</button>
+<button type="submit" id="actSubmit" class="w-full py-3 rounded-xl bg-navy text-white font-bold disabled:opacity-50" disabled>Submit activity</button>
 <p id="actMsg" class="text-center text-sm hidden"></p>
 </form>
 </div>
 <div class="bg-white rounded-2xl p-6 shadow-lg border">
-<div class="flex items-center justify-between mb-2">
-<h3 class="text-xl font-bold text-navy">Weekly Leaderboard</h3><span class="text-3xl">🏆</span>
-</div>
+<div class="flex items-center justify-between mb-2"><h3 class="text-xl font-bold text-navy">Weekly Leaderboard</h3><span class="text-3xl">🏆</span></div>
 <p class="text-sm text-slate-500 mb-6" id="weekLabel">Most active supporters this week</p>
 <div id="leaderboard" class="space-y-3"><p class="text-slate-500 text-sm">Loading rankings…</p></div>
-<div class="mt-8 pt-6 border-t">
-<h4 class="font-bold text-navy mb-3">Your recent logs (this device)</h4>
-<ul id="localActs" class="text-sm text-slate-600 space-y-2"></ul>
-</div>
+<div class="mt-8 pt-6 border-t"><h4 class="font-bold text-navy mb-3">Your recent logs (this device)</h4><ul id="localActs" class="text-sm text-slate-600 space-y-2"></ul></div>
 </div>
 </div>
 </main>
-<footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p></footer>
+<footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p><p class="text-white/50 text-sm mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p></footer>
 <script>
 const menuBtn=document.getElementById('menuBtn');const mobileMenu=document.getElementById('mobileMenu');
 if(menuBtn)menuBtn.onclick=()=>mobileMenu.classList.toggle('hidden');
+const SITE_ORIGIN=window.location.origin;
 const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzXqgFn1BZv4vcuetNv9J7vF0bmU-PhJ9QIiG2ayVSsVqFZRExrs1IM5tRM13mFXGtu/exec';
+function shareLink(){return SITE_ORIGIN;}function newsLink(){return SITE_ORIGIN+'/news.html';}
 const TASKS=[
-{title:'WhatsApp Status Drive',desc:'Post today’s campaign message on your WhatsApp status for 24 hours.',share:'OK is Okay! 🇳🇬\nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\nhttps://oluwadarakehinde.vercel.app'},
-{title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:'Good day family 🙏\nPlease support Hon. Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon in 2027.\n#OKisOkay\nhttps://oluwadarakehinde.vercel.app'},
-{title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:'I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\nOK is Okay! #OKisOkay #NDC2027'},
-{title:'Facebook Reel or Short',desc:'Record 15–30 seconds saying why OK is Okay and post as a Reel.',share:'Oluwadara Kehinde is the competent, homegrown choice for Yewa North/Imeko-Afon. OK is Okay! 🇳🇬'},
-{title:'Post an Engagement Photo',desc:'Share a campaign or community photo with a supportive caption.',share:'From the grassroots 📸 Supporting Oluwadara Kehinde (Akan). #OKisOkay #NDC2027'},
-{title:'Call One Supporter',desc:'Phone one friend or relative and invite them to join or volunteer.',share:'I just called a friend about the OK campaign. You can too — https://oluwadarakehinde.vercel.app'},
-{title:'Invite 3 People to the Website',desc:'Send the site link to three people from the constituency.',share:'Please check out the OK campaign:\nhttps://oluwadarakehinde.vercel.app\n#OKisOkay'},
-{title:'Engage Campaign Posts',desc:'Like and leave a meaningful comment on the latest campaign posts.',share:'Commented in support of Oluwadara Kehinde today. #OKisOkay'},
-{title:'WhatsApp Broadcast',desc:'Send today’s update to your broadcast list.',share:'Oluwadara Kehinde (Akan) is running under NDC for Yewa North/Imeko-Afon 2027.\nOK is Okay!\nhttps://oluwadarakehinde.vercel.app'},
-{title:'Market / Workplace Chat',desc:'Talk briefly about the campaign with someone at the market or work.',share:'Had a good conversation about OK today. Homegrown leadership for Yewa North/Imeko-Afon. #OKisOkay'},
-{title:'Share a Campaign Pledge',desc:'Repost one pledge: audits, tech bootcamps, farmers support, or health/schools.',share:'Pledge I support: Quarterly town halls + published audits of constituency funds.\nThat’s the OK standard. #OKisOkay'},
-{title:'Tag 5 Friends',desc:'Tag five people from the constituency on a campaign post.',share:'Tagging friends who care about Yewa North & Imeko-Afon — check Oluwadara Kehinde (Akan) for 2027. #OKisOkay'},
-{title:'Profile Frame / Badge',desc:'Add an OK or NDC frame/badge to your profile picture for the week.',share:'Profile updated for the movement. OK is Okay! Oluwadara Kehinde — Yewa North/Imeko-Afon 2027.'},
-{title:'Youth Voter Reminder',desc:'Remind three young people to check their PVC / registration.',share:'Young people of Yewa North & Imeko-Afon: confirm your PVC. Support competent leadership — OK is Okay!'},
-{title:'Share the News',desc:'Share one campaign news article from the News page with your network.',share:'Read this on the OK campaign:\nhttps://oluwadarakehinde.vercel.app/news.html\n#OKisOkay'}
+{title:'WhatsApp Status Drive',desc:'Post today’s campaign message on your WhatsApp status for 24 hours.',share:()=>`OK is Okay! 🇳🇬\nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\n${shareLink()}`},
+{title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Good day family 🙏\nPlease support Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon in 2027.\n#OKisOkay\n${shareLink()}`},
+{title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:()=>`I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\nOK is Okay! #OKisOkay #NDC2027\n${shareLink()}`},
+{title:'Facebook Reel or Short',desc:'Record 15–30 seconds saying why OK is Okay and post as a Reel.',share:()=>`Oluwadara Kehinde (Akan) is the competent, homegrown choice for Yewa North/Imeko-Afon. OK is Okay! 🇳🇬\n${shareLink()}`},
+{title:'Post an Engagement Photo',desc:'Share a campaign or community photo with a supportive caption.',share:()=>`From the grassroots 📸 Supporting Oluwadara Kehinde (Akan). #OKisOkay #NDC2027\n${shareLink()}`},
+{title:'Call One Supporter',desc:'Phone one friend or relative and invite them to join or volunteer.',share:()=>`I just called a friend about the OK campaign. Join us: ${shareLink()}`},
+{title:'Invite 3 People to the Website',desc:'Send the site link to three people from the constituency.',share:()=>`Please check out the OK campaign:\n${shareLink()}\nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027. #OKisOkay`},
+{title:'Engage Campaign Posts',desc:'Like and leave a meaningful comment on the latest campaign posts.',share:()=>`Commented in support of Oluwadara Kehinde (Akan) today. #OKisOkay`},
+{title:'WhatsApp Broadcast',desc:'Send today’s update to your broadcast list.',share:()=>`Oluwadara Kehinde (Akan) is running under NDC for Yewa North/Imeko-Afon 2027.\nOK is Okay!\n${shareLink()}`},
+{title:'Market / Workplace Chat',desc:'Talk briefly about the campaign with someone at the market or work.',share:()=>`Had a good conversation about OK today. Homegrown leadership for Yewa North/Imeko-Afon. #OKisOkay`},
+{title:'Share a Campaign Pledge',desc:'Repost one pledge: youth, agriculture, education or accountable representation.',share:()=>`Pledge I support: people-centred representation and youth opportunity for Yewa North/Imeko-Afon.\nOluwadara Kehinde (Akan) 2027. #OKisOkay\n${shareLink()}`},
+{title:'Tag 5 Friends',desc:'Tag five people from the constituency on a campaign post.',share:()=>`Tagging friends who care about Yewa North & Imeko-Afon — check Oluwadara Kehinde (Akan) for 2027. #OKisOkay\n${shareLink()}`},
+{title:'Profile Frame / Badge',desc:'Add an OK or NDC frame/badge to your profile picture for the week.',share:()=>`Profile updated for the movement. OK is Okay! Oluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.`},
+{title:'Youth Voter Reminder',desc:'Remind three young people to check their PVC / registration.',share:()=>`Young people of Yewa North & Imeko-Afon: confirm your PVC. Support competent leadership — OK is Okay!\n${shareLink()}`},
+{title:'Share the News',desc:'Share one campaign news article from the News page with your network.',share:()=>`Read this on the OK campaign:\n${newsLink()}\nOluwadara Kehinde (Akan). #OKisOkay`}
 ];
 function dayOfYear(d){const s=new Date(d.getFullYear(),0,0);return Math.floor((d-s)/86400000);}
-function pickDailyTask(){
-const today=new Date();const doy=dayOfYear(today);const yIdx=((doy-1)%TASKS.length+TASKS.length)%TASKS.length;
-let idx=doy%TASKS.length;if(idx===yIdx)idx=(idx+1)%TASKS.length;return TASKS[idx];
-}
-const currentTask=pickDailyTask();
+function pickDailyTask(){const today=new Date();const doy=dayOfYear(today);const yIdx=((doy-1)%TASKS.length+TASKS.length)%TASKS.length;let idx=doy%TASKS.length;if(idx===yIdx)idx=(idx+1)%TASKS.length;return TASKS[idx];}
+const currentTask=pickDailyTask();const shareBody=typeof currentTask.share==='function'?currentTask.share():currentTask.share;
 document.getElementById('dateLabel').textContent=new Date().toLocaleDateString('en-NG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 document.getElementById('taskTitle').textContent=currentTask.title;
 document.getElementById('taskDesc').textContent=currentTask.desc;
-document.getElementById('shareText').textContent=currentTask.share;
+document.getElementById('shareText').textContent=shareBody;
 document.getElementById('taskValue').value=currentTask.title;
-document.getElementById('copyBtn').onclick=async()=>{
-try{await navigator.clipboard.writeText(currentTask.share);}catch(e){const ta=document.createElement('textarea');ta.value=currentTask.share;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}
-document.getElementById('copied').classList.remove('hidden');
-setTimeout(()=>document.getElementById('copied').classList.add('hidden'),2000);
-};
+document.getElementById('copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText(shareBody);}catch(e){const ta=document.createElement('textarea');ta.value=shareBody;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}document.getElementById('copied').classList.remove('hidden');setTimeout(()=>document.getElementById('copied').classList.add('hidden'),2000);};
 document.getElementById('doThisBtn').onclick=()=>{document.getElementById('logSection').classList.remove('hidden');document.getElementById('logSection').scrollIntoView({behavior:'smooth'});};
+let supporters=[];
+async function loadSupporters(){try{const res=await fetch(GOOGLE_SCRIPT_URL+'?action=supporters&_='+Date.now());const data=await res.json();if(data&&Array.isArray(data.supporters))supporters=data.supporters;}catch(e){}try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');list.forEach(a=>{if(!a.fullName)return;if(!supporters.some(s=>s.name.toLowerCase()===a.fullName.toLowerCase()))supporters.push({name:a.fullName,phone:a.phone||''});});}catch(e){}supporters.sort((a,b)=>a.name.localeCompare(b.name));}
+function filterSupporters(q){q=(q||'').trim().toLowerCase();if(!q)return supporters.slice(0,30);return supporters.filter(s=>s.name.toLowerCase().includes(q)).slice(0,30);}
+function renderDropdown(list){const dd=document.getElementById('nameDropdown');if(!list.length){dd.classList.add('hidden');document.getElementById('strangerBox').classList.remove('hidden');document.getElementById('actSubmit').disabled=true;document.getElementById('selectedName').value='';document.getElementById('phoneDisplay').classList.add('hidden');return;}document.getElementById('strangerBox').classList.add('hidden');dd.innerHTML=list.map((s,i)=>`<button type="button" data-i="${i}" class="supporter-item w-full text-left px-4 py-2.5 border-b text-sm"><span class="font-medium text-navy">${s.name}</span>${s.phone?`<span class="text-slate-400 text-xs ml-2">${s.phone}</span>`:''}</button>`).join('');dd.classList.remove('hidden');dd.querySelectorAll('button').forEach(btn=>{btn.onclick=()=>selectSupporter(list[+btn.dataset.i]);});}
+function selectSupporter(s){document.getElementById('nameSearch').value=s.name;document.getElementById('selectedName').value=s.name;document.getElementById('selectedPhone').value=s.phone||'';document.getElementById('phoneShown').value=s.phone||'(no phone on file)';document.getElementById('phoneDisplay').classList.remove('hidden');document.getElementById('nameDropdown').classList.add('hidden');document.getElementById('strangerBox').classList.add('hidden');document.getElementById('actSubmit').disabled=false;}
+const nameSearch=document.getElementById('nameSearch');
+nameSearch.addEventListener('focus',()=>renderDropdown(filterSupporters(nameSearch.value)));
+nameSearch.addEventListener('input',()=>{document.getElementById('selectedName').value='';document.getElementById('actSubmit').disabled=true;document.getElementById('phoneDisplay').classList.add('hidden');const q=nameSearch.value.trim();const list=filterSupporters(q);if(q&&!list.length){document.getElementById('strangerBox').classList.remove('hidden');document.getElementById('nameDropdown').classList.add('hidden');}else{document.getElementById('strangerBox').classList.add('hidden');renderDropdown(list);}});
+document.addEventListener('click',(e)=>{if(!e.target.closest('#nameSearch')&&!e.target.closest('#nameDropdown'))document.getElementById('nameDropdown').classList.add('hidden');});
+loadSupporters();
 function saveLocalAct(p){try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');list.unshift({...p,at:new Date().toLocaleString('en-NG')});localStorage.setItem('ok_acts',JSON.stringify(list.slice(0,20)));renderLocalActs();}catch(e){}}
-function renderLocalActs(){const ul=document.getElementById('localActs');try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');if(!list.length){ul.innerHTML='<li class="text-slate-400">No logs on this device yet.</li>';return;}ul.innerHTML=list.slice(0,8).map(a=>'<li class="flex justify-between gap-2 border-b pb-2"><span class="font-medium text-navy">'+(a.task||'')+'</span><span class="text-xs text-slate-400">'+(a.at||'')+'</span></li>').join('');}catch(e){ul.innerHTML='';}}
+function renderLocalActs(){const ul=document.getElementById('localActs');try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');if(!list.length){ul.innerHTML='<li class="text-slate-400">No logs on this device yet.</li>';return;}ul.innerHTML=list.slice(0,8).map(a=>`<li class="flex justify-between gap-2 border-b pb-2"><span class="font-medium text-navy">${a.task||''}</span><span class="text-xs text-slate-400">${a.at||''}</span></li>`).join('');}catch(e){ul.innerHTML='';}}
 renderLocalActs();
-document.getElementById('activityForm').onsubmit=async(e)=>{
-e.preventDefault();const btn=document.getElementById('actSubmit');const msg=document.getElementById('actMsg');
-btn.disabled=true;btn.textContent='Saving…';
-const payload={type:'activity',fullName:actName.value.trim(),phone:actPhone.value.trim(),task:taskValue.value,note:actNote.value.trim(),timestamp:new Date().toISOString()};
-saveLocalAct(payload);
-try{await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-msg.textContent='Great work! Activity logged. Keep going 💪';msg.className='text-center text-sm text-green-600 font-medium';
-e.target.reset();taskValue.value=currentTask.title;setTimeout(loadLeaderboard,2000);
-}catch(err){msg.textContent='Saved on this device. Server sync may need Apps Script update.';msg.className='text-center text-sm text-amber-600 font-medium';}
-msg.classList.remove('hidden');btn.disabled=false;btn.textContent='Submit activity';
-};
-function badgeFor(rank,tasks){
-if(rank===1)return{label:'🥇 Gold Champion',cls:'badge-gold text-white'};
-if(rank===2)return{label:'🥈 Silver Mobilizer',cls:'badge-silver text-white'};
-if(rank===3)return{label:'🥉 Bronze Builder',cls:'badge-bronze text-white'};
-if(tasks>=10)return{label:'⭐ Star Volunteer',cls:'bg-brand-green text-white'};
-if(tasks>=5)return{label:'🔥 Active Supporter',cls:'bg-navy text-white'};
-return{label:'✓ Contributor',cls:'bg-slate-200 text-slate-700'};
-}
-async function loadLeaderboard(){
-const box=document.getElementById('leaderboard');let leaders=[],week='';
-try{const res=await fetch(GOOGLE_SCRIPT_URL+'?action=leaderboard&_='+Date.now());const text=await res.text();let data;try{data=JSON.parse(text);}catch(_){data=null;}if(data&&data.leaders){leaders=data.leaders;week=data.week||'';}}catch(err){console.warn(err);}
-if(!leaders.length){try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');const map={};list.forEach(a=>{const k=(a.phone||a.fullName||'you').toLowerCase();if(!map[k])map[k]={name:a.fullName||'You',phone:a.phone||'',count:0};map[k].count++;});leaders=Object.values(map).sort((a,b)=>b.count-a.count).slice(0,15).map((l,i)=>({rank:i+1,name:l.name,phone:l.phone?l.phone.slice(0,4)+'***':'',tasks:l.count}));if(leaders.length)document.getElementById('weekLabel').textContent='From this device (server ranking after Apps Script supports leaderboard)';}catch(e){}}
-else if(week)document.getElementById('weekLabel').textContent='Week '+week+' · Top supporters';
-if(!leaders.length){box.innerHTML='<p class="text-slate-500 text-sm">No activities logged this week yet. Be the first!</p>';return;}
-box.innerHTML=leaders.map(l=>{const b=badgeFor(l.rank,l.tasks);return '<div class="flex items-center gap-3 p-3 rounded-xl '+(l.rank<=3?'bg-amber-50 border border-amber-100':'bg-slate-50')+'"><span class="w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm '+(l.rank===1?'bg-amber-400 text-white':l.rank===2?'bg-slate-300':l.rank===3?'bg-amber-700 text-white':'bg-slate-200')+'">'+l.rank+'</span><div class="flex-1 min-w-0"><p class="font-semibold text-navy truncate">'+(l.name||'Supporter')+'</p><p class="text-xs text-slate-500">'+(l.phone||'')+'</p><span class="inline-block mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full '+b.cls+'">'+b.label+'</span></div><div class="text-right"><span class="font-bold text-brand-green text-lg">'+l.tasks+'</span><p class="text-[10px] text-slate-400">tasks</p></div></div>';}).join('');
-}
+document.getElementById('activityForm').onsubmit=async(e)=>{e.preventDefault();const name=document.getElementById('selectedName').value.trim();if(!name){document.getElementById('strangerBox').classList.remove('hidden');return;}const btn=document.getElementById('actSubmit');const msg=document.getElementById('actMsg');btn.disabled=true;btn.textContent='Saving…';const payload={type:'activity',fullName:name,phone:document.getElementById('selectedPhone').value.trim(),task:document.getElementById('taskValue').value,note:document.getElementById('actNote').value.trim(),timestamp:new Date().toISOString()};saveLocalAct(payload);try{await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});msg.textContent='Great work! Activity logged. Keep going 💪';msg.className='text-center text-sm text-green-600 font-medium';document.getElementById('actNote').value='';setTimeout(loadLeaderboard,2000);}catch(err){msg.textContent='Saved on this device.';msg.className='text-center text-sm text-amber-600 font-medium';}msg.classList.remove('hidden');btn.disabled=false;btn.textContent='Submit activity';};
+function badgeFor(rank,tasks){if(rank===1)return{label:'🥇 Gold Champion',cls:'badge-gold text-white'};if(rank===2)return{label:'🥈 Silver Mobilizer',cls:'badge-silver text-white'};if(rank===3)return{label:'🥉 Bronze Builder',cls:'badge-bronze text-white'};if(tasks>=10)return{label:'⭐ Star Volunteer',cls:'bg-brand-green text-white'};if(tasks>=5)return{label:'🔥 Active Supporter',cls:'bg-navy text-white'};return{label:'✓ Contributor',cls:'bg-slate-200 text-slate-700'};}
+async function loadLeaderboard(){const box=document.getElementById('leaderboard');let leaders=[],week='';try{const res=await fetch(GOOGLE_SCRIPT_URL+'?action=leaderboard&_='+Date.now());const text=await res.text();let data;try{data=JSON.parse(text);}catch(_){data=null;}if(data&&data.leaders){leaders=data.leaders;week=data.week||'';}}catch(err){}if(!leaders.length){try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');const map={};list.forEach(a=>{const k=(a.phone||a.fullName||'you').toLowerCase();if(!map[k])map[k]={name:a.fullName||'You',phone:a.phone||'',count:0};map[k].count++;});leaders=Object.values(map).sort((a,b)=>b.count-a.count).slice(0,15).map((l,i)=>({rank:i+1,name:l.name,phone:l.phone?l.phone.slice(0,4)+'***':'',tasks:l.count}));if(leaders.length)document.getElementById('weekLabel').textContent='From this device (server ranking after Apps Script update)';}catch(e){}}else if(week)document.getElementById('weekLabel').textContent='Week '+week+' · Top supporters';if(!leaders.length){box.innerHTML='<p class="text-slate-500 text-sm">No activities logged this week yet. Be the first!</p>';return;}box.innerHTML=leaders.map(l=>{const b=badgeFor(l.rank,l.tasks);return `<div class="flex items-center gap-3 p-3 rounded-xl ${l.rank<=3?'bg-amber-50 border border-amber-100':'bg-slate-50'}"><span class="w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm ${l.rank===1?'bg-amber-400 text-white':l.rank===2?'bg-slate-300':l.rank===3?'bg-amber-700 text-white':'bg-slate-200'}">${l.rank}</span><div class="flex-1 min-w-0"><p class="font-semibold text-navy truncate">${l.name||'Supporter'}</p><p class="text-xs text-slate-500">${l.phone||''}</p><span class="inline-block mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full ${b.cls}">${b.label}</span></div><div class="text-right"><span class="font-bold text-brand-green text-lg">${l.tasks}</span><p class="text-[10px] text-slate-400">tasks</p></div></div>`;}).join('');}
 loadLeaderboard();
 </script>
 </body>
