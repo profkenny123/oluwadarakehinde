@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>News | OK Campaign</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>.nav-scrolled{background:rgba(10,22,40,.97);backdrop-filter:blur(12px)}</style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 min-h-screen flex flex-col">
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
+<div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+<a href="index.html" class="text-white font-bold text-lg">OK is Okay</a>
+<nav class="hidden lg:flex gap-5 text-sm text-white/90">
+<a href="index.html">Home</a><a href="tasks.html">Daily Tasks</a><a href="gallery.html">Gallery</a><a href="news.html">News</a>
+<a href="index.html#join" class="px-4 py-2 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
+</nav>
+<button id="menuBtn" class="lg:hidden text-white p-2">☰</button>
+</div>
+<div id="mobileMenu" class="hidden lg:hidden bg-navy border-t border-white/10 px-4 py-3 space-y-2">
+<a href="index.html" class="block text-white">Home</a>
+<a href="tasks.html" class="block text-white">Daily Tasks</a>
+<a href="gallery.html" class="block text-white">Gallery</a>
+<a href="news.html" class="block text-white">News</a>
+</div>
+</header>
+<main class="pt-24 pb-16 flex-1">
+<div class="max-w-5xl mx-auto px-4">
+<div class="text-center mb-8">
+<h1 class="text-3xl font-extrabold text-navy mb-2">News & Updates</h1>
+<div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full mb-3"></div>
+<p class="text-slate-600">Auto-advances · Open inside the site when possible</p>
+</div>
+<div class="relative mb-10">
+<div class="overflow-hidden rounded-2xl"><div id="newsTrack" class="flex transition-transform duration-500"></div></div>
+<button id="newsPrev" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white">‹</button>
+<button id="newsNext" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white">›</button>
+</div>
+<div class="bg-white rounded-2xl shadow-lg border overflow-hidden">
+<div class="px-6 py-4 border-b bg-slate-50"><h2 class="font-bold text-navy">All news</h2><p class="text-xs text-slate-500">From news.json on GitHub</p></div>
+<ul id="newsList" class="divide-y"></ul>
+</div>
+</div>
+</main>
+<div id="reader" class="fixed inset-0 z-[60] hidden">
+<div class="absolute inset-0 bg-navy/80" id="readerBackdrop"></div>
+<div class="absolute inset-4 md:inset-10 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+<div class="flex items-center justify-between px-4 py-3 border-b bg-slate-50 gap-2">
+<div class="min-w-0 flex-1"><h3 id="readerTitle" class="font-bold text-navy truncate"></h3><p id="readerMeta" class="text-xs text-slate-500"></p></div>
+<a id="readerExternal" href="#" target="_blank" rel="noopener" class="text-sm px-3 py-1.5 rounded-lg bg-navy text-white">Open original</a>
+<button id="readerClose" class="w-9 h-9 text-xl">×</button>
+</div>
+<div class="flex-1 relative bg-slate-100">
+<iframe id="readerFrame" class="absolute inset-0 w-full h-full border-0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
+<div id="readerBlocked" class="absolute inset-0 hidden flex-col items-center justify-center p-8 text-center bg-slate-50">
+<p class="text-lg font-semibold text-navy mb-2">This site may block in-page viewing</p>
+<p class="text-slate-600 mb-4">Use the button below to read the full article.</p>
+<a id="readerBlockedLink" href="#" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-brand-red text-white font-semibold">Open article in new tab</a>
+</div>
+</div>
+</div>
+</div>
+<footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu');
+if(menuBtn)menuBtn.onclick=()=>mobileMenu.classList.toggle('hidden');
+let newsItems=[],nIdx=0,nTimer=null;
+function openReader(item){
+document.getElementById('readerTitle').textContent=item.title||'';
+document.getElementById('readerMeta').textContent=[item.source,item.date].filter(Boolean).join(' · ');
+const frame=document.getElementById('readerFrame'),blocked=document.getElementById('readerBlocked');
+const ext=document.getElementById('readerExternal'),bl=document.getElementById('readerBlockedLink');
+if(!item.url){frame.src='about:blank';blocked.classList.remove('hidden');blocked.classList.add('flex');bl.href='#';}
+else{ext.href=item.url;bl.href=item.url;blocked.classList.add('hidden');frame.src=item.url;setTimeout(()=>{blocked.classList.remove('hidden');blocked.classList.add('flex');},3500);}
+document.getElementById('reader').classList.remove('hidden');
+}
+function closeReader(){document.getElementById('reader').classList.add('hidden');document.getElementById('readerFrame').src='about:blank';}
+document.getElementById('readerClose').onclick=closeReader;
+document.getElementById('readerBackdrop').onclick=closeReader;
+function goNews(i){if(!newsItems.length)return;nIdx=(i+newsItems.length)%newsItems.length;document.getElementById('newsTrack').style.transform='translateX(-'+(nIdx*100)+'%)';}
+function resetN(){clearInterval(nTimer);nTimer=setInterval(()=>goNews(nIdx+1),6000);}
+document.getElementById('newsNext').onclick=()=>{goNews(nIdx+1);resetN();};
+document.getElementById('newsPrev').onclick=()=>{goNews(nIdx-1);resetN();};
+async function loadNews(){
+try{const res=await fetch('/news.json?_='+Date.now());newsItems=await res.json();}catch(e){newsItems=[];}
+const track=document.getElementById('newsTrack'),ul=document.getElementById('newsList');
+if(!newsItems.length){track.innerHTML='<div class="min-w-full p-10 text-center text-slate-500">No news yet.</div>';ul.innerHTML='<li class="px-6 py-4 text-slate-500">Add entries in news.json</li>';return;}
+track.innerHTML=newsItems.map((item,i)=>'<div class="min-w-full px-1"><button type="button" data-i="'+i+'" class="news-card w-full text-left bg-navy text-white rounded-2xl p-8 min-h-[200px]"><p class="text-brand-gold text-xs font-semibold uppercase mb-2">'+(item.source||'News')+(item.date?' · '+item.date:'')+'</p><h2 class="text-2xl font-bold mb-2">'+(item.title||'')+'</h2><p class="text-white/70 text-sm">'+(item.summary||'Tap to read')+'</p><span class="inline-block mt-4 text-sm font-semibold text-brand-green">Read →</span></button></div>').join('');
+track.querySelectorAll('.news-card').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
+ul.innerHTML=newsItems.map((item,i)=>'<li><button type="button" data-i="'+i+'" class="w-full text-left px-6 py-4 hover:bg-slate-50 flex gap-3"><span class="text-brand-red font-bold text-sm">'+String(i+1).padStart(2,'0')+'</span><div><p class="font-semibold text-navy">'+(item.title||'')+'</p><p class="text-xs text-slate-500">'+[item.source,item.date].filter(Boolean).join(' · ')+'</p></div></button></li>').join('');
+ul.querySelectorAll('button').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
+goNews(0);resetN();
+}
+loadNews();
+</script>
+</body>
+</html>
