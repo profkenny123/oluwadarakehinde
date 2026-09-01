@@ -3,6 +3,18 @@
     "file": "Blue Campaign Banner.jpeg",
     "caption": "Campaign Banner (Blue)"
   }, 
+      {
+    "file": "Igan Alade4.jpeg",
+    "caption": "Engagement at Igan Alade on 25th August"
+  },
+      {
+    "file": "Igan alade2.jpeg",
+    "caption": "Engagement at Igan Alade on 25th August"
+  },
+        {
+    "file": "Igan Alade 3.jpeg",
+    "caption": "Engagement at Igan Alade on 25th August"
+  },
     {
     "file": "Campaign Sticker.jpeg",
     "caption": "Campaign Sticker"
@@ -11,9 +23,9 @@
     "file": "Engagement in Ayetoro on Saturday 29th August 2026.jpeg",
     "caption": "Ayetoro Engagement - August 29 2026"
   },
-    {
-    "file": "NDC Voter Engagement.jpeg",
-    "caption": "NDC Voter Engagement"
+      {
+    "file": "Joga Ayetoro.jpeg",
+    "caption": "Engagement in Joga on Sep 1st"
   },
     {
     "file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026 .jpeg",
@@ -22,5 +34,25 @@
     {
     "file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026.jpeg",
     "caption": "Ward Coordinator's Meeting - August 2029"
+  },
+      {
+    "file": "NDC Voter Engagement.jpeg",
+    "caption": "NDC Voter Engagement"
+  },
+      {
+    "file": "Ibese.jpeg",
+    "caption": "Engagement in Ibese Ward - 29th August"
+  },
+      {
+    "file": "Ohunbe.jpeg",
+    "caption": "Engagement in Ohunbe Ward - 29th August"
+  },
+      {
+    "file": "Ohunbe2.jpeg",
+    "caption": "Engagement in Ohunbe Ward - 29th August"
+  },
+      {
+    "file": "Igan Alade.jpeg",
+    "caption": "Engagement in Igan Alade"
   }
 ]
