@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "welcome",
+    "title": "Welcome to the OK Campaign News Hub",
+    "url": "",
+    "source": "Campaign Team",
+    "date": "2026-09-01",
+    "summary": "Add news links in news.json on GitHub. Each entry appears here and can be opened inside the site."
+  }
+]
