@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NDC Party | Oluwadara Kehinde Campaign</title>
+<meta name="description" content="Nigeria Democratic Congress (NDC) — the party platform of Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027."/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 min-h-screen flex flex-col">
+<header class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
+<div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+<a href="index.html" class="text-white font-bold text-lg">OK is Okay</a>
+<nav class="hidden lg:flex items-center gap-4 text-sm text-white/90">
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="tasks.html">Daily Tasks</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News</a>
+<a href="ndc.html">NDC</a>
+<a href="index.html#join" class="px-4 py-2 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
+</nav>
+<button id="menuBtn" class="lg:hidden text-white p-2">☰</button>
+</div>
+<div id="mobileMenu" class="hidden lg:hidden bg-navy border-t border-white/10 px-4 py-3 space-y-2">
+<a href="index.html" class="block text-white py-2">Home</a>
+<a href="index.html#about" class="block text-white py-2">About</a>
+<a href="tasks.html" class="block text-white py-2">Daily Tasks</a>
+<a href="gallery.html" class="block text-white py-2">Gallery</a>
+<a href="news.html" class="block text-white py-2">News</a>
+<a href="ndc.html" class="block text-white py-2">NDC Party</a>
+<a href="index.html#join" class="block text-center mt-2 px-5 py-3 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
+</div>
+</header>
+<main class="pt-16 flex-1 flex flex-col">
+<div class="bg-navy text-white px-4 py-4 border-b border-white/10">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+<div>
+<h1 class="text-xl font-bold">Nigeria Democratic Congress (NDC)</h1>
+<p class="text-white/70 text-sm">Official party website · Oluwadara Kehinde campaigns under NDC</p>
+</div>
+<a href="https://ndcnigeria.com/" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-brand-green text-white text-sm font-semibold hover:opacity-90">Open ndcnigeria.com ↗</a>
+</div>
+</div>
+<div class="relative flex-1 bg-slate-200" style="min-height:calc(100vh - 9rem)">
+<iframe id="ndcFrame" src="https://ndcnigeria.com/" title="NDC Nigeria official website" class="absolute inset-0 w-full h-full border-0 bg-white" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div id="ndcFallback" class="absolute inset-0 hidden flex-col items-center justify-center p-8 text-center bg-slate-100">
+<p class="text-lg font-semibold text-navy mb-2">The NDC site could not be shown inside this page</p>
+<p class="text-slate-600 mb-4 max-w-md">Some websites block embedding. Use the button below to visit the official NDC website.</p>
+<a href="https://ndcnigeria.com/" target="_blank" rel="noopener" class="px-6 py-3 rounded-full bg-brand-red text-white font-semibold">Visit ndcnigeria.com</a>
+</div>
+</div>
+</main>
+<footer class="bg-navy-dark py-6 text-center text-white text-sm">
+<p class="font-semibold">OK is Okay · NDC is Okay · Nigeria will be Okay</p>
+<p class="text-white/50 mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p>
+</footer>
+<script>
+document.getElementById('menuBtn').onclick=()=>document.getElementById('mobileMenu').classList.toggle('hidden');
+</script>
+</body>
+</html>
