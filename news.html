@@ -4,10 +4,21 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>News & Movement | OK Campaign</title>
-<meta name="description" content="Campaign news, Peter Obi and NDC updates, trending videos."/>
+<meta name="description" content="Campaign news for Oluwadara Kehinde, Peter Obi and NDC updates, trending videos."/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17735824450"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17735824450');
+</script>
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-17735824450/Q7Z7CP634O0cEMLojIlC'});
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 min-h-screen flex flex-col">
 <header class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
@@ -33,22 +44,27 @@
 <div class="text-center mb-10">
 <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-2">News & Movement</h1>
 <div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full mb-3"></div>
-<p class="text-slate-600">Campaign coverage · Peter Obi & NDC · Trending videos</p>
+<p class="text-slate-600">Oluwadara Kehinde first · Then NDC & Peter Obi updates</p>
 </div>
+<section class="mb-14">
+<h2 class="text-2xl font-bold text-navy mb-4">Latest headlines</h2>
+<div class="relative mb-2">
+<div class="overflow-hidden rounded-2xl">
+<div id="newsTrack" class="flex transition-transform duration-500 ease-in-out"></div>
+</div>
+<button id="newsPrev" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">‹</button>
+<button id="newsNext" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">›</button>
+</div>
+<p class="text-xs text-slate-400 text-center">Campaign stories are prioritised; swipe or use arrows</p>
+</section>
 <section class="mb-14">
 <h2 class="text-2xl font-bold text-navy mb-2">Trending Videos · Peter Obi & NDC</h2>
 <p class="text-sm text-slate-500 mb-6">Speeches, interviews and supporting voices · Edit videos.json to add more</p>
 <div id="videoGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"><p class="text-slate-500 col-span-full">Loading videos…</p></div>
 </section>
 <section class="mb-10">
-<h2 class="text-2xl font-bold text-navy mb-4">Latest articles</h2>
-<div class="relative mb-6">
-<div class="overflow-hidden rounded-2xl"><div id="newsTrack" class="flex transition-transform duration-500"></div></div>
-<button id="newsPrev" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">‹</button>
-<button id="newsNext" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">›</button>
-</div>
 <div class="bg-white rounded-2xl shadow-lg border overflow-hidden">
-<div class="px-6 py-4 border-b bg-slate-50"><h3 class="font-bold text-navy">All news links</h3><p class="text-xs text-slate-500">news.json · videos.json on GitHub</p></div>
+<div class="px-6 py-4 border-b bg-slate-50"><h3 class="font-bold text-navy">All news links</h3><p class="text-xs text-slate-500">Oluwadara items are permanent · Movement items kept recent (max 7)</p></div>
 <ul id="newsList" class="divide-y"></ul>
 </div>
 </section>
@@ -58,7 +74,7 @@
 <div class="flex items-center justify-between px-4 py-3 border-b bg-slate-50 gap-2">
 <div class="min-w-0 flex-1"><h3 id="readerTitle" class="font-bold text-navy truncate"></h3><p id="readerMeta" class="text-xs text-slate-500"></p></div>
 <a id="readerExternal" href="#" target="_blank" rel="noopener" class="text-sm px-3 py-1.5 rounded-lg bg-navy text-white">Open original</a>
-<button id="readerClose" class="w-9 h-9 text-xl">×</button>
+<button id="readerClose" type="button" class="w-9 h-9 text-xl">×</button>
 </div>
 <div class="flex-1 relative bg-slate-100">
 <iframe id="readerFrame" class="absolute inset-0 w-full h-full border-0" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
@@ -76,38 +92,62 @@
 <p class="text-white/50 text-sm mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p></footer>
 <script>
 document.getElementById('menuBtn').onclick=()=>document.getElementById('mobileMenu').classList.toggle('hidden');
+function isOluwadara(item){
+  if((item.category||'')==='oluwadara') return true;
+  const id=(item.id||'');
+  if(/^News\d/i.test(id)) return true;
+  const t=((item.title||'')+' '+(item.summary||'')).toLowerCase();
+  return t.includes('oluwadara') || t.includes('kehinde');
+}
+function prioritizeNews(items){
+  const ok=[], rest=[];
+  items.forEach(i=>(isOluwadara(i)?ok:rest).push(i));
+  ok.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const cutoff=new Date(); cutoff.setDate(cutoff.getDate()-31);
+  const recent=rest.filter(i=>{
+    if(!i.date) return true;
+    const d=new Date(i.date);
+    return !isNaN(d) && d>=cutoff;
+  }).sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,7);
+  return ok.concat(recent);
+}
 async function loadVideos(){
-const grid=document.getElementById('videoGrid');let items=[];
-try{const res=await fetch('/videos.json?_='+Date.now());items=await res.json();}catch(e){}
-if(!items.length){grid.innerHTML='<p class="text-slate-500 col-span-full">Add videos in videos.json</p>';return;}
-grid.innerHTML=items.map(v=>'<div class="bg-white rounded-2xl overflow-hidden shadow-md border flex flex-col"><div class="aspect-video bg-navy relative"><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/'+v.youtubeId+'" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div><div class="p-4 flex-1 flex flex-col"><span class="text-[10px] font-bold uppercase text-brand-green mb-1">'+(v.tag||'Video')+'</span><h3 class="font-semibold text-navy text-sm leading-snug mb-1">'+v.title+'</h3><p class="text-xs text-slate-500 mt-auto">'+(v.source||'')+'</p></div></div>').join('');
+  const grid=document.getElementById('videoGrid'); let items=[];
+  try{const res=await fetch('/videos.json?_='+Date.now()); items=await res.json();}catch(e){}
+  if(!items.length){grid.innerHTML='<p class="text-slate-500 col-span-full">Add videos in videos.json</p>'; return;}
+  grid.innerHTML=items.map(v=>'<div class="bg-white rounded-2xl overflow-hidden shadow-md border flex flex-col"><div class="aspect-video bg-navy relative"><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/'+v.youtubeId+'" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div><div class="p-4 flex-1 flex flex-col"><span class="text-[10px] font-bold uppercase text-brand-green mb-1">'+(v.tag||'Video')+'</span><h3 class="font-semibold text-navy text-sm leading-snug mb-1">'+v.title+'</h3><p class="text-xs text-slate-500 mt-auto">'+(v.source||'')+'</p></div></div>').join('');
 }
 loadVideos();
-let newsItems=[],nIdx=0,nTimer=null;
+let newsItems=[], nIdx=0, nTimer=null;
 function openReader(item){
-document.getElementById('readerTitle').textContent=item.title||'';
-document.getElementById('readerMeta').textContent=[item.source,item.date].filter(Boolean).join(' · ');
-const frame=document.getElementById('readerFrame'),blocked=document.getElementById('readerBlocked');
-const ext=document.getElementById('readerExternal'),bl=document.getElementById('readerBlockedLink');
-if(!item.url){frame.src='about:blank';blocked.classList.remove('hidden');blocked.classList.add('flex');}
-else{ext.href=item.url;bl.href=item.url;blocked.classList.add('hidden');frame.src=item.url;setTimeout(()=>{blocked.classList.remove('hidden');blocked.classList.add('flex');},3500);}
-document.getElementById('reader').classList.remove('hidden');
+  document.getElementById('readerTitle').textContent=item.title||'';
+  document.getElementById('readerMeta').textContent=[item.source,item.date].filter(Boolean).join(' · ');
+  const frame=document.getElementById('readerFrame'), blocked=document.getElementById('readerBlocked');
+  const ext=document.getElementById('readerExternal'), bl=document.getElementById('readerBlockedLink');
+  if(!item.url){frame.src='about:blank'; blocked.classList.remove('hidden'); blocked.classList.add('flex');}
+  else{ext.href=item.url; bl.href=item.url; blocked.classList.add('hidden'); frame.src=item.url; setTimeout(()=>{blocked.classList.remove('hidden'); blocked.classList.add('flex');},3500);}
+  document.getElementById('reader').classList.remove('hidden');
 }
-function closeReader(){document.getElementById('reader').classList.add('hidden');document.getElementById('readerFrame').src='about:blank';}
-document.getElementById('readerClose').onclick=closeReader;document.getElementById('readerBackdrop').onclick=closeReader;
-function goNews(i){if(!newsItems.length)return;nIdx=(i+newsItems.length)%newsItems.length;document.getElementById('newsTrack').style.transform='translateX(-'+(nIdx*100)+'%)';}
-function resetN(){clearInterval(nTimer);nTimer=setInterval(()=>goNews(nIdx+1),6000);}
-document.getElementById('newsNext').onclick=()=>{goNews(nIdx+1);resetN();};
-document.getElementById('newsPrev').onclick=()=>{goNews(nIdx-1);resetN();};
+function closeReader(){document.getElementById('reader').classList.add('hidden'); document.getElementById('readerFrame').src='about:blank';}
+document.getElementById('readerClose').onclick=closeReader;
+document.getElementById('readerBackdrop').onclick=closeReader;
+function goNews(i){if(!newsItems.length)return; nIdx=(i+newsItems.length)%newsItems.length; document.getElementById('newsTrack').style.transform='translateX(-'+(nIdx*100)+'%)';}
+function resetN(){clearInterval(nTimer); nTimer=setInterval(()=>goNews(nIdx+1),6000);}
+document.getElementById('newsNext').onclick=()=>{goNews(nIdx+1); resetN();};
+document.getElementById('newsPrev').onclick=()=>{goNews(nIdx-1); resetN();};
 async function loadNews(){
-try{const res=await fetch('/news.json?_='+Date.now());newsItems=await res.json();}catch(e){newsItems=[];}
-const track=document.getElementById('newsTrack'),ul=document.getElementById('newsList');
-if(!newsItems.length){track.innerHTML='<div class="min-w-full p-10 text-center text-slate-500">No news yet.</div>';return;}
-track.innerHTML=newsItems.map((item,i)=>'<div class="min-w-full px-1"><button type="button" data-i="'+i+'" class="news-card w-full text-left bg-navy text-white rounded-2xl p-8 min-h-[180px]"><p class="text-brand-gold text-xs font-semibold uppercase mb-2">'+(item.source||'News')+(item.date?' · '+item.date:'')+'</p><h2 class="text-xl font-bold mb-2">'+(item.title||'')+'</h2><p class="text-white/70 text-sm">'+(item.summary||'Tap to read')+'</p><span class="inline-block mt-4 text-sm font-semibold text-brand-green">Read →</span></button></div>').join('');
-track.querySelectorAll('.news-card').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
-ul.innerHTML=newsItems.map((item,i)=>'<li><button type="button" data-i="'+i+'" class="w-full text-left px-6 py-4 hover:bg-slate-50 flex gap-3"><span class="text-brand-red font-bold text-sm">'+String(i+1).padStart(2,'0')+'</span><div><p class="font-semibold text-navy">'+(item.title||'')+'</p><p class="text-xs text-slate-500">'+[item.source,item.date].filter(Boolean).join(' · ')+'</p></div></button></li>').join('');
-ul.querySelectorAll('button').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
-goNews(0);resetN();
+  try{const res=await fetch('/news.json?_='+Date.now()); newsItems=prioritizeNews(await res.json());}
+  catch(e){newsItems=[];}
+  const track=document.getElementById('newsTrack'), ul=document.getElementById('newsList');
+  if(!newsItems.length){track.innerHTML='<div class="min-w-full p-10 text-center text-slate-500">No news yet.</div>'; return;}
+  track.innerHTML=newsItems.map((item,i)=>{
+    const badge=isOluwadara(item)?'<span class="inline-block text-[10px] font-bold uppercase bg-brand-green/20 text-brand-green px-2 py-0.5 rounded mb-2">Campaign</span>':'<span class="inline-block text-[10px] font-bold uppercase bg-white/10 text-brand-gold px-2 py-0.5 rounded mb-2">Movement</span>';
+    return '<div class="min-w-full px-1"><button type="button" data-i="'+i+'" class="news-card w-full text-left bg-navy text-white rounded-2xl p-8 min-h-[180px]">'+badge+'<p class="text-brand-gold text-xs font-semibold uppercase mb-2">'+(item.source||'News')+(item.date?' · '+item.date:'')+'</p><h2 class="text-xl font-bold mb-2">'+(item.title||'')+'</h2><p class="text-white/70 text-sm">'+(item.summary||'Tap to read')+'</p><span class="inline-block mt-4 text-sm font-semibold text-brand-green">Read →</span></button></div>';
+  }).join('');
+  track.querySelectorAll('.news-card').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
+  ul.innerHTML=newsItems.map((item,i)=>'<li><button type="button" data-i="'+i+'" class="w-full text-left px-6 py-4 hover:bg-slate-50 flex gap-3"><span class="text-brand-red font-bold text-sm">'+String(i+1).padStart(2,'0')+'</span><div><p class="font-semibold text-navy">'+(item.title||'')+'</p><p class="text-xs text-slate-500">'+[item.source,item.date,isOluwadara(item)?'Campaign':'Movement'].filter(Boolean).join(' · ')+'</p></div></button></li>').join('');
+  ul.querySelectorAll('button').forEach(btn=>btn.onclick=()=>openReader(newsItems[+btn.dataset.i]));
+  goNews(0); resetN();
 }
 loadNews();
 </script>
