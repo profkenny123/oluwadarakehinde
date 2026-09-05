@@ -1,40 +1,39 @@
 # How to update the campaign site & Apps Script
 
-## 1. Redeploy Google Apps Script (required for email + phone ID)
+## Email column on Google Sheet
 
-1. Open [script.google.com](https://script.google.com) with the same Google account that owns the Sheet.
-2. Open the existing **OK Campaign** project (or the one already linked to your Web App URL).
-3. Replace **all** code with the contents of `GOOGLE_APPS_SCRIPT.js` from this folder.
-4. **Deploy → Manage deployments → Edit (pencil) → New version → Deploy**.
-5. Keep the same Web App URL (Already used on the website).
+A sheet **with Email column** (and all existing volunteers + Activities) is ready:
 
-What this enables:
-- Optional **Email** column on the existing Volunteers sheet (no new sheet)
-- Welcome email with Campaign Sticker + WhatsApp links when email is provided
-- Phone as unique ID (upsert if same phone registers again)
-- Supporters list for task logging (name + phone search)
+https://docs.google.com/spreadsheets/d/1sNj5ly4cPHpEei-5lPUnwo_74BPozFOdJzk1l4QeuyI/edit
 
-## 2. Website files
+Headers: Timestamp | Full Name | Phone Number | **Email** | LGA | Ward | ...
 
-After GitHub push / Vercel deploy, these are live:
+Google Drive connector cannot edit cells inside an existing Google Sheet in place. The Email column was added by exporting your data, inserting Email after Phone, and uploading this updated copy.
+
+**Recommended:** Use the sheet above as the live campaign sheet (Apps Script already points to it once you paste the new GOOGLE_APPS_SCRIPT.js).
+
+Your original sheet (without Email) remains at:
+https://docs.google.com/spreadsheets/d/1YhHcRz1ZJF0DqIjVp5PoQgs6FcRQev30LGwRxZaRt5k/edit
+
+---
+
+## Redeploy Google Apps Script (required)
+
+1. Open script.google.com with the account that owns the Sheet.
+2. Open the existing OK Campaign project.
+3. Replace **all** code with `GOOGLE_APPS_SCRIPT.js` from this repo.
+4. Deploy → Manage deployments → Edit → New version → Deploy (same Web App URL).
+
+## Website files
 
 | File | Change |
 |------|--------|
-| `index.html` | Email field, NG phone validation, expanded About, redirect to tasks after submit |
-| `tasks.html` | Gallery merged, Share now (device share sheet), log only after Copy/Share, name+phone typeahead |
-| `gallery.html` | Redirects to `tasks.html#gallery` |
-| `GOOGLE_APPS_SCRIPT.js` | Email + welcome mail + phone upsert |
+| index.html | Email field, NG phone validation, About expanded, redirect to tasks |
+| tasks.html | Gallery merged, Share now, log after Copy/Share, name+phone typeahead |
+| gallery.html | Redirects to tasks.html#gallery |
 
-## 3. WhatsApp links in welcome email
+## WhatsApp in welcome email
 
 - Ogun West / Others: https://chat.whatsapp.com/CxSSZdmVPfW6zhj8yXbZPX
 - Yewa North: https://chat.whatsapp.com/KjNTG1ggLpBGKZuO27CbDP
-- Imeko Afon: add later in Apps Script `WA_LINKS`
-
-## 4. Test checklist
-
-1. Register with phone `08031234567` + optional email → should land on Daily Tasks.
-2. On Tasks: Copy text or Share now → then **Log it** appears.
-3. Type name or phone digits → pick from dropdown → submit activity.
-4. Check Google Sheet for Email column and new row.
-5. If email given, check inbox for welcome message (may land in spam once).
+- Imeko Afon: add later in WA_LINKS
