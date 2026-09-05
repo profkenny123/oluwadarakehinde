@@ -1,43 +1,12 @@
 [
   {
-    "id": "obi-ph-wike",
-    "title": "We will not arrest you — Peter Obi replies Wike at Port Harcourt town hall",
-    "url": "https://businessday.ng/politics/article/we-will-not-arrest-you-peter-obi-throws-tantrum-back-at-wike-in-port-harcourt/",
-    "source": "BusinessDay",
-    "date": "2026-09-04",
-    "summary": "Obi and Kwankwaso address a packed Obi Talks Nigeria town hall in Port Harcourt; Obi vows to defend votes and invest in health and production."
-  },
-  {
-    "id": "obi-irev-ph",
-    "title": "They will try to manipulate IReV, but it won’t be easy — Peter Obi",
-    "url": "https://www.naijanews.com/2026/09/03/2027-they-will-try-to-manipulate-irev-but-it-wont-be-easy-peter-obi/",
-    "source": "Naija News",
-    "date": "2026-09-03",
-    "summary": "At the Rivers town hall, Obi says NDC will resist polling-unit intimidation and protect results on IReV in 2027."
-  },
-  {
-    "id": "obi-rivers-votes",
-    "title": "People of Rivers State will vote, and their votes must count — Peter Obi",
-    "url": "https://www.naijanews.com/?s=peter+Obi",
-    "source": "Naija News",
-    "date": "2026-09-04",
-    "summary": "NDC presidential candidate tells Rivers residents that votes must count and citizens should not be intimidated."
-  },
-  {
-    "id": "obi-abuja-hq",
-    "title": "Obi hosts Kwankwaso and NDC candidates at Obidient Headquarters in Abuja",
-    "url": "https://theeconomictimes.com.ng/2026/09/01/obi-hosts-kwankwaso-ndc-candidates-at-obidient-headquarters-in-abuja/",
-    "source": "The Economic Times",
-    "date": "2026-09-01",
-    "summary": "Strategy session on expanding NDC into rural communities and delivering a production-driven economy."
-  },
-  {
     "id": "News1",
     "title": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon",
     "url": "https://readership.ng/2027-oluwadara-kehinde-unveils-development-agenda-for-yewa-north-imeko-afon/",
     "source": "Readership.ng",
     "date": "2026-09-01",
-    "summary": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon."
+    "summary": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon.",
+    "category": "oluwadara"
   },
   {
     "id": "News2",
@@ -45,7 +14,8 @@
     "url": "https://www.amebo9jafeed.com.ng/2026/08/why-ndcs-oluwadara-kehinde-is-man-to.html",
     "source": "amebo9jafeed",
     "date": "2026-08-31",
-    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon"
+    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "category": "oluwadara"
   },
   {
     "id": "News3",
@@ -53,15 +23,35 @@
     "url": "https://theencounter.com.ng/why-ndcs-oluwadara-kehinde-is-the-man-to-represent-yewa-north-imeko-afon/",
     "source": "theencounter.com.ng",
     "date": "2026-08-31",
-    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon."
+    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon.",
+    "category": "oluwadara"
   },
   {
-    "id": "obi-ndc-ticket",
-    "title": "Full Text: Peter Obi's Speech After Emerging NDC Presidential Candidate for 2027",
-    "url": "https://www.legit.ng/politics/1712331-full-text-peter-obis-speech-emerging-ndc-presidential-candidate-2027-election/",
-    "source": "Legit.ng",
-    "date": "2026-05-31",
-    "summary": "Peter Obi accepts NDC presidential ticket and outlines his vision for a New Nigeria."
+    "id": "obi-ph-wike",
+    "title": "We will not arrest you — Peter Obi replies Wike at Port Harcourt town hall",
+    "url": "https://businessday.ng/politics/article/we-will-not-arrest-you-peter-obi-throws-tantrum-back-at-wike-in-port-harcourt/",
+    "source": "BusinessDay",
+    "date": "2026-09-04",
+    "summary": "Obi and Kwankwaso address a packed Obi Talks Nigeria town hall in Port Harcourt; Obi vows to defend votes and invest in health and production.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-rivers-votes",
+    "title": "People of Rivers State will vote, and their votes must count — Peter Obi",
+    "url": "https://www.naijanews.com/?s=peter+Obi",
+    "source": "Naija News",
+    "date": "2026-09-04",
+    "summary": "NDC presidential candidate tells Rivers residents that votes must count and citizens should not be intimidated.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-irev-ph",
+    "title": "They will try to manipulate IReV, but it won’t be easy — Peter Obi",
+    "url": "https://www.naijanews.com/2026/09/03/2027-they-will-try-to-manipulate-irev-but-it-wont-be-easy-peter-obi/",
+    "source": "Naija News",
+    "date": "2026-09-03",
+    "summary": "At the Rivers town hall, Obi says NDC will resist polling-unit intimidation and protect results on IReV in 2027.",
+    "category": "movement"
   },
   {
     "id": "obi-service",
@@ -69,15 +59,17 @@
     "url": "https://thesun.ng/2027-peter-obi-seeks-service-tinubu-atiku-seek-power-ndc-chieftain/",
     "source": "The Sun",
     "date": "2026-09-02",
-    "summary": "NDC chieftain draws a sharp distinction: Obi driven by service, not pursuit of power."
+    "summary": "NDC chieftain draws a sharp distinction: Obi driven by service, not pursuit of power.",
+    "category": "movement"
   },
   {
-    "id": "ndc-affirms-obi",
-    "title": "NDC affirms Peter Obi as presidential candidate for 2027 election",
-    "url": "https://thenationonlineng.net/updated-ndc-affirms-peter-obi-as-presidential-candidate-for-2027-election/",
-    "source": "The Nation",
-    "date": "2026-05-30",
-    "summary": "NDC special convention affirms Peter Obi; Kwankwaso named running mate."
+    "id": "obi-abuja-hq",
+    "title": "Obi hosts Kwankwaso and NDC candidates at Obidient Headquarters in Abuja",
+    "url": "https://theeconomictimes.com.ng/2026/09/01/obi-hosts-kwankwaso-ndc-candidates-at-obidient-headquarters-in-abuja/",
+    "source": "The Economic Times",
+    "date": "2026-09-01",
+    "summary": "Strategy session on expanding NDC into rural communities and delivering a production-driven economy.",
+    "category": "movement"
   },
   {
     "id": "obi-campaign-start",
@@ -85,6 +77,7 @@
     "url": "https://www.naijanews.com/2026/08/21/full-text-peter-obi-address-to-mark-2027-presidential-national-assembly-campaigns-commencement/",
     "source": "Naija News",
     "date": "2026-08-21",
-    "summary": "Peter Obi addresses Nigerians as presidential and National Assembly campaigns begin."
+    "summary": "Peter Obi addresses Nigerians as presidential and National Assembly campaigns begin.",
+    "category": "movement"
   }
 ]
