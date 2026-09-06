@@ -1,1 +1,96 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Daily Tasks & Gallery | OK Campaign</title>
+<meta name="description" content="Daily campaign tasks, photo gallery and weekly leaderboard for Oluwadara Kehinde supporters."/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>.badge-gold{background:linear-gradient(135deg,#f59e0b,#d97706)}.badge-silver{background:linear-gradient(135deg,#94a3b8,#64748b)}.badge-bronze{background:linear-gradient(135deg,#d97706,#92400e)}.supporter-item:hover,.supporter-item.active{background:#f0fdf4;border-color:#008751}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17735824450"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17735824450');gtag('event','conversion',{'send_to':'AW-17735824450/Q7Z7CP634O0cEMLojIlC'});</script>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 min-h-screen flex flex-col">
+<header class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
+<div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+<a href="index.html" class="text-white font-bold text-lg">OK is Okay</a>
+<nav class="hidden lg:flex gap-5 text-sm text-white/90">
+<a href="index.html">Home</a><a href="tasks.html">Daily Tasks</a><a href="tasks.html#gallery">Gallery</a><a href="news.html">News</a><a href="ndc.html">NDC</a>
+<a href="index.html#join" class="px-4 py-2 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
+</nav>
+<button id="menuBtn" class="lg:hidden text-white p-2" type="button">☰</button>
+</div>
+<div id="mobileMenu" class="hidden lg:hidden bg-navy px-4 py-3 space-y-2">
+<a href="index.html" class="block text-white py-2">Home</a>
+<a href="tasks.html" class="block text-white py-2">Daily Tasks</a>
+<a href="tasks.html#gallery" class="block text-white py-2">Gallery</a>
+<a href="news.html" class="block text-white py-2">News</a>
+<a href="ndc.html" class="block text-white py-2">NDC Party</a>
+<a href="index.html#join" class="block text-center mt-2 px-5 py-3 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
+</div>
+</header>
+<main class="pt-24 pb-16 flex-1">
+<div class="max-w-4xl mx-auto px-4">
+<div class="text-center mb-8">
+<h1 class="text-3xl font-extrabold text-navy mb-2">Today's Campaign Task</h1>
+<div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full mb-3"></div>
+<p class="text-slate-600">A new action every day. Share, engage, grow the movement.</p>
+<p id="dateLabel" class="text-sm text-slate-400 mt-1"></p>
+</div>
+<div class="bg-navy text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-6">
+<p class="text-brand-gold text-sm font-semibold uppercase mb-2">Task of the day</p>
+<h2 id="taskTitle" class="text-2xl font-bold mb-3">Loading…</h2>
+<p id="taskDesc" class="text-white/80 mb-4"></p>
+<div class="bg-white/10 rounded-xl p-4 mb-5 border border-white/20">
+<p class="text-xs text-brand-gold font-semibold mb-2 uppercase">Copy & share this message</p>
+<p id="shareText" class="text-white/95 text-sm whitespace-pre-wrap"></p>
+<div class="flex flex-wrap gap-2 mt-3">
+<button type="button" id="copyBtn" class="px-4 py-2 rounded-lg bg-white text-navy text-sm font-semibold">Copy text</button>
+<button type="button" id="shareBtn" class="px-4 py-2 rounded-lg bg-brand-green text-white text-sm font-semibold">Share now</button>
+<span id="copied" class="self-center text-brand-green text-sm hidden">Copied!</span>
+</div>
+<p class="text-xs text-white/50 mt-2">Share opens your phone’s share menu (WhatsApp, status, etc.). Campaign image is included when the device supports it.</p>
+</div>
+<button id="doThisBtn" type="button" class="hidden px-5 py-2.5 rounded-full bg-brand-red text-white font-semibold">I completed this — Log it</button>
+<p id="logHint" class="text-sm text-white/60 mt-2">Copy the text or tap <strong>Share now</strong> first — then you can log the task.</p>
+</div>
+<div id="logSection" class="bg-white rounded-2xl p-6 shadow-lg border mb-10 hidden">
+<h3 class="text-xl font-bold text-navy mb-2">Log your activity</h3>
+<p class="text-sm text-slate-500 mb-4">Search by <strong>name or phone</strong> from the supporters list.</p>
+<form id="activityForm" class="space-y-4">
+<input type="hidden" id="taskValue"/><input type="hidden" id="selectedName"/><input type="hidden" id="selectedPhone"/>
+<div class="relative">
+<label class="block text-sm font-semibold mb-1">Your name or phone *</label>
+<input type="text" id="nameSearch" autocomplete="off" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="Start typing name or phone"/>
+<div id="nameDropdown" class="absolute z-20 left-0 right-0 mt-1 max-h-56 overflow-y-auto bg-white border rounded-xl shadow-lg hidden"></div>
+<p id="strangerBox" class="hidden mt-3 p-4 rounded-xl bg-amber-50 border border-amber-200 text-sm text-amber-900"><strong>Not found.</strong> <a href="index.html#join" class="font-semibold text-brand-red underline">Register as a supporter →</a></p>
+</div>
+<div id="phoneDisplay" class="hidden"><label class="block text-sm font-semibold mb-1">Phone</label><input type="text" id="phoneShown" readonly class="w-full px-4 py-3 rounded-xl border bg-slate-50"/></div>
+<div><label class="block text-sm font-semibold mb-1">Optional note</label><input type="text" id="actNote" class="w-full px-4 py-3 rounded-xl border" placeholder="e.g. Shared in 3 groups"/></div>
+<button type="submit" id="actSubmit" class="w-full py-3 rounded-xl bg-navy text-white font-bold disabled:opacity-50" disabled>Submit activity</button>
+<p id="actMsg" class="text-center text-sm hidden"></p>
+</form>
+</div>
+<section id="gallery" class="mb-10 scroll-mt-24">
+<div class="flex items-center justify-between mb-4"><h2 class="text-2xl font-bold text-navy">Campaign Gallery</h2><span>📷</span></div>
+<p class="text-sm text-slate-500 mb-4">Photos from engagements across Yewa North & Imeko-Afon</p>
+<div class="relative mb-2">
+<div class="overflow-hidden rounded-2xl bg-slate-200 aspect-[16/10]"><div id="galleryTrack" class="flex h-full transition-transform duration-500 ease-in-out"></div></div>
+<button id="galPrev" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">‹</button>
+<button id="galNext" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">›</button>
+</div>
+<p id="galCaption" class="text-center text-sm text-slate-600 mt-2"></p>
+</section>
+<div class="bg-white rounded-2xl p-6 shadow-lg border">
+<div class="flex items-center justify-between mb-2"><h3 class="text-xl font-bold text-navy">Weekly Leaderboard</h3><span>🏆</span></div>
+<p class="text-sm text-slate-500 mb-6" id="weekLabel">Most active supporters this week</p>
+<div id="leaderboard" class="space-y-3"><p class="text-slate-500 text-sm">Loading rankings…</p></div>
+<div class="mt-8 pt-6 border-t"><h4 class="font-bold text-navy mb-3">Your recent logs (this device)</h4><ul id="localActs" class="text-sm text-slate-600 space-y-2"></ul></div>
+</div>
+</div>
+</main>
+<footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p><p class="text-white/50 text-sm mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p></footer>
+<script src="tasks-app.js"></script>
+</body></html>
