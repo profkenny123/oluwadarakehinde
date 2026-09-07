@@ -10,7 +10,7 @@ function shareLink(){return SITE_ORIGIN;}
 function newsLink(){return SITE_ORIGIN+'/news.html';}
 
 const TASKS=[
-{title:'Share Peter Obi Port Harcourt Town Hall (Trending)',desc:'Sunday task: Watch and share the viral NDC town hall from Port Harcourt — Obi & Kwankwaso. Post the full video or the votes-must-count / I am equally ready to die clip in at least two WhatsApp groups and on your status.',share:()=>`Trending NDC video: Peter Obi & Senator Kwankwaso town hall in Port Harcourt.\nOur votes MUST count. A New Nigeria is possible.\nFull town hall: https://youtu.be/-zXVE1fG0nM\nShort clip (Channels): https://youtu.be/ysSFO0qDlkg\nMore videos & news: ${newsLink()}\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
+{title:'Share Peter Obi Madonna University Speech (Trending)',desc:'Monday task: Watch and share Obi at Madonna University, Okija — they want to stop him, he says they will not win. Pair it with the Daily Trust story and remind three people to get or confirm their PVC.',share:()=>`Trending NDC: Peter Obi at Madonna University, Okija.\n\u201cThey are doing everything to stop me. They will not win.\u201d\nGet your PVC. Vote competence, not tribe.\nSpeech: https://youtu.be/rUDtuDTslIY\nStory (Daily Trust): https://dailytrust.com/2027-contest-tinubus-govt-doing-everything-to-stop-me-peter-obi/\nKogi visit: https://youtu.be/MGTC8wSABGw\nMore videos & news: ${newsLink()}\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
 {title:"Amplify Today's NDC News",desc:'Open the News page, pick a recent story, and share the link with five people.',share:()=>`Trending on NDC: stay informed and share.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
 {title:'Status: Votes Must Count',desc:'Post a 24-hour WhatsApp/Facebook status: votes must count + OK is Okay + NDC is Okay.',share:()=>`Our votes MUST count in 2027.\nPeter Obi / Kwankwaso — NDC.\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon House of Reps.\nOK is Okay | NDC is Okay | Nigeria will be Okay.\n${shareLink()}\n#OKisOkay #NDC2027`},
 {title:'WhatsApp Status Drive',desc:"Post today’s campaign message on your WhatsApp status for 24 hours.",share:()=>`OK is Okay! \nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\n${shareLink()}`},
@@ -30,7 +30,7 @@ function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floo
 function pickDailyTask(){
   const today=new Date();
   const iso=today.toISOString().slice(0,10);
-  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':1,'2026-09-08':2};
+  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':2,'2026-09-09':14};
   if(featured[iso]!=null) return TASKS[featured[iso]%TASKS.length];
   return TASKS[dayOfYear(today)%TASKS.length];
 }
