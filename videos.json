@@ -1,5 +1,19 @@
 [
   {
+    "id": "obi-makinde-office",
+    "title": "Peter Obi attends inauguration of Seyi Makinde's APM campaign office",
+    "youtubeId": "GuQ4U4_sUGc",
+    "source": "GoldMyneTV",
+    "tag": "Today · Visit"
+  },
+  {
+    "id": "obi-kogi-nc",
+    "title": "#NigeriaDecides2027: Obi Calls For Leaders With Capacity And Character",
+    "youtubeId": "MGTC8wSABGw",
+    "source": "News Central TV",
+    "tag": "Trending · Kogi Visit"
+  },
+  {
     "id": "obi-madonna",
     "title": "Today, They Want To Stop Me But They Can't Succeed — Peter Obi at Madonna University",
     "youtubeId": "rUDtuDTslIY",
@@ -7,18 +21,11 @@
     "tag": "Trending · Speech"
   },
   {
-    "id": "obi-kogi-nc",
-    "title": "#NigeriaDecides2027: Obi Calls For Leaders With Capacity And Character",
-    "youtubeId": "MGTC8wSABGw",
-    "source": "News Central TV",
-    "tag": "Trending · Visit"
-  },
-  {
-    "id": "obi-ph-full",
-    "title": "Full Video: Peter Obi Town Hall Meeting in Port Harcourt",
-    "youtubeId": "-zXVE1fG0nM",
-    "source": "Advocacy For Good Governance",
-    "tag": "Town Hall"
+    "id": "obi-ph-channels",
+    "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall, Port Harcourt",
+    "youtubeId": "sDVxEhC1sYs",
+    "source": "Channels Television",
+    "tag": "NDC · Town Hall"
   },
   {
     "id": "obi-ready-die",
@@ -28,11 +35,11 @@
     "tag": "Speech"
   },
   {
-    "id": "obi-ph-channels",
-    "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall, Port Harcourt",
-    "youtubeId": "sDVxEhC1sYs",
-    "source": "Channels Television",
-    "tag": "NDC · Visit"
+    "id": "obi-ph-full",
+    "title": "Full Video: Peter Obi Town Hall Meeting in Port Harcourt",
+    "youtubeId": "-zXVE1fG0nM",
+    "source": "Advocacy For Good Governance",
+    "tag": "Town Hall"
   },
   {
     "id": "obi-challenge",
@@ -75,12 +82,5 @@
     "youtubeId": "xS6YhF_yJg4",
     "source": "Voice Tv Nigeria",
     "tag": "Speech"
-  },
-  {
-    "id": "ndc-appeal",
-    "title": "NDC Appeals Ruling; Uploads Obi's Name On INEC Portal",
-    "youtubeId": "VSJ2O5cynIg",
-    "source": "TVC News Nigeria",
-    "tag": "NDC News"
   }
 ]
