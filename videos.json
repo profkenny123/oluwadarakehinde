@@ -1,24 +1,59 @@
 [
   {
+    "id": "obi-benue-arise",
+    "title": "Peter Obi: Benue protest against my visit initiated by Governor’s Special Adviser",
+    "youtubeId": "oQYXyxujVmc",
+    "source": "Arise News",
+    "tag": "Today · Benue Visit"
+  },
+  {
+    "id": "obi-benue-sahara",
+    "title": "Peter Obi speaks after convoy was blocked on way to Yelwata community",
+    "youtubeId": "cibMxGBK2hc",
+    "source": "SaharaTV",
+    "tag": "Today · Speech"
+  },
+  {
+    "id": "obi-benue-njenje",
+    "title": "Convoy blocked on Gboko Road after landing in Benue",
+    "youtubeId": "rsrG7elKbDI",
+    "source": "Njenje Media TV",
+    "tag": "Viral · Visit"
+  },
+  {
+    "id": "kwankwaso-benue",
+    "title": "Kwankwaso condemns blockage of Peter Obi's convoy in Benue",
+    "youtubeId": "WzzyeLmU1JI",
+    "source": "GoldMyneTV",
+    "tag": "NDC · Running Mate"
+  },
+  {
+    "id": "tietie-benue",
+    "title": "Peter Obi does not need permission to visit any part of Nigeria — Frank Tietie",
+    "youtubeId": "mPUVSnjYB5g",
+    "source": "Arise News",
+    "tag": "Trending · Analysis"
+  },
+  {
     "id": "obi-makinde-office",
     "title": "Peter Obi attends inauguration of Seyi Makinde's APM campaign office",
     "youtubeId": "GuQ4U4_sUGc",
     "source": "GoldMyneTV",
-    "tag": "Today · Visit"
+    "tag": "Visit"
   },
   {
     "id": "obi-kogi-nc",
     "title": "#NigeriaDecides2027: Obi Calls For Leaders With Capacity And Character",
     "youtubeId": "MGTC8wSABGw",
     "source": "News Central TV",
-    "tag": "Trending · Kogi Visit"
+    "tag": "Kogi Visit"
   },
   {
     "id": "obi-madonna",
     "title": "Today, They Want To Stop Me But They Can't Succeed — Peter Obi at Madonna University",
     "youtubeId": "rUDtuDTslIY",
     "source": "Advocacy For Good Governance",
-    "tag": "Trending · Speech"
+    "tag": "Speech"
   },
   {
     "id": "obi-ph-channels",
@@ -47,40 +82,5 @@
     "youtubeId": "qX7ktwLOy6U",
     "source": "Channels Television",
     "tag": "Viral · Records"
-  },
-  {
-    "id": "obi-koinonia",
-    "title": "Peter Obi Speaks at Koinonia | Leadership & Public Funds",
-    "youtubeId": "wE7aixcHlYw",
-    "source": "GlimpseTV",
-    "tag": "Viral · Speech"
-  },
-  {
-    "id": "obi-service",
-    "title": "Tinubu, Atiku Are After Power, But Obi Seeks Service — NDC Chieftain",
-    "youtubeId": "fPiXyGIts1s",
-    "source": "Channels Television",
-    "tag": "NDC"
-  },
-  {
-    "id": "obi-eastern-eye",
-    "title": "Peter Obi on 2027 Presidency, Kwankwaso Alliance, Economy & Security",
-    "youtubeId": "qkd463p7j54",
-    "source": "Eastern Eye",
-    "tag": "Interview"
-  },
-  {
-    "id": "obi-ballot",
-    "title": "They Can't Stop Me From Being On The Ballot — Peter Obi",
-    "youtubeId": "upAPCvBdZ1k",
-    "source": "Opinion Nigeria TV",
-    "tag": "NDC · Ballot"
-  },
-  {
-    "id": "obi-convention",
-    "title": "Peter Obi Storms NDC Podium With Powerful Message",
-    "youtubeId": "xS6YhF_yJg4",
-    "source": "Voice Tv Nigeria",
-    "tag": "Speech"
   }
 ]
