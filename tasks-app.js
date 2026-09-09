@@ -5,16 +5,16 @@ mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>mobileMenu.classList.a
 
 const SITE_ORIGIN=window.location.origin;
 const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzXqgFn1BZv4vcuetNv9J7vF0bmU-PhJ9QIiG2ayVSsVqFZRExrs1IM5tRM13mFXGtu/exec';
-const CAMPAIGN_IMAGE=SITE_ORIGIN+'/gallery/Engagement%20at%20Ilara%2020260905.jpeg';
+const CAMPAIGN_IMAGE=SITE_ORIGIN+'/gallery/Engagement%20at%20Saala%20Ayetoro%2020260906.jpeg';
 function shareLink(){return SITE_ORIGIN;}
 function newsLink(){return SITE_ORIGIN+'/news.html';}
 function galleryLink(){return SITE_ORIGIN+'/tasks.html#gallery';}
 
 const TASKS=[
-{title:'Share Obi\'s Anambra Record + Grassroots Photos',
-desc:'Tuesday task: Share Peter Obi\'s reply that he improved Anambra and can do the same for Nigeria. Pair it with a recent gallery photo from Ilara, Ayetoro or Owode and remind three people to protect their PVC.',
-share:()=>`Trending NDC today:\nPeter Obi: \u201cI improved Anambra. I can do the same in Nigeria.\u201d\nUnity, security, health, education — votes MUST count.\n\nWatch Kogi visit: https://youtu.be/MGTC8wSABGw\nMakinde office visit: https://youtu.be/GuQ4U4_sUGc\nStory: https://dailypost.ng/2026/09/07/2027-i-can-fix-nigeria-my-anambra-record-speaks-peter-obi-replies-datti/\n\nFrom our own ground: Ilara, Ayetoro, Saala & Owode engagements.\nGallery: ${galleryLink()}\nNews & videos: ${newsLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
-{title:"Amplify Today's NDC News",desc:'Open the News page, pick a recent story (Obi–Datti reply or Makinde office visit), and share the link with five people.',share:()=>`Trending on NDC: stay informed and share.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
+{title:'Share Obi Benue Visit + Our Grassroots Photos',
+desc:'Wednesday task: Share Peter Obi\'s humanitarian visit to Benue — convoy blocked on the way to Yelwata families. Pair the videos with a recent gallery photo from Saala Ayetoro, Ilara or Owode. Remind three people: votes must count, movement stays peaceful.',
+share:()=>`Trending NDC today:\nPeter Obi went to Benue to condole Yelwata families — not to campaign. His convoy was blocked on Gboko Road.\nNDC is demanding a probe. Politics of thuggery is not democracy.\n\nWatch Obi speak: https://youtu.be/oQYXyxujVmc\nSaharaTV clip: https://youtu.be/cibMxGBK2hc\nKwankwaso reacts: https://youtu.be/WzzyeLmU1JI\nNews & more videos: ${newsLink()}\n\nFrom our own ground: Saala Ayetoro, Ilara, Ayetoro Ward 2 & Owode Idi Ayin.\nGallery: ${galleryLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
+{title:"Amplify Today's NDC News",desc:'Open the News page, pick a Benue blockade or NDC probe story, and share the link plus one embedded video with five people.',share:()=>`Trending on NDC: Peter Obi\'s Benue visit and the call for a probe.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
 {title:'Status: Votes Must Count',desc:'Post a 24-hour WhatsApp/Facebook status: votes must count + OK is Okay + NDC is Okay. Use a gallery photo if you can.',share:()=>`Our votes MUST count in 2027.\nPeter Obi / Kwankwaso — NDC.\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon House of Reps.\nOK is Okay | NDC is Okay | Nigeria will be Okay.\n${shareLink()}\n#OKisOkay #NDC2027`},
 {title:'WhatsApp Status Drive',desc:"Post today’s campaign message on your WhatsApp status for 24 hours.",share:()=>`OK is Okay! \nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\n${shareLink()}`},
 {title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Good day family\nPlease support Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon in 2027.\n#OKisOkay\n${shareLink()}`},
@@ -33,7 +33,7 @@ function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floo
 function pickDailyTask(){
   const today=new Date();
   const iso=today.toISOString().slice(0,10);
-  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':7,'2026-09-10':2};
+  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':0,'2026-09-10':1,'2026-09-11':7};
   if(featured[iso]!=null) return TASKS[featured[iso]%TASKS.length];
   return TASKS[dayOfYear(today)%TASKS.length];
 }
@@ -48,7 +48,7 @@ document.getElementById('taskValue').value=daily.title;
 document.getElementById('dateLabel').textContent=new Date().toLocaleDateString('en-NG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 function unlockLog(){sharedOrCopied=true;document.getElementById('doThisBtn').classList.remove('hidden');document.getElementById('logHint').classList.add('hidden');}
 document.getElementById('copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText(shareBody);}catch(e){const ta=document.createElement('textarea');ta.value=shareBody;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}document.getElementById('copied').classList.remove('hidden');setTimeout(()=>document.getElementById('copied').classList.add('hidden'),2000);unlockLog();};
-document.getElementById('shareBtn').onclick=async()=>{const data={title:'OK is Okay — Oluwadara Kehinde',text:shareBody,url:shareLink()};try{if(navigator.share){if(navigator.canShare){try{const res=await fetch(CAMPAIGN_IMAGE,{mode:'cors'});const blob=await res.blob();const file=new File([blob],'OK-Engagement-Ilara.jpeg',{type:blob.type||'image/jpeg'});const withFile={...data,files:[file]};if(navigator.canShare(withFile)){await navigator.share(withFile);unlockLog();return;}}catch(_){}}await navigator.share(data);unlockLog();return;}}catch(err){if(err&&err.name==='AbortError') return;}try{await navigator.clipboard.writeText(shareBody+'\n'+shareLink());}catch(_){}alert('Share menu not available on this device. Text copied — paste into WhatsApp or any app.');unlockLog();};
+document.getElementById('shareBtn').onclick=async()=>{const data={title:'OK is Okay — Oluwadara Kehinde',text:shareBody,url:shareLink()};try{if(navigator.share){if(navigator.canShare){try{const res=await fetch(CAMPAIGN_IMAGE,{mode:'cors'});const blob=await res.blob();const file=new File([blob],'OK-Engagement-Saala-Ayetoro.jpeg',{type:blob.type||'image/jpeg'});const withFile={...data,files:[file]};if(navigator.canShare(withFile)){await navigator.share(withFile);unlockLog();return;}}catch(_){}}await navigator.share(data);unlockLog();return;}}catch(err){if(err&&err.name==='AbortError') return;}try{await navigator.clipboard.writeText(shareBody+'\n'+shareLink());}catch(_){}alert('Share menu not available on this device. Text copied — paste into WhatsApp or any app.');unlockLog();};
 document.getElementById('doThisBtn').onclick=()=>{if(!sharedOrCopied) return;document.getElementById('logSection').classList.remove('hidden');document.getElementById('logSection').scrollIntoView({behavior:'smooth'});};
 let supporters=[];
 function normPhone(p){return String(p||'').replace(/\D/g,'');}
