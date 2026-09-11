@@ -12,9 +12,9 @@ function galleryLink(){return SITE_ORIGIN+'/tasks.html#gallery';}
 
 const TASKS=[
 {title:'Share Obi Arise Interview + Our Grassroots Photos',
-desc:'Thursday task: Share Peter Obi on Arise TV today — one-term presidency, votes must count (the Port Harcourt line was symbolic, not violence). Pair the interview with a gallery photo from Saala Ayetoro, Ilara, Ayetoro Ward 2 or Owode Idi Ayin. Tell three people: protect the vote; stay peaceful.',
-share:()=>`Trending NDC today (10 Sept):\nPeter Obi on Arise TV: I will not stay one day beyond a one-term presidency. The \'ready to die\' line was symbolic — our votes MUST count.\n\nWatch Arise interview: https://youtu.be/X-fE8nigmV8\nDickson on Benue blockade: https://youtu.be/71Ylie7s4Rs\nObi in Benue (viral): https://youtu.be/oQYXyxujVmc\nNews & more videos: ${newsLink()}\n\nFrom our ground: Saala Ayetoro, Ilara, Ayetoro Ward 2 & Owode Idi Ayin.\nGallery: ${galleryLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
-{title:"Amplify Today's NDC News",desc:'Open the News page, pick the Arise interview or NDC logo/court story, and share the link plus one embedded video with five people.',share:()=>`Trending on NDC: Peter Obi on Arise — one term, votes must count.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
+desc:'Friday task: Share Peter Obi on Arise — one-term presidency, votes must count, alliance talk belongs to NDC and ADC as parties. Pair the interview with a gallery photo from Saala Ayetoro, Ilara, Ayetoro Ward 2 or Owode Idi Ayin. Tell three people: protect the vote; stay peaceful.',
+share:()=>`Trending NDC today (11 Sept):\nPeter Obi on Arise TV: I will not stay one day beyond a one-term presidency. Any alliance with Atiku must be negotiated by NDC and ADC — not by candidates. Our votes MUST count.\n\nWatch full Arise interview: https://youtu.be/X-fE8nigmV8\nOne-term clip: https://youtube.com/shorts/nsmoJMGXxRw\nObi in Benue (viral): https://youtu.be/oQYXyxujVmc\nNews & more videos: ${newsLink()}\n\nFrom our ground: Saala Ayetoro, Ilara, Ayetoro Ward 2 & Owode Idi Ayin.\nGallery: ${galleryLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
+{title:"Amplify Today's NDC News",desc:'Open the News page, pick the Arise interview or the alliance/one-term story, and share the link plus one embedded video with five people.',share:()=>`Trending on NDC: Peter Obi on Arise — one term, parties decide any alliance, votes must count.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
 {title:'Status: Votes Must Count',desc:'Post a 24-hour WhatsApp/Facebook status: votes must count + OK is Okay + NDC is Okay. Use a gallery photo if you can.',share:()=>`Our votes MUST count in 2027.\nPeter Obi / Kwankwaso — NDC.\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon House of Reps.\nOK is Okay | NDC is Okay | Nigeria will be Okay.\n${shareLink()}\n#OKisOkay #NDC2027`},
 {title:'WhatsApp Status Drive',desc:"Post today’s campaign message on your WhatsApp status for 24 hours.",share:()=>`OK is Okay! \nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\n${shareLink()}`},
 {title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Good day family\nPlease support Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon in 2027.\n#OKisOkay\n${shareLink()}`},
@@ -33,7 +33,7 @@ function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floo
 function pickDailyTask(){
   const today=new Date();
   const iso=today.toISOString().slice(0,10);
-  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':0,'2026-09-10':0,'2026-09-11':7};
+  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':0,'2026-09-10':0,'2026-09-11':0};
   if(featured[iso]!=null) return TASKS[featured[iso]%TASKS.length];
   return TASKS[dayOfYear(today)%TASKS.length];
 }
