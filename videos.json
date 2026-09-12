@@ -1,66 +1,87 @@
 [
   {
+    "id": "arise-today-pack",
+    "title": "Tinubu & Obi endorsed Atiku in the past + Obi: our past is not our destiny",
+    "youtubeId": "I9QYd4m_o1o",
+    "source": "Arise News",
+    "tag": "Today \u00b7 Viral"
+  },
+  {
+    "id": "obi-coalition-short",
+    "title": "Any coalition with Atiku cannot be individual \u2014 I have a party behind my candidacy",
+    "youtubeId": "AUvCZOJ_m84",
+    "source": "Arise News",
+    "tag": "Today \u00b7 Clip"
+  },
+  {
     "id": "obi-arise-full-today",
     "title": "Peter Obi exclusive: one-term presidency, alliance talk, votes must count",
     "youtubeId": "X-fE8nigmV8",
     "source": "Arise News",
-    "tag": "Today · Full Interview"
+    "tag": "Interview"
   },
   {
     "id": "obi-arise-oneterm-short",
     "title": "I would not stay one day longer than my one-term presidency",
     "youtubeId": "nsmoJMGXxRw",
     "source": "Arise News",
-    "tag": "Today · Clip"
+    "tag": "Viral \u00b7 Clip"
   },
   {
-    "id": "dickson-benue-arise",
-    "title": "The protest against Obi in Benue is intolerable — there has to be punishment — Dickson",
-    "youtubeId": "71Ylie7s4Rs",
-    "source": "Arise News",
-    "tag": "NDC Leader"
+    "id": "who-afraid-obi",
+    "title": "Who is afraid of Peter Obi? \u2014 NDC chieftain Dickson Iroegbu on the Benue blockade",
+    "youtubeId": "GdwMjJJ_nTM",
+    "source": "TrustTV News",
+    "tag": "NDC \u00b7 Trending"
   },
   {
     "id": "obi-benue-arise",
-    "title": "Peter Obi: Benue protest against my visit initiated by Governor’s Special Adviser",
+    "title": "Peter Obi: Benue protest against my visit initiated by Governor\u2019s Special Adviser",
     "youtubeId": "oQYXyxujVmc",
     "source": "Arise News",
-    "tag": "Viral · Benue Visit"
+    "tag": "Viral \u00b7 Benue Visit"
+  },
+  {
+    "id": "dickson-benue-arise",
+    "title": "The protest against Obi in Benue is intolerable \u2014 there has to be punishment \u2014 Dickson",
+    "youtubeId": "71Ylie7s4Rs",
+    "source": "Arise News",
+    "tag": "NDC Leader"
   },
   {
     "id": "obi-benue-sahara",
     "title": "Peter Obi speaks after convoy was blocked on way to Yelwata community",
     "youtubeId": "cibMxGBK2hc",
     "source": "SaharaTV",
-    "tag": "Viral · Speech"
+    "tag": "Viral \u00b7 Speech"
   },
   {
     "id": "obi-benue-njenje",
     "title": "Convoy blocked on Gboko Road after landing in Benue",
     "youtubeId": "rsrG7elKbDI",
     "source": "Njenje Media TV",
-    "tag": "Viral · Visit"
+    "tag": "Viral \u00b7 Visit"
   },
   {
     "id": "kwankwaso-benue",
     "title": "Kwankwaso condemns blockage of Peter Obi's convoy in Benue",
     "youtubeId": "WzzyeLmU1JI",
     "source": "GoldMyneTV",
-    "tag": "NDC · Running Mate"
+    "tag": "NDC \u00b7 Running Mate"
   },
   {
     "id": "tietie-benue",
-    "title": "Peter Obi does not need permission to visit any part of Nigeria — Frank Tietie",
+    "title": "Peter Obi does not need permission to visit any part of Nigeria \u2014 Frank Tietie",
     "youtubeId": "mPUVSnjYB5g",
     "source": "Arise News",
-    "tag": "Trending · Analysis"
+    "tag": "Trending \u00b7 Analysis"
   },
   {
     "id": "benue-apology",
     "title": "Benue man apologises to Peter Obi after the Yelwata blockade",
     "youtubeId": "cj3_LlaKwA4",
     "source": "RNN TV",
-    "tag": "Viral · Benue"
+    "tag": "Viral \u00b7 Benue"
   },
   {
     "id": "obi-makinde-office",
@@ -71,14 +92,14 @@
   },
   {
     "id": "obi-ph-channels",
-    "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall, Port Harcourt",
+    "title": "Obi & Kwankwaso Engage Rivers Residents \u2014 NDC Town Hall, Port Harcourt",
     "youtubeId": "sDVxEhC1sYs",
     "source": "Channels Television",
-    "tag": "NDC · Town Hall"
+    "tag": "NDC \u00b7 Town Hall"
   },
   {
     "id": "obi-ready-die",
-    "title": "2027: I Am Equally Ready To Die To Save Nigeria — Peter Obi",
+    "title": "2027: I Am Equally Ready To Die To Save Nigeria \u2014 Peter Obi",
     "youtubeId": "ysSFO0qDlkg",
     "source": "Channels Television",
     "tag": "Speech"
@@ -88,6 +109,6 @@
     "title": "If There's Anything Kwankwaso And I Have Done Wrong, Say It Out Now",
     "youtubeId": "qX7ktwLOy6U",
     "source": "Channels Television",
-    "tag": "Viral · Records"
+    "tag": "Viral \u00b7 Records"
   }
 ]
