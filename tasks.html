@@ -51,7 +51,6 @@
 </div>
 </header>
 
-<!-- Identity modal -->
 <div id="idModal" class="fixed inset-0 z-[70] hidden">
 <div class="absolute inset-0 bg-navy/80" id="idBackdrop"></div>
 <div class="absolute inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-2xl shadow-2xl p-6">
@@ -76,7 +75,6 @@
 <main class="pt-24 pb-16 flex-1">
 <div class="max-w-4xl mx-auto px-4">
 
-<!-- Dashboard -->
 <div id="dash" class="bg-white rounded-2xl border shadow-lg p-5 mb-6 hidden">
 <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
 <div>
@@ -122,7 +120,7 @@
 <input id="dashRef" type="text" readonly class="flex-1 text-xs sm:text-sm px-3 py-2 rounded-lg border bg-white truncate"/>
 <button type="button" id="copyRef" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm font-semibold shrink-0">Copy</button>
 </div>
-<p class="text-[11px] text-slate-400 mt-1">When someone joins with your link, you earn +3 OK-Coins each time they complete a task. Their recruits earn you +1.</p>
+<p class="text-[11px] text-slate-400 mt-1">New supporter via your link: they get +100, you get +50, your upline +10. When they complete tasks: you +5, your upline +2.</p>
 </div>
 </div>
 
@@ -134,7 +132,7 @@
 <div class="text-center mb-6">
 <h1 class="text-3xl font-extrabold text-navy mb-2">Today's Campaign Task</h1>
 <div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full mb-3"></div>
-<p class="text-slate-600">Share · Log · Earn <strong>+10 OK-Coins</strong> · Max 10 / day</p>
+<p class="text-slate-600">Share now · Earn <strong>+10 OK-Coins</strong> · Max 10 / day</p>
 <p id="dateLabel" class="text-sm text-slate-400 mt-1"></p>
 </div>
 
@@ -143,32 +141,17 @@
 <h2 id="taskTitle" class="text-2xl font-bold mb-3">Loading…</h2>
 <p id="taskDesc" class="text-white/80 mb-4"></p>
 <div class="bg-white/10 rounded-xl p-4 mb-5 border border-white/20">
-<p class="text-xs text-brand-gold font-semibold mb-2 uppercase">Copy & share this message</p>
+<p class="text-xs text-brand-gold font-semibold mb-2 uppercase">Share this message</p>
 <p id="shareText" class="text-white/95 text-sm whitespace-pre-wrap"></p>
 <div class="flex flex-wrap gap-2 mt-3">
-<button type="button" id="copyBtn" class="px-4 py-2 rounded-lg bg-white text-navy text-sm font-semibold">Copy text</button>
-<button type="button" id="shareBtn" class="px-4 py-2 rounded-lg bg-brand-green text-white text-sm font-semibold">Share now</button>
-<span id="copied" class="self-center text-brand-green text-sm hidden">Copied!</span>
+<button type="button" id="shareBtn" class="px-5 py-2.5 rounded-lg bg-brand-green text-white text-sm font-bold">Share now · +10 OK-Coins</button>
 </div>
-<p class="text-xs text-white/50 mt-2">Your referral link is added when you are signed in.</p>
+<p class="text-xs text-white/50 mt-2">Tap Share now to open WhatsApp / status / apps. Coins credit as soon as you share. Your referral link is included when signed in.</p>
 </div>
-<button id="doThisBtn" type="button" class="hidden px-5 py-2.5 rounded-full bg-brand-red text-white font-semibold">I completed this — Earn +10 OK-Coins</button>
-<p id="logHint" class="text-sm text-white/60 mt-2">1) Identify yourself · 2) Copy or Share · 3) Log to earn coins</p>
-<p id="capMsg" class="hidden text-sm text-brand-gold mt-2 font-semibold">Daily limit reached (10/10). Come back after midnight (Lagos).</p>
-</div>
-
-<div id="logSection" class="bg-white rounded-2xl p-6 shadow-lg border mb-10 hidden">
-<h3 class="text-xl font-bold text-navy mb-2">Confirm & earn</h3>
-<p class="text-sm text-slate-500 mb-4">Logging credits <strong>+10 OK-Coins</strong> to your balance (and referral bonuses to your upline).</p>
-<form id="activityForm" class="space-y-4">
 <input type="hidden" id="taskValue"/>
-<div>
-<label class="block text-sm font-semibold mb-1">Optional note</label>
-<input type="text" id="actNote" class="w-full px-4 py-3 rounded-xl border" placeholder="e.g. Shared in 3 groups"/>
-</div>
-<button type="submit" id="actSubmit" class="w-full py-3 rounded-xl bg-navy text-white font-bold">Log task & earn +10 OK-Coins</button>
-<p id="actMsg" class="text-center text-sm hidden"></p>
-</form>
+<p id="logHint" class="text-sm text-white/60 mt-2">Identify yourself, then tap <strong>Share now</strong> to earn +10 OK-Coins.</p>
+<p id="capMsg" class="hidden text-sm text-brand-gold mt-2 font-semibold">Daily limit reached (10/10). Come back after midnight (Lagos).</p>
+<p id="actMsg" class="text-sm mt-2 hidden"></p>
 </div>
 
 <section id="gallery" class="mb-10 scroll-mt-24">
@@ -249,7 +232,6 @@ function clearSession(){
 
 let session=loadSession();
 let me=null;
-let sharedOrCopied=false;
 let shareBody='';
 
 function tierClass(tier){
@@ -345,7 +327,12 @@ function renderDash(){
   document.getElementById('dashRef').value=link;
   const capped=today>=MAX_DAILY;
   document.getElementById('capMsg').classList.toggle('hidden',!capped);
-  document.getElementById('doThisBtn').disabled=capped;
+  const shareBtn=document.getElementById('shareBtn');
+  if(shareBtn){
+    shareBtn.disabled=capped;
+    if(capped) shareBtn.textContent='Daily limit reached';
+    else shareBtn.textContent='Share now · +10 OK-Coins';
+  }
 }
 
 async function fetchMe(phone){
@@ -409,31 +396,59 @@ document.getElementById('copyRef').onclick=async()=>{
   setTimeout(()=>document.getElementById('copyRef').textContent='Copy',1500);
 };
 
-function unlockLog(){
+async function creditTask(){
+  if(!session||!session.phone) return;
+  if(me&&me.tasksToday>=MAX_DAILY){
+    document.getElementById('capMsg').classList.remove('hidden');
+    return;
+  }
+  const payload={
+    type:'activity',
+    fullName:(me&&me.fullName)||session.fullName||'',
+    phone:session.phone,
+    task:document.getElementById('taskValue').value,
+    note:'',
+    timestamp:new Date().toISOString()
+  };
+  const msg=document.getElementById('actMsg');
+  const btn=document.getElementById('shareBtn');
+  btn.disabled=true;
+  btn.textContent='Crediting…';
+  try{
+    await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const local=JSON.parse(localStorage.getItem('ok_acts')||'[]');
+    local.unshift({...payload,at:new Date().toLocaleString('en-NG')});
+    localStorage.setItem('ok_acts',JSON.stringify(local.slice(0,30)));
+    msg.textContent='+10 OK-Coins credited! Updating balance…';
+    msg.className='text-sm mt-2 text-brand-green font-semibold';
+    msg.classList.remove('hidden');
+    document.getElementById('logHint').classList.add('hidden');
+    renderLocalActs();
+    setTimeout(async()=>{
+      await fetchMe(session.phone);
+      loadLeaderboard();
+      msg.textContent='+10 OK-Coins added to your balance.';
+      btn.disabled=false;
+      btn.textContent='Share now · +10 OK-Coins';
+    },1500);
+  }catch(err){
+    msg.textContent='Share recorded on this device. Balance will sync when online.';
+    msg.className='text-sm mt-2 text-amber-300 font-medium';
+    msg.classList.remove('hidden');
+    btn.disabled=false;
+    btn.textContent='Share now · +10 OK-Coins';
+  }
+}
+
+document.getElementById('shareBtn').onclick=async()=>{
   if(!requireIdentity()) return;
   if(me&&me.tasksToday>=MAX_DAILY){
     document.getElementById('capMsg').classList.remove('hidden');
     return;
   }
-  sharedOrCopied=true;
-  document.getElementById('doThisBtn').classList.remove('hidden');
-  document.getElementById('logHint').classList.add('hidden');
-}
-
-document.getElementById('copyBtn').onclick=async()=>{
-  if(!requireIdentity()) return;
-  refreshShareBody();
-  try{await navigator.clipboard.writeText(shareBody);}
-  catch(e){const ta=document.createElement('textarea');ta.value=shareBody;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}
-  document.getElementById('copied').classList.remove('hidden');
-  setTimeout(()=>document.getElementById('copied').classList.add('hidden'),2000);
-  unlockLog();
-};
-
-document.getElementById('shareBtn').onclick=async()=>{
-  if(!requireIdentity()) return;
   refreshShareBody();
   const data={title:'OK is Okay — Oluwadara Kehinde',text:shareBody,url:shareLink()};
+  let shared=false;
   try{
     if(navigator.share){
       if(navigator.canShare){
@@ -442,69 +457,22 @@ document.getElementById('shareBtn').onclick=async()=>{
           const blob=await res.blob();
           const file=new File([blob],'OK-Campaign-Sticker.jpeg',{type:blob.type||'image/jpeg'});
           const withFile={...data,files:[file]};
-          if(navigator.canShare(withFile)){await navigator.share(withFile);unlockLog();return;}
+          if(navigator.canShare(withFile)){await navigator.share(withFile);shared=true;}
         }catch(_){}
       }
-      await navigator.share(data);
-      unlockLog();
-      return;
+      if(!shared){await navigator.share(data);shared=true;}
     }
-  }catch(err){if(err&&err.name==='AbortError') return;}
-  try{await navigator.clipboard.writeText(shareBody+'\n'+shareLink());}catch(_){}
-  alert('Share menu not available. Text copied — paste into WhatsApp.');
-  unlockLog();
-};
-
-document.getElementById('doThisBtn').onclick=()=>{
-  if(!requireIdentity()) return;
-  if(!sharedOrCopied) return;
-  document.getElementById('logSection').classList.remove('hidden');
-  document.getElementById('logSection').scrollIntoView({behavior:'smooth'});
-};
-
-document.getElementById('activityForm').onsubmit=async(e)=>{
-  e.preventDefault();
-  if(!requireIdentity()) return;
-  if(!sharedOrCopied){
-    document.getElementById('actMsg').textContent='Copy or share the task first.';
-    document.getElementById('actMsg').className='text-center text-sm text-red-600';
-    document.getElementById('actMsg').classList.remove('hidden');
-    return;
-  }
-  const payload={
-    type:'activity',
-    fullName:(me&&me.fullName)||session.fullName||'',
-    phone:session.phone,
-    task:document.getElementById('taskValue').value,
-    note:document.getElementById('actNote').value.trim(),
-    timestamp:new Date().toISOString()
-  };
-  document.getElementById('actSubmit').disabled=true;
-  document.getElementById('actSubmit').textContent='Crediting…';
-  try{
-    await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-    const local=JSON.parse(localStorage.getItem('ok_acts')||'[]');
-    local.unshift({...payload,at:new Date().toLocaleString('en-NG')});
-    localStorage.setItem('ok_acts',JSON.stringify(local.slice(0,30)));
-    document.getElementById('actMsg').textContent='+10 OK-Coins submitted. Refreshing balance…';
-    document.getElementById('actMsg').className='text-center text-sm text-green-600 font-medium';
-    document.getElementById('actMsg').classList.remove('hidden');
-    renderLocalActs();
-    setTimeout(async()=>{
-      await fetchMe(session.phone);
-      loadLeaderboard();
-      document.getElementById('actMsg').textContent='Logged! Balance updated.';
-    },1500);
   }catch(err){
-    document.getElementById('actMsg').textContent='Saved on this device. Balance will sync when online.';
-    document.getElementById('actMsg').className='text-center text-sm text-amber-600';
-    document.getElementById('actMsg').classList.remove('hidden');
+    if(err&&err.name==='AbortError') return;
   }
-  document.getElementById('actSubmit').disabled=false;
-  document.getElementById('actSubmit').textContent='Log task & earn +10 OK-Coins';
-  sharedOrCopied=false;
-  document.getElementById('doThisBtn').classList.add('hidden');
-  document.getElementById('logHint').classList.remove('hidden');
+  if(!shared){
+    try{
+      const wa='https://wa.me/?text='+encodeURIComponent(shareBody);
+      window.open(wa,'_blank','noopener');
+      shared=true;
+    }catch(_){}
+  }
+  if(shared) await creditTask();
 };
 
 function renderLocalActs(){
