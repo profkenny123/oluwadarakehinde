@@ -1,84 +1,12 @@
 [
   {
-    "id": "obi-wike-healthier",
-    "title": "Wike looked healthier and happier when we worked together — Peter Obi",
-    "url": "https://dailypost.ng/2026/09/16/wike-looked-healthier-happier-when-we-worked-together-peter-obi/",
-    "source": "Daily Post",
-    "date": "2026-09-16",
-    "summary": "NDC presidential candidate Peter Obi says Nyesom Wike remains a friend. In the Adeola Fayehun interview he says he will not use the presidency to chase opponents — focus is tomorrow, not scores.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-adeola-mandate-news",
-    "title": "How I will stop mandate theft in 2027 — Obi on Adeola Fayehun live",
-    "url": "https://www.youtube.com/watch?v=Zfo8UjHjys4",
-    "source": "Adeola Fayehun",
+    "id": "ok-education-2026-27",
+    "title": "2026/27 Session: Oluwadara Kehinde Calls For Greater Focus On Education In Yewa North, Imeko-Afon",
+    "url": "https://readership.ng/2026-27-session-oluwadara-kehinde-calls-for-greater-focus-on-education-in-yewa-north-imeko-afon/",
+    "source": "Readership.ng",
     "date": "2026-09-15",
-    "summary": "Viral live (~188K views): Obi pledges agents at every polling unit in 2027, an independent situation room for PU results, and that NDC will not take INEC on trust the way 2023 did.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-billionaire-naira",
-    "title": "I am a billionaire in naira — Peter Obi clarifies in viral interview",
-    "url": "https://www.naijanews.com/2026/09/15/i-am-a-billionaire-peter-obi-reveals-video/",
-    "source": "Naija News",
-    "date": "2026-09-15",
-    "summary": "On Adeola Fayehun / Rudolf Okonkwo, Obi says he is a naira billionaire. Clip is circulating with the mandate-protection interview.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-makinde-hurdles",
-    "title": "Four hurdles said to stand between an Obi–Makinde opposition pact",
-    "url": "https://allafrica.com/stories/202609140107.html",
-    "source": "Vanguard / allAfrica",
-    "date": "2026-09-14",
-    "summary": "A presidential aide lists ambition, zoning, structure and trust as obstacles after Peter Obi appeared with Seyi Makinde at the APM campaign office and in Ibadan. NDC still runs its own ticket.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-911-ny",
-    "title": "Obi pays tribute to 9/11 victims in New York, calls for peace over hatred",
-    "url": "https://punchng.com/obi-pays-tribute-to-9-11-victims-calls-for-peace-over-hatred/",
-    "source": "Punch",
-    "date": "2026-09-12",
-    "summary": "NDC presidential candidate Peter Obi joined a prayer and remembrance service in New York on the 25th anniversary of 9/11, then continued high-level meetings. He called for peace, compassion, justice and respect for human life.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-911-businessday",
-    "title": "25 years after 9/11, Peter Obi calls for global peace and unity",
-    "url": "https://businessday.ng/news/article/25-years-after-9-11-peter-obi-calls-for-global-peace-unity/",
-    "source": "BusinessDay",
-    "date": "2026-09-12",
-    "summary": "While in New York, Obi honoured first responders and victims’ families and said shared humanity must unite people beyond nationality, race or politics.",
-    "category": "movement"
-  },
-  {
-    "id": "ndc-logo-inec",
-    "title": "INEC uploads NDC modified logo and updates party leadership after court order",
-    "url": "https://dailypost.ng/2026/09/10/inec-uploads-ndcs-new-logo-updates-party-leadership/",
-    "source": "Daily Post",
-    "date": "2026-09-10",
-    "summary": "Following Justice Abdulmalik’s ruling, INEC published the NDC two-finger victory-sign logo (blue background, NDC in red) and listed Zuwoghe as National Chairman ‘by court order’.",
-    "category": "movement"
-  },
-  {
-    "id": "ndc-logo-resolved",
-    "title": "NDC resolves logo dispute — Dickson directs candidates to use approved mark",
-    "url": "https://dailytrust.com/ndc-resolves-logo-dispute/",
-    "source": "Daily Trust",
-    "date": "2026-09-13",
-    "summary": "NDC national leader Seriake Dickson says the judiciary directed INEC to adopt the modified digital logo. Candidates should switch campaign materials to the approved design.",
-    "category": "movement"
-  },
-  {
-    "id": "umeh-collation",
-    "title": "NDC chieftain Umeh clarifies Obi’s remark on polling-unit result collation",
-    "url": "https://www.naijanews.com/2026/09/12/ndc-chieftain-umeh-clarifies-peter-obis-remark-parallel-result-collation/",
-    "source": "Naija News",
-    "date": "2026-09-12",
-    "summary": "Senator Victor Umeh says NDC will deploy agents at every polling unit and send declared results to the party situation room — not run a rival INEC. Votes must be protected.",
-    "category": "movement"
+    "summary": "NDC candidate Oluwadara Kehinde welcomes students, teachers and parents back for the 2026/27 session, urging discipline and excellence, and pledges to prioritise education, access and support for young people across Yewa North and Imeko-Afon if elected in 2027.",
+    "category": "oluwadara"
   },
   {
     "id": "News1",
@@ -108,138 +36,57 @@
     "category": "oluwadara"
   },
   {
-    "id": "obi-past-destiny",
-    "title": "Peter Obi: our past is not our destiny — Arise pack circulating nationwide",
-    "url": "https://www.youtube.com/watch?v=I9QYd4m_o1o",
-    "source": "Arise News",
-    "date": "2026-09-12",
-    "summary": "Weekend viral pack: Obi on 1966 and national transformation, plus coalition talk that any deal with Atiku must be negotiated by NDC and ADC as parties.",
+    "id": "obi-ph-wike",
+    "title": "We will not arrest you — Peter Obi replies Wike at Port Harcourt town hall",
+    "url": "https://businessday.ng/politics/article/we-will-not-arrest-you-peter-obi-throws-tantrum-back-at-wike-in-port-harcourt/",
+    "source": "BusinessDay",
+    "date": "2026-09-04",
+    "summary": "Obi and Kwankwaso address a packed Obi Talks Nigeria town hall in Port Harcourt; Obi vows to defend votes and invest in health and production.",
     "category": "movement"
   },
   {
-    "id": "obi-coalition-party",
-    "title": "Obi: coalition with Atiku cannot be an individual arrangement",
-    "url": "https://www.youtube.com/shorts/AUvCZOJ_m84",
-    "source": "Arise News",
-    "date": "2026-09-12",
-    "summary": "Short clip: both men are candidates of different parties, so merger talk belongs to party structures — not a private handshake.",
+    "id": "obi-rivers-votes",
+    "title": "People of Rivers State will vote, and their votes must count — Peter Obi",
+    "url": "https://www.naijanews.com/?s=peter+Obi",
+    "source": "Naija News",
+    "date": "2026-09-04",
+    "summary": "NDC presidential candidate tells Rivers residents that votes must count and citizens should not be intimidated.",
     "category": "movement"
   },
   {
-    "id": "obi-right-direction",
-    "title": "I’m coming to lead Nigeria in the right direction — Peter Obi",
-    "url": "https://independent.ng/im-coming-to-lead-nigeria-in-the-right-direction-peter-obi/",
-    "source": "Independent",
-    "date": "2026-09-11",
-    "summary": "On Arise TV, the NDC candidate says he will hand over in 2031, reverse Nigeria’s course, and target poverty with honest agriculture and education subsidies.",
+    "id": "obi-irev-ph",
+    "title": "They will try to manipulate IReV, but it won’t be easy — Peter Obi",
+    "url": "https://www.naijanews.com/2026/09/03/2027-they-will-try-to-manipulate-irev-but-it-wont-be-easy-peter-obi/",
+    "source": "Naija News",
+    "date": "2026-09-03",
+    "summary": "At the Rivers town hall, Obi says NDC will resist polling-unit intimidation and protect results on IReV in 2027.",
     "category": "movement"
   },
   {
-    "id": "obi-atiku-parties",
-    "title": "Obi: any alliance with Atiku must be negotiated by NDC and ADC, not candidates",
-    "url": "https://punchng.com/obi-why-i-cant-step-down-for-atiku/",
-    "source": "Punch",
-    "date": "2026-09-11",
-    "summary": "Peter Obi says he will not unilaterally step down. Both men are now candidates of different parties, so merger talk belongs to party structures.",
+    "id": "obi-service",
+    "title": "2027: Peter Obi seeks service, Tinubu, Atiku seek power — NDC chieftain",
+    "url": "https://thesun.ng/2027-peter-obi-seeks-service-tinubu-atiku-seek-power-ndc-chieftain/",
+    "source": "The Sun",
+    "date": "2026-09-02",
+    "summary": "NDC chieftain draws a sharp distinction: Obi driven by service, not pursuit of power.",
     "category": "movement"
   },
   {
-    "id": "obi-inec-2023",
-    "title": "Obi: in 2023 we took things for granted and believed INEC — not again",
-    "url": "https://www.thisdaylive.com/2026/09/11/obi-in-2023-we-took-things-for-granted-believed-inec-but-not-again/",
-    "source": "THISDAY",
-    "date": "2026-09-11",
-    "summary": "The NDC presidential candidate says 2027 will be different: protect every vote and build an independent polling-unit result check.",
+    "id": "obi-abuja-hq",
+    "title": "Obi hosts Kwankwaso and NDC candidates at Obidient Headquarters in Abuja",
+    "url": "https://theeconomictimes.com.ng/2026/09/01/obi-hosts-kwankwaso-ndc-candidates-at-obidient-headquarters-in-abuja/",
+    "source": "The Economic Times",
+    "date": "2026-09-01",
+    "summary": "Strategy session on expanding NDC into rural communities and delivering a production-driven economy.",
     "category": "movement"
   },
   {
-    "id": "obi-arise-die-symbolic",
-    "title": "Obi clarifies ready to die remark — votes must count, it was symbolic",
-    "url": "https://punchng.com/obi-clarifies-ready-to-die-comment-says-it-was-symbolic/",
-    "source": "Punch",
-    "date": "2026-09-10",
-    "summary": "On Arise TV, the NDC presidential candidate says the Port Harcourt line was solidarity, not violence: protect the vote so it is counted.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-arise-oneterm",
-    "title": "Obi: I will not stay one day beyond a one-term presidency",
-    "url": "https://allafrica.com/stories/202609100211.html",
-    "source": "Vanguard / allAfrica",
-    "date": "2026-09-10",
-    "summary": "In the same Arise interview, Obi restates a four-year compact, security first, and that he will speak to Nigerians himself — nobody talks for Peter Obi.",
-    "category": "movement"
-  },
-  {
-    "id": "ndc-logo-court",
-    "title": "Court orders INEC to upload NDC modified logo — Dickson",
-    "url": "https://blueprint.ng/tag/ndc/",
-    "source": "Blueprint",
-    "date": "2026-09-10",
-    "summary": "NDC national leader Seriake Dickson says the party secured a court directive for INEC to use its modified digital logo.",
-    "category": "movement"
-  },
-  {
-    "id": "ndc-benue-probe",
-    "title": "NDC demands probe into blockade of Peter Obi convoy in Benue",
-    "url": "https://www.thecable.ng/ndc-obidients-condemn-state-backed-mob-action-against-obi-in-benue-demand-probe/",
-    "source": "TheCable",
-    "date": "2026-09-08",
-    "summary": "NDC and the Obidient Movement condemn the blockade on Gboko Road that stopped Obi from reaching Yelwata families, and call on security agencies to investigate.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-benue-blockade",
-    "title": "Peter Obi convoy blocked in Benue on way to Yelwata condolence visit",
-    "url": "https://www.legit.ng/politics/1729697-peter-obi-releases-video-how-attacked-benue-strong-vow/",
-    "source": "Legit.ng",
-    "date": "2026-09-08",
-    "summary": "Obi says the trip was humanitarian, not a campaign stop. Youths chanting Peter Obi go back blocked the Makurdi-Gboko highway after he landed about 9 a.m.",
-    "category": "movement"
-  },
-  {
-    "id": "keyamo-benue",
-    "title": "Not acceptable — Keyamo condemns blockade of Obi convoy",
-    "url": "https://tribuneonlineng.com/not-acceptable-keyamo-reacts-to-peter-obis-convoy-blockade/",
-    "source": "Tribune Online",
-    "date": "2026-09-09",
-    "summary": "Aviation Minister Festus Keyamo says every candidate must be free to move and campaign without intimidation, regardless of party.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-makinde-unity",
-    "title": "Obi explains why he joined Makinde at APM campaign office commissioning",
-    "url": "https://www.legit.ng/politics/1729562-peter-obi-explains-reason-joining-makinde-commissioning-apms-presidential-campaign-office/",
-    "source": "Legit.ng",
-    "date": "2026-09-08",
-    "summary": "At the Abuja commissioning, Obi says Makinde is qualified to be president and urges 2027 contestants to compete on ideas, unity and inclusion — not desperation.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-datti-anambra",
-    "title": "I improved Anambra — I can do the same in Nigeria, Obi replies Datti",
-    "url": "https://dailypost.ng/2026/09/07/2027-i-can-fix-nigeria-my-anambra-record-speaks-peter-obi-replies-datti/",
-    "source": "Daily Post",
-    "date": "2026-09-07",
-    "summary": "Responding to Yusuf Datti Baba-Ahmed, Obi cites his Anambra record and pledges civility, cut waste, fight corruption, unity, security, health and education.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-votes-kogi",
-    "title": "2027: Obi demands vote protection as INEC warns against inflammatory campaigns",
-    "url": "https://guardian.ng/politics/2027-obi-demands-vote-protection-as-inec-warns-against-inflammatory-campaigns/",
-    "source": "The Guardian",
-    "date": "2026-09-07",
-    "summary": "On his Kogi-Benue-Enugu thank-you tour, the NDC presidential candidate says he is not worried about the result — only that Nigerians protect their votes.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-madonna-stop",
-    "title": "2027: Tinubu government is doing everything to stop me — Peter Obi",
-    "url": "https://dailytrust.com/2027-contest-tinubus-govt-doing-everything-to-stop-me-peter-obi/",
-    "source": "Daily Trust",
-    "date": "2026-09-07",
-    "summary": "At Madonna University, Okija, Obi tells students he will stay on the ballot, urges PVC collection, and says he is contesting as the most qualified — not because he is Igbo.",
+    "id": "obi-campaign-start",
+    "title": "Full Text: Peter Obi Address To Mark 2027 Campaigns Commencement",
+    "url": "https://www.naijanews.com/2026/08/21/full-text-peter-obi-address-to-mark-2027-presidential-national-assembly-campaigns-commencement/",
+    "source": "Naija News",
+    "date": "2026-08-21",
+    "summary": "Peter Obi addresses Nigerians as presidential and National Assembly campaigns begin.",
     "category": "movement"
   }
 ]

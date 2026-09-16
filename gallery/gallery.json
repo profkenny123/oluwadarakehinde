@@ -1,78 +1,29 @@
 [
-  {
-    "file": "Blue Campaign Banner.jpeg",
-    "caption": "Campaign Banner (Blue)"
-  }, 
-      {
-    "file": "Igan Alade4.jpeg",
-    "caption": "Engagement at Igan Alade on 25th August"
-  },
-      {
-    "file": "Igan alade2.jpeg",
-    "caption": "Engagement at Igan Alade on 25th August"
-  },
-        {
-    "file": "Igan Alade 3.jpeg",
-    "caption": "Engagement at Igan Alade on 25th August"
-  },
-    {
-    "file": "Campaign Sticker.jpeg",
-    "caption": "Campaign Sticker"
-  },
-    {
-    "file": "Engagement in Ayetoro on Saturday 29th August 2026.jpeg",
-    "caption": "Ayetoro Engagement - August 29 2026"
-  },
-      {
-    "file": "Joga Ayetoro.jpeg",
-    "caption": "Engagement in Joga on Sep 1st"
-  },
-    {
-    "file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026 .jpeg",
-    "caption": "Ward Coordinator's Meeting - August 2029"
-  },
-    {
-    "file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026.jpeg",
-    "caption": "Ward Coordinator's Meeting - August 2029"
-  },
-      {
-    "file": "NDC Voter Engagement.jpeg",
-    "caption": "NDC Voter Engagement"
-  },
-      {
-    "file": "Ibese.jpeg",
-    "caption": "Engagement in Ibese Ward - 29th August"
-  },
-      {
-    "file": "Ohunbe.jpeg",
-    "caption": "Engagement in Ohunbe Ward - 29th August"
-  },
-      {
-    "file": "Ohunbe2.jpeg",
-    "caption": "Engagement in Ohunbe Ward - 29th August"
-  },
-    {
-    "file": "Ayetoro Ward 2 20260906.jpeg",
-    "caption": "Ayetoro Ward 2 Sunday, 06 September 2026"
-  },
-  {
-    "file": "Engagement   at Ilara 20260905.jpeg",
-    "caption": "Engagement at Ilara Saturday, 05 September 2026"
-  },
-  {
-    "file": "Engagement at Ilara 20260905_1.jpeg",
-    "caption": "Engagement at Ilara Saturday, 05 September 2026"
-  },
-  {
-    "file": "Engagement   at Saala Ayetoro 20260906.jpeg",
-    "caption": "Engagement at Saala Ayetoro Sunday, 06 September 2026"
-  },
-  {
-    "file": "Engagement at Saala Ayetoro 20260906_1.jpeg",
-    "caption": "Engagement at Saala Ayetoro Sunday, 06 September 2026"
-  },
-  {
-    "file": "Motorcycle   Riders Engagement at Owode Idi Ayin 20260905.jpeg",
-    "caption": "Motorcycle Riders Engagement at Owode Idi Ayin Saturday, 05 September 2026"
-  }
+  {"file": "Blue Campaign Banner.jpeg", "caption": "Blue Campaign Banner"},
+  {"file": "Campaign Sticker.jpeg", "caption": "Campaign Sticker"},
+  {"file": "candidate-profile.jpg", "caption": "candidate-profile"},
+  {"file": "Igan Alade4.jpeg", "caption": "Igan Alade4"},
+  {"file": "Igan alade2.jpeg", "caption": "Igan alade2"},
+  {"file": "Igan Alade 3.jpeg", "caption": "Igan Alade 3"},
+  {"file": "Engagement in Ayetoro on Saturday 29th August 2026.jpeg", "caption": "Engagement in Ayetoro on Saturday 29th August 2026"},
+  {"file": "Joga Ayetoro.jpeg", "caption": "Joga Ayetoro"},
+  {"file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026 .jpeg", "caption": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026"},
+  {"file": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026.jpeg", "caption": "Ward Coordinator's Meeeting in Ayetoro on Saturday 29th August 2026"},
+  {"file": "NDC Voter Engagement.jpeg", "caption": "NDC Voter Engagement"},
+  {"file": "Ibese.jpeg", "caption": "Ibese"},
+  {"file": "Ohunbe.jpeg", "caption": "Ohunbe"},
+  {"file": "Ohunbe2.jpeg", "caption": "Ohunbe2"},
+  {"file": "Ayetoro Ward 2 20260906.jpeg", "caption": "Ayetoro Ward 2 20260906"},
+  {"file": "Engagement at Ilara 20260905.jpeg", "caption": "Engagement at Ilara 20260905"},
+  {"file": "Engagement at Ilara 20260905_1.jpeg", "caption": "Engagement at Ilara 20260905_1"},
+  {"file": "Ilara 06 Sep.jpg", "caption": "Ilara 06 Sep"},
+  {"file": "Engagement at Saala Ayetoro 20260906.jpeg", "caption": "Engagement at Saala Ayetoro 20260906"},
+  {"file": "Engagement at Saala Ayetoro 20260906_1.jpeg", "caption": "Engagement at Saala Ayetoro 20260906_1"},
+  {"file": "Motorcycle Riders Engagement at Owode Idi Ayin 20260905.jpeg", "caption": "Motorcycle Riders Engagement at Owode Idi Ayin 20260905"},
+  {"file": "Imasayi 01.jpg", "caption": "Imasayi 01"},
+  {"file": "Imeko Team.jpeg", "caption": "Imeko Team"},
+  {"file": "Ebute 13th Septe.mp4", "caption": "Ebute 13th Septe"},
+  {"file": "Imeko Afon Ok Team 13th Sept.mp4", "caption": "Imeko Afon Ok Team 13th Sept"},
+  {"file": "Sawonjo 15th Sept.mp4", "caption": "Sawonjo 15th Sept"},
+  {"file": "Sunwa ward 15th Sept.mp4", "caption": "Sunwa ward 15th Sept"}
 ]
