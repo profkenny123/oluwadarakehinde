@@ -11,10 +11,10 @@ function newsLink(){return SITE_ORIGIN+'/news.html';}
 function galleryLink(){return SITE_ORIGIN+'/tasks.html#gallery';}
 
 const TASKS=[
-{title:'Tuesday NDC Pack: Arise exclusive + New York + Gallery',
-desc:'Tuesday task: Share the viral Arise exclusive (~497K views) — one-term presidency, votes must count, coalition talk belongs to parties. Add Obi’s New York 9/11 tribute. Pair with a gallery photo from Saala Ayetoro, Ilara, Ayetoro Ward 2 or Owode Idi Ayin.',
-share:()=>`Trending NDC today (15 Sept):\nPeter Obi’s Arise exclusive is everywhere: one-term presidency, votes must count, any alliance is party-to-party.\nIn New York he honoured 9/11 victims and called for peace.\nNDC still fields its own ticket with Obi/Kwankwaso.\n\nWatch (Arise exclusive): https://youtu.be/X-fE8nigmV8\nOne-term clip: https://youtube.com/shorts/nsmoJMGXxRw\nCoalition belongs to parties: https://youtube.com/shorts/AUvCZOJ_m84\nMakinde office visit: https://youtu.be/GuQ4U4_sUGc\nNews: ${newsLink()}\nNDC page: ${SITE_ORIGIN}/ndc.html\n\nFrom our ground: Saala Ayetoro, Ilara, Ayetoro Ward 2 & Owode Idi Ayin.\nGallery: ${galleryLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
-{title:"Amplify Today's NDC News",desc:'Open the News page. Share the Arise exclusive, Obi’s New York 9/11 tribute, and one embedded video with five people.',share:()=>`Trending on NDC: Watch Peter Obi on Arise — one term, votes must count. He honoured 9/11 victims in New York.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
+{title:'Wednesday NDC Pack: Adeola live + Votes must count + Gallery',
+desc:'Wednesday task: Share Peter Obi\u2019s viral Adeola Fayehun live (~188K views) — agents at every polling unit, votes must count. Pair with a gallery photo from Saala Ayetoro, Ilara, Ayetoro Ward 2 or Owode Idi Ayin.',
+share:()=>`Trending NDC today (16 Sept):\nPeter Obi on Adeola Fayehun: how we will protect every vote in 2027 — agents at every PU, situation room, no more taking INEC on trust.\nHe also said the presidency is not for chasing opponents.\nNDC ticket: Obi / Kwankwaso.\n\nWatch (Adeola live): https://youtu.be/Zfo8UjHjys4\nArise exclusive: https://youtu.be/X-fE8nigmV8\nOne-term clip: https://youtube.com/shorts/nsmoJMGXxRw\nNews: ${newsLink()}\nNDC page: ${SITE_ORIGIN}/ndc.html\n\nFrom our ground: Saala Ayetoro, Ilara, Ayetoro Ward 2 & Owode Idi Ayin.\nGallery: ${galleryLink()}\n\nOK is Okay | NDC is Okay\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n#OKisOkay #NDC2027 #Obidient`},
+{title:"Amplify Today's NDC News",desc:'Open the News page. Share the Adeola live, Obi on Wike/friendship without score-settling, and one embedded video with five people.',share:()=>`Trending on NDC: Watch Peter Obi on Adeola Fayehun — protect the vote in 2027.\nRead & watch: ${newsLink()}\nStand with competent leadership locally — Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon.\n#OKisOkay #NDC2027`},
 {title:'Status: Votes Must Count',desc:'Post a 24-hour WhatsApp/Facebook status: votes must count + OK is Okay + NDC is Okay. Use a gallery photo if you can.',share:()=>`Our votes MUST count in 2027.\nPeter Obi / Kwankwaso — NDC.\nOluwadara Kehinde (Akan) — Yewa North/Imeko-Afon House of Reps.\nOK is Okay | NDC is Okay | Nigeria will be Okay.\n${shareLink()}\n#OKisOkay #NDC2027`},
 {title:'WhatsApp Status Drive',desc:"Post today’s campaign message on your WhatsApp status for 24 hours.",share:()=>`OK is Okay! \nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\nTransparent. Tech-driven. Homegrown.\n#OKisOkay #NDC2027\n${shareLink()}`},
 {title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Good day family\nPlease support Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon in 2027.\n#OKisOkay\n${shareLink()}`},
@@ -33,7 +33,7 @@ function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floo
 function pickDailyTask(){
   const today=new Date();
   const iso=today.toISOString().slice(0,10);
-  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':0,'2026-09-10':0,'2026-09-11':0,'2026-09-12':0,'2026-09-13':0,'2026-09-14':0,'2026-09-15':0};
+  const featured={'2026-09-04':0,'2026-09-05':1,'2026-09-06':0,'2026-09-07':0,'2026-09-08':0,'2026-09-09':0,'2026-09-10':0,'2026-09-11':0,'2026-09-12':0,'2026-09-13':0,'2026-09-14':0,'2026-09-15':0,'2026-09-16':0,'2026-09-17':0};
   if(featured[iso]!=null) return TASKS[featured[iso]%TASKS.length];
   return TASKS[dayOfYear(today)%TASKS.length];
 }
