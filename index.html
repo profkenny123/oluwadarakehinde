@@ -8,24 +8,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{navy:{DEFAULT:'#0A1628',dark:'#060d18',mid:'#1a2d4a'},brand:{red:'#C41E3A',green:'#008751',gold:'#f59e0b'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
-<style>html{scroll-behavior:smooth}.hero-overlay{background:linear-gradient(135deg,rgba(10,22,40,.93),rgba(6,13,24,.88))}</style>
+<style>html{scroll-behavior:smooth}.hero-overlay{background:linear-gradient(135deg,rgba(10,22,40,.93),rgba(6,13,24,.88))}.pillar-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(10,22,40,.15)}.nav-scrolled{background:rgba(10,22,40,.97);backdrop-filter:blur(12px)}.checkbox-card:has(input:checked){border-color:#008751;background:#f0fdf4}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17735824450"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17735824450');gtag('event','conversion',{'send_to':'AW-17735824450/Q7Z7CP634O0cEMLojIlC'});</script>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-navy/95">
 <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-<a href="#home" class="flex items-center gap-3"><div class="leading-tight"><span class="block text-white font-bold text-lg">OK is Okay</span><span class="block text-brand-green text-xs font-medium">Oluwadara Kehinde</span></div></a>
+<a href="#home" class="flex items-center gap-3"><img src="/assets/ndc-logo.png" alt="NDC" class="h-10 w-10 object-contain rounded-full bg-white p-0.5" onerror="this.style.display='none'"/><div class="leading-tight"><span class="block text-white font-bold text-lg">OK is Okay</span><span class="block text-brand-green text-xs font-medium">Oluwadara Kehinde</span></div></a>
 <nav class="hidden lg:flex items-center gap-4 text-sm text-white/90">
-<a href="#home">Home</a><a href="#about">About</a><a href="#join">Volunteer</a>
+<a href="#home">Home</a><a href="#about">About</a><a href="#pillars">Agenda</a>
 <a href="tasks.html">Daily Tasks</a><a href="tasks.html#gallery">Gallery</a><a href="news.html">News</a><a href="ndc.html">NDC</a>
-<a href="#join" class="px-4 py-2 rounded-full bg-brand-red text-white font-semibold">Join</a>
+<a href="#join" class="px-4 py-2 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
 </nav>
 <button id="menuBtn" class="lg:hidden text-white p-2" type="button">☰</button>
 </div>
 <div id="mobileMenu" class="hidden lg:hidden bg-navy px-4 py-3 space-y-2">
 <a href="#home" class="block text-white py-2">Home</a>
 <a href="#about" class="block text-white py-2">About</a>
+<a href="#pillars" class="block text-white py-2">Agenda</a>
 <a href="tasks.html" class="block text-white py-2">Daily Tasks</a>
 <a href="tasks.html#gallery" class="block text-white py-2">Gallery</a>
 <a href="news.html" class="block text-white py-2">News</a>
@@ -33,73 +34,170 @@
 <a href="#join" class="block text-center mt-2 px-5 py-3 rounded-full bg-brand-red text-white font-semibold">Volunteer</a>
 </div>
 </header>
+
 <main>
-<section id="home" class="relative min-h-[75vh] flex items-center justify-center text-white pt-20">
+<section id="home" class="relative min-h-[85vh] flex items-center text-white overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image:url('/assets/hero-bg.jpg')"></div>
 <div class="absolute inset-0 hero-overlay"></div>
-<div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-20">
-<p class="text-brand-gold text-sm font-semibold uppercase tracking-wide mb-3">NDC · Yewa North / Imeko-Afon · 2027</p>
-<h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Oluwadara Kehinde (Akan)</h1>
-<p class="text-xl text-white/80 mb-8">Transparent. Tech-driven. Homegrown leadership for our constituency.</p>
-<div class="flex flex-wrap gap-3 justify-center">
-<a href="#join" class="px-6 py-3 rounded-full bg-brand-red text-white font-bold">Join as a supporter</a>
-<a href="tasks.html" class="px-6 py-3 rounded-full bg-white text-navy font-bold">Earn OK-Coins</a>
+<div class="relative z-10 max-w-7xl mx-auto px-4 py-28 w-full">
+<div class="max-w-2xl">
+<p class="text-brand-gold text-sm font-semibold uppercase tracking-widest mb-4">NDC · Yewa North / Imeko-Afon · 2027</p>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5">Oluwadara Kehinde <span class="text-brand-gold">(Akan)</span></h1>
+<p class="text-lg sm:text-xl text-white/85 mb-8 leading-relaxed">Homegrown leadership. Transparent representation. Tech-driven solutions for Yewa North and Imeko-Afon.</p>
+<div class="flex flex-wrap gap-3">
+<a href="#join" class="px-7 py-3.5 rounded-full bg-brand-red text-white font-bold shadow-lg hover:opacity-95">Join the Movement</a>
+<a href="tasks.html" class="px-7 py-3.5 rounded-full bg-white text-navy font-bold hover:bg-slate-100">Earn OK-Coins</a>
+</div>
+<p class="mt-8 text-white/60 text-sm font-medium">OK is Okay · NDC is Okay · Nigeria will be Okay</p>
 </div>
 </div>
 </section>
-<section class="py-16 max-w-4xl mx-auto px-4" id="about">
-<h2 class="text-3xl font-extrabold text-navy mb-4">About the Candidate</h2>
+
+<section id="about" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<img src="/assets/candidate-profile.jpg" alt="Oluwadara Kehinde" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" onerror="this.src='/gallery/candidate-profile.jpg'"/>
+</div>
+<div>
+<p class="text-brand-red text-sm font-bold uppercase tracking-wide mb-2">About</p>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-4">A son of the soil. Ready to serve.</h2>
 <div class="w-20 h-1.5 bg-brand-red rounded-full mb-6"></div>
-<p class="text-slate-600 leading-relaxed mb-4">Oluwadara Kehinde (Akan) is the NDC candidate for the Yewa North/Imeko-Afon Federal Constituency in the 2027 general elections. He stands for accountable representation, youth opportunity, education, agriculture and people-centred development.</p>
-<p class="text-slate-600 leading-relaxed">OK is Okay. NDC is Okay. Together we build a constituency where votes count and every community is heard.</p>
-</section>
-<section class="py-16 bg-slate-50" id="join">
-<div class="max-w-xl mx-auto px-4">
-<h2 class="text-3xl font-extrabold text-navy mb-2 text-center">Volunteer / Join</h2>
-<p class="text-center text-slate-500 mb-8">Register with your phone. Share your referral link. Earn OK-Coins.</p>
-<form id="volForm" class="bg-white rounded-2xl shadow-lg border p-6 space-y-4">
-<div><label class="block text-sm font-semibold mb-1">Full name *</label><input id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-xl border" placeholder="Your full name"/></div>
-<div><label class="block text-sm font-semibold mb-1">Phone number *</label><input id="phone" name="phone" required inputmode="numeric" maxlength="11" class="w-full px-4 py-3 rounded-xl border" placeholder="08031234567"/></div>
-<div><label class="block text-sm font-semibold mb-1">Email (optional)</label><input id="email" name="email" type="email" class="w-full px-4 py-3 rounded-xl border" placeholder="you@email.com"/></div>
-<div class="grid grid-cols-2 gap-3">
-<div><label class="block text-sm font-semibold mb-1">LGA *</label><select id="lga" name="lga" required class="w-full px-4 py-3 rounded-xl border"><option value="">Select</option><option>Yewa North</option><option>Imeko-Afon</option></select></div>
-<div><label class="block text-sm font-semibold mb-1">Ward</label><input id="ward" name="ward" class="w-full px-4 py-3 rounded-xl border" placeholder="Your ward"/></div>
+<p class="text-slate-600 leading-relaxed mb-4">Oluwadara Kehinde (Akan) is the Nigeria Democratic Congress (NDC) candidate for the Yewa North/Imeko-Afon Federal Constituency in the 2027 general elections.</p>
+<p class="text-slate-600 leading-relaxed mb-4">He is committed to accountable representation, youth opportunity, quality education, agriculture, and people-centred development across every ward of the constituency.</p>
+<p class="text-slate-600 leading-relaxed mb-6">His approach is transparent, tech-driven and rooted in the communities he seeks to represent — from Ayetoro to Imeko, from Ibese to Ilara and beyond.</p>
+<a href="#join" class="inline-block px-6 py-3 rounded-full bg-navy text-white font-semibold">Volunteer with OK</a>
 </div>
-<button type="submit" class="w-full py-3 rounded-xl bg-navy text-white font-bold">Submit & go to tasks</button>
+</div>
+</section>
+
+<section id="pillars" class="py-20 bg-slate-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-12">
+<p class="text-brand-red text-sm font-bold uppercase tracking-wide mb-2">Agenda</p>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-3">What we stand for</h2>
+<div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full"></div>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="pillar-card bg-white rounded-2xl p-6 shadow border transition-all duration-300">
+<div class="text-3xl mb-3">🎓</div>
+<h3 class="font-bold text-navy text-lg mb-2">Education</h3>
+<p class="text-slate-600 text-sm leading-relaxed">Support students and teachers; expand access to quality learning across Yewa North and Imeko-Afon.</p>
+</div>
+<div class="pillar-card bg-white rounded-2xl p-6 shadow border transition-all duration-300">
+<div class="text-3xl mb-3">🌾</div>
+<h3 class="font-bold text-navy text-lg mb-2">Agriculture</h3>
+<p class="text-slate-600 text-sm leading-relaxed">Strengthen farmers, value chains and rural livelihoods so our communities thrive.</p>
+</div>
+<div class="pillar-card bg-white rounded-2xl p-6 shadow border transition-all duration-300">
+<div class="text-3xl mb-3">💼</div>
+<h3 class="font-bold text-navy text-lg mb-2">Youth Opportunity</h3>
+<p class="text-slate-600 text-sm leading-relaxed">Skills, jobs and enterprise support for young people ready to build the future.</p>
+</div>
+<div class="pillar-card bg-white rounded-2xl p-6 shadow border transition-all duration-300">
+<div class="text-3xl mb-3">⚖️</div>
+<h3 class="font-bold text-navy text-lg mb-2">Accountable Representation</h3>
+<p class="text-slate-600 text-sm leading-relaxed">Transparent leadership that listens to every ward and defends every vote.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="join" class="py-20 bg-white">
+<div class="max-w-xl mx-auto px-4">
+<div class="text-center mb-8">
+<p class="text-brand-red text-sm font-bold uppercase tracking-wide mb-2">Get involved</p>
+<h2 class="text-3xl font-extrabold text-navy mb-2">Volunteer / Join</h2>
+<p class="text-slate-500">Register with your phone. Share your referral link. Earn OK-Coins on daily tasks.</p>
+</div>
+<form id="volunteerForm" class="bg-white rounded-2xl shadow-xl border p-6 sm:p-8 space-y-4">
+<div>
+<label class="block text-sm font-semibold mb-1">Full name *</label>
+<input type="text" id="fullName" required class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="As you want to be known"/>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1">Phone number *</label>
+<input type="tel" id="phone" required inputmode="numeric" maxlength="11" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="08031234567"/>
+<p class="text-xs text-slate-400 mt-1">11-digit Nigerian number (unique ID for OK-Coins)</p>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1">Email (optional)</label>
+<input type="email" id="email" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="you@email.com"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-semibold mb-1">LGA *</label>
+<select id="lga" required class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none">
+<option value="">Select LGA</option>
+<option value="Yewa North">Yewa North</option>
+<option value="Imeko-Afon">Imeko-Afon</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold mb-1">Ward</label>
+<input type="text" id="ward" class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-navy outline-none" placeholder="Your ward"/>
+</div>
+</div>
+<div>
+<p class="block text-sm font-semibold mb-2">How can you help? (select all that apply)</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<label class="checkbox-card flex items-center gap-2 p-3 rounded-xl border cursor-pointer text-sm"><input type="checkbox" name="helpOptions" value="Polling Agent" class="rounded"/> Polling Agent</label>
+<label class="checkbox-card flex items-center gap-2 p-3 rounded-xl border cursor-pointer text-sm"><input type="checkbox" name="helpOptions" value="Ward Mobilizer" class="rounded"/> Ward Mobilizer</label>
+<label class="checkbox-card flex items-center gap-2 p-3 rounded-xl border cursor-pointer text-sm"><input type="checkbox" name="helpOptions" value="Social Media Advocate" class="rounded"/> Social Media Advocate</label>
+<label class="checkbox-card flex items-center gap-2 p-3 rounded-xl border cursor-pointer text-sm"><input type="checkbox" name="helpOptions" value="Donor" class="rounded"/> Donor</label>
+</div>
+<p id="helpError" class="hidden text-sm text-red-600 mt-1">Please select at least one way you can help.</p>
+</div>
+<button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-navy text-white font-bold hover:opacity-95">Submit & go to Daily Tasks</button>
 <p id="formMessage" class="text-center text-sm hidden"></p>
 </form>
 </div>
 </section>
 </main>
+
 <footer class="bg-navy-dark py-12 text-center text-white">
 <p class="font-extrabold text-lg">OK is Okay | NDC is Okay</p>
-<p class="text-white/50 text-sm mt-2">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p>
+<p class="text-white/50 text-sm mt-2">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon Federal Constituency 2027</p>
+<div class="mt-4 flex flex-wrap justify-center gap-4 text-sm text-white/70">
+<a href="tasks.html" class="hover:text-white">Daily Tasks</a>
+<a href="news.html" class="hover:text-white">News</a>
+<a href="ndc.html" class="hover:text-white">NDC</a>
+</div>
 </footer>
+
 <script>
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
 if(menuBtn) menuBtn.onclick=()=>mobileMenu.classList.toggle('hidden');
+mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>mobileMenu.classList.add('hidden'));
 const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzXqgFn1BZv4vcuetNv9J7vF0bmU-PhJ9QIiG2ayVSsVqFZRExrs1IM5tRM13mFXGtu/exec';
-(function(){try{const u=new URL(location.href);const ref=u.searchParams.get('ref');if(ref)sessionStorage.setItem('ok_ref',ref);}catch(_){}})();
+(function captureRef(){try{const u=new URL(location.href);const ref=u.searchParams.get('ref');if(ref) sessionStorage.setItem('ok_ref',ref);}catch(_){}})();
 function isNgPhone(v){const s=String(v||'').replace(/\D/g,'');return /^0[789][01]\d{8}$/.test(s);}
-document.getElementById('volForm').onsubmit=async(e)=>{
+document.getElementById('volunteerForm').addEventListener('submit', async function(e){
 e.preventDefault();
 const fullName=document.getElementById('fullName');
 const phone=document.getElementById('phone');
 const lga=document.getElementById('lga');
 const ward=document.getElementById('ward');
 const formMessage=document.getElementById('formMessage');
+const helps=[...document.querySelectorAll('input[name="helpOptions"]:checked')].map(c=>c.value);
+if(!helps.length){document.getElementById('helpError').classList.remove('hidden');return;}
+document.getElementById('helpError').classList.add('hidden');
 const phoneVal=phone.value.trim().replace(/\s+/g,'');
-if(!isNgPhone(phoneVal)){formMessage.textContent='Enter a valid Nigerian phone (11 digits starting with 0).';formMessage.className='text-center text-sm text-red-600 font-medium';formMessage.classList.remove('hidden');return;}
+if(!isNgPhone(phoneVal)){formMessage.textContent='Enter a valid Nigerian phone: 11 digits starting with 0 (e.g. 08031234567).';formMessage.className='text-center text-sm text-red-600 font-medium';formMessage.classList.remove('hidden');return;}
 let referredBy='';try{referredBy=sessionStorage.getItem('ok_ref')||'';}catch(_){}
-const data={type:'volunteer',fullName:fullName.value.trim(),phone:phoneVal,email:(document.getElementById('email').value||'').trim(),lga:lga.value,ward:ward.value,helpOptions:[],referredBy:referredBy,timestamp:new Date().toISOString()};
+const data={type:'volunteer',fullName:fullName.value.trim(),phone:phoneVal,email:(document.getElementById('email').value||'').trim(),lga:lga.value,ward:ward.value,helpOptions:helps,referredBy:referredBy,timestamp:new Date().toISOString()};
 try{
 await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
 formMessage.textContent='Thank you! Redirecting to daily tasks…';formMessage.className='text-center text-sm text-green-600 font-medium';formMessage.classList.remove('hidden');
-try{localStorage.setItem('ok_last_volunteer',JSON.stringify({fullName:data.fullName,phone:data.phone,ts:Date.now()}));localStorage.setItem('ok_session',JSON.stringify({fullName:data.fullName,phone:data.phone,coins:0}));}catch(_){}
+try{
+  localStorage.setItem('ok_last_volunteer',JSON.stringify({fullName:data.fullName,phone:data.phone,email:data.email,ts:Date.now()}));
+  localStorage.setItem('ok_session',JSON.stringify({fullName:data.fullName,phone:data.phone,coins:0}));
+}catch(_){}
 setTimeout(()=>{window.location.href='tasks.html';},900);
 }catch(err){formMessage.textContent='Something went wrong. Please try again.';formMessage.className='text-center text-sm text-red-600 font-medium';formMessage.classList.remove('hidden');}
-};
+});
 </script>
+
 <audio id="bgMusic" src="/gallery/campaign%20music.mpeg" loop preload="auto"></audio>
 <button type="button" id="musicToggle" class="fixed bottom-4 right-4 z-[60] px-4 py-2.5 rounded-full bg-navy text-white text-sm font-semibold shadow-lg border border-white/20">♪ Music</button>
 <script>
