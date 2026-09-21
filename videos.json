@@ -4,14 +4,21 @@
     "title": "Peter Obi exclusive: one-term presidency, alliance talk, votes must count",
     "youtubeId": "X-fE8nigmV8",
     "source": "Arise News",
-    "tag": "Interview · ~564K views"
+    "tag": "Interview · ~571K views"
   },
   {
     "id": "obi-ph-full",
     "title": "Full video: Peter Obi & Kwankwaso town hall — Port Harcourt",
     "youtubeId": "-zXVE1fG0nM",
     "source": "Advocacy For Good Governance",
-    "tag": "Visit · Town Hall · ~58K views"
+    "tag": "Town Hall · Pair with Kaduna visit"
+  },
+  {
+    "id": "obi-ph-channels",
+    "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall",
+    "youtubeId": "sDVxEhC1sYs",
+    "source": "Channels Television",
+    "tag": "NDC · Town Hall"
   },
   {
     "id": "obi-adeola-mandate",
@@ -28,18 +35,18 @@
     "tag": "Viral · Clip · Share today"
   },
   {
+    "id": "obi-challenge-wrong",
+    "title": "If Kwankwaso and I have done anything wrong, say it out now",
+    "youtubeId": "qX7ktwLOy6U",
+    "source": "Channels Television",
+    "tag": "Speech · NDC ticket"
+  },
+  {
     "id": "obi-coalition-short",
     "title": "Any coalition with Atiku cannot be individual — I have a party behind my candidacy",
     "youtubeId": "AUvCZOJ_m84",
     "source": "Arise News",
     "tag": "Clip · ~127K views"
-  },
-  {
-    "id": "obi-ph-channels",
-    "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall, Port Harcourt",
-    "youtubeId": "sDVxEhC1sYs",
-    "source": "Channels Television",
-    "tag": "NDC · Town Hall"
   },
   {
     "id": "obi-ready-die",
@@ -53,25 +60,18 @@
     "title": "NDC appeals ruling, uploads Peter Obi’s name on INEC portal",
     "youtubeId": "VSJ2O5cynIg",
     "source": "TVC News Nigeria",
-    "tag": "NDC · Legal · Context"
+    "tag": "NDC · Legal"
   },
   {
-    "id": "arise-today-pack",
-    "title": "Tinubu & Obi endorsed Atiku in the past + Obi: our past is not our destiny",
-    "youtubeId": "I9QYd4m_o1o",
-    "source": "Arise News",
-    "tag": "Viral pack"
-  },
-  {
-    "id": "obi-makinde-office",
-    "title": "Peter Obi attends inauguration of Seyi Makinde's APM campaign office",
-    "youtubeId": "GuQ4U4_sUGc",
-    "source": "GoldMyneTV",
-    "tag": "Visit · Trending"
+    "id": "obi-umahi-wike",
+    "title": "Peter Obi responds to Umahi & Wike on capacity to be President",
+    "youtubeId": "YkEdGwYJmr4",
+    "source": "NoireTV",
+    "tag": "Recent · Capacity"
   },
   {
     "id": "who-afraid-obi",
-    "title": "Who is afraid of Peter Obi? — NDC chieftain Dickson Iroegbu on the Benue blockade",
+    "title": "Who is afraid of Peter Obi? — NDC chieftain on the Benue blockade",
     "youtubeId": "GdwMjJJ_nTM",
     "source": "TrustTV News",
     "tag": "NDC · Trending"
@@ -82,12 +82,5 @@
     "youtubeId": "oQYXyxujVmc",
     "source": "Arise News",
     "tag": "Viral · Benue Visit"
-  },
-  {
-    "id": "obi-benue-sahara",
-    "title": "Peter Obi speaks after convoy was blocked on way to Yelwata community",
-    "youtubeId": "cibMxGBK2hc",
-    "source": "SaharaTV",
-    "tag": "Viral · Speech"
   }
 ]
