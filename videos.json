@@ -1,17 +1,38 @@
 [
   {
+    "id": "obi-kaduna-lyon",
+    "title": "Peter Obi & Rabiu Kwankwaso speaking at the NDC Town Hall in Kaduna",
+    "youtubeId": "C75tAKYBzC8",
+    "source": "Lyon Mack TV",
+    "tag": "Town Hall · Today · Share"
+  },
+  {
+    "id": "obi-kaduna-arise",
+    "title": "2027: Obi & Kwankwaso call for issue-based campaigns",
+    "youtubeId": "91jAPJ5rLAA",
+    "source": "Arise News",
+    "tag": "NDC · Kaduna · Viral"
+  },
+  {
+    "id": "obi-kaduna-channels",
+    "title": "Peter Obi holds town hall with NDC members in Kaduna",
+    "youtubeId": "1unOlm5DY_o",
+    "source": "Channels Television",
+    "tag": "NDC · Town Hall"
+  },
+  {
     "id": "obi-arise-full-today",
     "title": "Peter Obi exclusive: one-term presidency, alliance talk, votes must count",
     "youtubeId": "X-fE8nigmV8",
     "source": "Arise News",
-    "tag": "Interview · ~571K views"
+    "tag": "Interview · ~580K views"
   },
   {
     "id": "obi-ph-full",
     "title": "Full video: Peter Obi & Kwankwaso town hall — Port Harcourt",
     "youtubeId": "-zXVE1fG0nM",
     "source": "Advocacy For Good Governance",
-    "tag": "Town Hall · Pair with Kaduna visit"
+    "tag": "Town Hall"
   },
   {
     "id": "obi-ph-channels",
@@ -32,7 +53,7 @@
     "title": "I would not stay one day longer than my one-term presidency",
     "youtubeId": "nsmoJMGXxRw",
     "source": "Arise News",
-    "tag": "Viral · Clip · Share today"
+    "tag": "Viral · Clip · Share"
   },
   {
     "id": "obi-challenge-wrong",
@@ -61,26 +82,5 @@
     "youtubeId": "VSJ2O5cynIg",
     "source": "TVC News Nigeria",
     "tag": "NDC · Legal"
-  },
-  {
-    "id": "obi-umahi-wike",
-    "title": "Peter Obi responds to Umahi & Wike on capacity to be President",
-    "youtubeId": "YkEdGwYJmr4",
-    "source": "NoireTV",
-    "tag": "Recent · Capacity"
-  },
-  {
-    "id": "who-afraid-obi",
-    "title": "Who is afraid of Peter Obi? — NDC chieftain on the Benue blockade",
-    "youtubeId": "GdwMjJJ_nTM",
-    "source": "TrustTV News",
-    "tag": "NDC · Trending"
-  },
-  {
-    "id": "obi-benue-arise",
-    "title": "Peter Obi: Benue protest against my visit initiated by Governor’s Special Adviser",
-    "youtubeId": "oQYXyxujVmc",
-    "source": "Arise News",
-    "tag": "Viral · Benue Visit"
   }
 ]
