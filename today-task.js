@@ -1,10 +1,10 @@
 window.TODAY_TASK={
-  date:'2026-09-23',
-  title:'Share NDC growth: Babachir Lawal joins + Kaduna town hall + our ground videos',
-  desc:'Today the conversation is that NDC is expanding. Former SGF Babachir Lawal joined NDC and endorsed the Obi-Kwankwaso ticket. Pair that with Kaduna town-hall videos (issue-based campaigns, holidays in Nigeria) and our own Sawonjo, Sunwa, Imeko and Ebute clips so national news rides with Yewa North / Imeko-Afon faces. When APC ministers talk about cutting Obi votes, share our ground work — that is how votes are won.',
+  date:'2026-09-24',
+  title:'Go and verify — share Obi record + NDC growth + our gallery ground work',
+  desc:'Today the ruling party is attacking Peter Obi’s catchphrase “go and verify.” That is the message: records beat noise. Pair Umahi’s attack with Babachir Lawal joining NDC, the agreed PCC (Obi and Kwankwaso nominating DG and spokesman), Kaduna town-hall videos, and our Sawonjo, Sunwa, Imeko and Ebute clips. National heat plus local faces wins Yewa North / Imeko-Afon.',
   share:function(){
     var origin=window.location.origin;
     var link=(typeof shareLink==='function')?shareLink():origin;
-    return 'NDC is growing. NDC is on the ground.\n\nFormer SGF Babachir Lawal has joined NDC and backed Peter Obi & Kwankwaso.\nRead: https://tribuneonlineng.com/breaking-babachir-lawal-joins-ndc/\n\nWatch Kaduna town hall (issue-based campaigns):\nhttps://www.youtube.com/watch?v=91jAPJ5rLAA\nPeter Obi & Kwankwaso in Kaduna:\nhttps://www.youtube.com/watch?v=C75tAKYBzC8\nMore videos: '+origin+'/ndc.html\n\nOur ground: Sawonjo & Sunwa (15 Sept), Imeko team, Ebute, Ilara, Ayetoro.\nGallery: '+origin+'/tasks.html#gallery\n\nOK is Okay | NDC is Okay\nJoin: '+link+'\n#OKisOkay #NDC2027 #YewaNorth #ImekoAfon';
+    return 'Go and verify. NDC is growing. NDC is on the ground.\n\nWorks Minister Umahi says he hates Peter Obi saying “go and verify.” We say: verify the record, then vote.\nRead: https://www.naijanews.com/2026/09/24/umahi-hates-about-peter-obi/\n\nFormer SGF Babachir Lawal has joined NDC and backed Obi-Kwankwaso.\nhttps://tribuneonlineng.com/breaking-babachir-lawal-joins-ndc/\n\nNDC, Obi and Kwankwaso have agreed the campaign structure. Watch Kaduna town hall:\nhttps://www.youtube.com/watch?v=C75tAKYBzC8\nArise: demand-driven campaign\nhttps://www.youtube.com/watch?v=91jAPJ5rLAA\nMore videos: '+origin+'/ndc.html\n\nOur ground: Sawonjo & Sunwa (15 Sept), Imeko team, Ebute, Ilara, Ayetoro.\nGallery: '+origin+'/tasks.html#gallery\n\nOK is Okay | NDC is Okay\nJoin: '+link+'\n#OKisOkay #NDC2027 #GoAndVerify #YewaNorth #ImekoAfon';
   }
 };
