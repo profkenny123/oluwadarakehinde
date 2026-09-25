@@ -1,10 +1,10 @@
 window.TODAY_TASK={
-  date:'2026-09-24',
-  title:'Go and verify — share Obi record + NDC growth + our gallery ground work',
-  desc:'Today the ruling party is attacking Peter Obi’s catchphrase “go and verify.” That is the message: records beat noise. Pair Umahi’s attack with Babachir Lawal joining NDC, the agreed PCC (Obi and Kwankwaso nominating DG and spokesman), Kaduna town-hall videos, and our Sawonjo, Sunwa, Imeko and Ebute clips. National heat plus local faces wins Yewa North / Imeko-Afon.',
+  date:'2026-09-25',
+  title:'Votes must count — share Obi jail-riggers pledge + NDC unity + our gallery ground work',
+  desc:'Today Peter Obi told Arise that anyone who rigs an election under his government — even by one vote — will go to jail. NDC New Media director Theo Agada said Obi will be the next president and 2027 will be Nigeria’s biggest political upset. Buba Galadima told Channels that Obi and Kwankwaso are on the same page and the ticket wins a free, fair poll. Pair those clips with Sawonjo, Sunwa, Imeko and Ebute videos so Yewa North / Imeko-Afon rides the national wave.',
   share:function(){
     var origin=window.location.origin;
     var link=(typeof shareLink==='function')?shareLink():origin;
-    return 'Go and verify. NDC is growing. NDC is on the ground.\n\nWorks Minister Umahi says he hates Peter Obi saying “go and verify.” We say: verify the record, then vote.\nRead: https://www.naijanews.com/2026/09/24/umahi-hates-about-peter-obi/\n\nFormer SGF Babachir Lawal has joined NDC and backed Obi-Kwankwaso.\nhttps://tribuneonlineng.com/breaking-babachir-lawal-joins-ndc/\n\nNDC, Obi and Kwankwaso have agreed the campaign structure. Watch Kaduna town hall:\nhttps://www.youtube.com/watch?v=C75tAKYBzC8\nArise: demand-driven campaign\nhttps://www.youtube.com/watch?v=91jAPJ5rLAA\nMore videos: '+origin+'/ndc.html\n\nOur ground: Sawonjo & Sunwa (15 Sept), Imeko team, Ebute, Ilara, Ayetoro.\nGallery: '+origin+'/tasks.html#gallery\n\nOK is Okay | NDC is Okay\nJoin: '+link+'\n#OKisOkay #NDC2027 #GoAndVerify #YewaNorth #ImekoAfon';
+    return 'Votes must count. NDC is one party. NDC is on the ground.\n\nPeter Obi: if I am president, whoever rigs — even one vote — goes to jail.\nPunch: https://punchng.com/anyone-who-rigs-election-under-me-will-go-to-jail-obi/\n\nNDC: Peter Obi next president — biggest political upset in Nigeria\u2019s history.\nhttps://dailypost.ng/2026/09/25/2027-peter-obi-next-president-will-cause-biggest-political-upset-in-nigerias-history-ndc/\n\nGaladima (Channels): Obi and Kwankwaso on the same page. Watch:\nhttps://www.youtube.com/watch?v=zh8wjlCO2LI\nMore videos: '+origin+'/ndc.html\n\nOur ground: Sawonjo & Sunwa (15 Sept), Imeko team, Ebute, Ilara, Ayetoro.\nGallery: '+origin+'/tasks.html#gallery\n\nOK is Okay | NDC is Okay\nJoin: '+link+'\n#OKisOkay #NDC2027 #VotesMustCount #YewaNorth #ImekoAfon';
   }
 };
