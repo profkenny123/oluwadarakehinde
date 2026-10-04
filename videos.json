@@ -1,10 +1,24 @@
 [
   {
+    "id": "obi-sokoto-townhall-own-29sept",
+    "title": "My town hall visit to Sokoto — Peter Obi (NDC, share today)",
+    "youtubeId": "--jNpqPZ3yQ",
+    "source": "Peter Obi (CON)",
+    "tag": "Today · Sokoto speech · Share"
+  },
+  {
+    "id": "obi-ramin-kura-30sept",
+    "title": "My visit to Ramin Kura IDP Camp in Sokoto — Peter Obi",
+    "youtubeId": "m6E9rtpRvYQ",
+    "source": "Peter Obi (CON)",
+    "tag": "Viral · IDP camp · Share"
+  },
+  {
     "id": "obi-indep-cursed-03oct",
     "title": "Are we cursed, or are we the cause? — Peter Obi’s Independence message (share today)",
     "youtubeId": "PwVFzVCgS04",
     "source": "SYMFONI",
-    "tag": "Viral today · Independence · Share"
+    "tag": "Still leading · Independence · Share"
   },
   {
     "id": "obi-arise-campaign-space",
@@ -14,11 +28,18 @@
     "tag": "Viral · 260k+ views · Share"
   },
   {
-    "id": "obi-ramin-kura-30sept",
-    "title": "My visit to Ramin Kura IDP Camp in Sokoto — Peter Obi",
-    "youtubeId": "m6E9rtpRvYQ",
-    "source": "Peter Obi (CON)",
-    "tag": "IDP · Viral · Share"
+    "id": "obi-sokoto-arrive-28sept",
+    "title": "Sokoto erupts as Peter Obi and Kwankwaso arrive for mobilisation",
+    "youtubeId": "h7d-vCFcgJ0",
+    "source": "DDM TV",
+    "tag": "Sokoto · Share"
+  },
+  {
+    "id": "obi-adeola-mandate",
+    "title": "How I'll Prevent The Stealing Of My Mandate In 2027 — Peter Obi",
+    "youtubeId": "Zfo8UjHjys4",
+    "source": "Adeola Fayehun",
+    "tag": "Tonight’s theme · Protect the vote"
   },
   {
     "id": "obi-kaduna-channels",
@@ -28,25 +49,18 @@
     "tag": "NDC · Town Hall · Share"
   },
   {
+    "id": "obi-ready-die",
+    "title": "2027: I Am Equally Ready To Die To Save Nigeria — Peter Obi",
+    "youtubeId": "ysSFO0qDlkg",
+    "source": "Channels Television",
+    "tag": "Vote protection · Share"
+  },
+  {
     "id": "obi-indep-newscentral",
     "title": "Nigeria at 66: I will lead by example — Peter Obi",
     "youtubeId": "Dgg6rkVcqe4",
     "source": "News Central TV",
     "tag": "Independence · Speech"
-  },
-  {
-    "id": "obi-sokoto-townhall-own-29sept",
-    "title": "My town hall visit to Sokoto — Peter Obi",
-    "youtubeId": "--jNpqPZ3yQ",
-    "source": "Peter Obi (CON)",
-    "tag": "Sokoto · Speech · Share"
-  },
-  {
-    "id": "obi-sokoto-arrive-28sept",
-    "title": "Sokoto erupts as Peter Obi and Kwankwaso arrive for mobilisation",
-    "youtubeId": "h7d-vCFcgJ0",
-    "source": "DDM TV",
-    "tag": "Sokoto · Share"
   },
   {
     "id": "obi-arise-full-today",
@@ -98,13 +112,6 @@
     "tag": "Viral · Clip · Share"
   },
   {
-    "id": "obi-adeola-mandate",
-    "title": "How I'll Prevent The Stealing Of My Mandate In 2027 — Peter Obi",
-    "youtubeId": "Zfo8UjHjys4",
-    "source": "Adeola Fayehun",
-    "tag": "Viral · Votes"
-  },
-  {
     "id": "obi-ph-channels",
     "title": "Obi & Kwankwaso Engage Rivers Residents — NDC Town Hall",
     "youtubeId": "sDVxEhC1sYs",
@@ -145,13 +152,6 @@
     "youtubeId": "AUvCZOJ_m84",
     "source": "Arise News",
     "tag": "Clip · Party first"
-  },
-  {
-    "id": "obi-ready-die",
-    "title": "2027: I Am Equally Ready To Die To Save Nigeria — Peter Obi",
-    "youtubeId": "ysSFO0qDlkg",
-    "source": "Channels Television",
-    "tag": "Speech"
   },
   {
     "id": "ndc-appeal-tvc",
