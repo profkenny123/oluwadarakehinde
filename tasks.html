@@ -66,7 +66,21 @@
 </div>
 <div class="mb-3"><div class="flex justify-between text-xs text-slate-500 mb-1"><span>Progress to next tier</span><span id="dashProgLabel">0 / 1,000</span></div><div class="h-2 rounded-full bg-slate-100 overflow-hidden"><div id="dashProgBar" class="h-full bg-brand-green rounded-full" style="width:0%"></div></div></div>
 <div class="rounded-xl bg-slate-50 border p-3"><p class="text-xs font-semibold text-slate-500 mb-1">Your referral link</p><div class="flex gap-2"><input id="dashRef" type="text" readonly class="flex-1 text-xs sm:text-sm px-3 py-2 rounded-lg border bg-white truncate"/><button type="button" id="copyRef" class="px-3 py-2 rounded-lg bg-brand-green text-white text-sm font-semibold shrink-0">Copy</button></div>
-<p class="text-[11px] text-slate-400 mt-1">New supporter via your link: +100 to them, +50 to you, +10 to your upline. Task bonuses: you +5, upline +2.</p></div>
+<p class="text-[11px] text-slate-400 mt-1">Share task: +100 OK-Coins. Referral (when someone joins via your link): +500 to you. New supporter: +100.</p></div>
+</div>
+
+<div id="awardsPanel" class="bg-white rounded-2xl border shadow-lg p-5 mb-6 hidden">
+  <h3 class="text-lg font-bold text-navy mb-1">Awards &amp; Claims</h3>
+  <p class="text-xs text-slate-500 mb-3">Reach a tier, then claim your reward. Claims are verified and fulfilled by the campaign team.</p>
+  <ul class="text-xs text-slate-600 mb-3 space-y-1">
+    <li><strong>Bronze</strong> (1,000) — 1GB data</li>
+    <li><strong>Silver</strong> (5,000) — ₦2,000 airtime</li>
+    <li><strong>Gold</strong> (20,000) — ₦5,000 cash</li>
+    <li><strong>Diamond</strong> (50,000) — ₦15,000 cash</li>
+    <li><strong>Star</strong> (100,000) — ₦30,000 cash</li>
+  </ul>
+  <div id="claimButtons" class="space-y-2"></div>
+  <p id="claimMsg" class="text-sm mt-2 hidden"></p>
 </div>
 
 <div id="guestPrompt" class="bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-6">
@@ -77,19 +91,19 @@
 <div class="text-center mb-6">
 <h1 class="text-3xl font-extrabold text-navy mb-2">Today's Campaign Task</h1>
 <div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full mb-3"></div>
-<p class="text-slate-600">Share now · Earn <strong>+10 OK-Coins</strong> · Max 10 / day</p>
+<p class="text-slate-600">Share now · Earn <strong>+100 OK-Coins</strong> · Max 10 / day</p>
 <p id="dateLabel" class="text-sm text-slate-400 mt-1"></p>
 </div>
 
 <div class="bg-navy text-white rounded-2xl p-6 sm:p-8 shadow-xl mb-6">
-<p class="text-brand-gold text-sm font-semibold uppercase mb-2">Task of the day · +10 OK-Coins</p>
+<p class="text-brand-gold text-sm font-semibold uppercase mb-2">Task of the day · +100 OK-Coins</p>
 <h2 id="taskTitle" class="text-2xl font-bold mb-3">Loading…</h2>
 <p id="taskDesc" class="text-white/80 mb-4"></p>
 <div class="bg-white/10 rounded-xl p-4 mb-5 border border-white/20">
 <p class="text-xs text-brand-gold font-semibold mb-2 uppercase">Share this message</p>
 <p id="shareText" class="text-white/95 text-sm whitespace-pre-wrap"></p>
 <div class="flex flex-wrap gap-2 mt-3">
-<button type="button" id="shareBtn" class="px-5 py-2.5 rounded-lg bg-brand-green text-white text-sm font-bold">Share now · +10 OK-Coins</button>
+<button type="button" id="shareBtn" class="px-5 py-2.5 rounded-lg bg-brand-green text-white text-sm font-bold">Share now · +100 OK-Coins</button>
 </div>
 </div>
 <input type="hidden" id="taskValue"/>
@@ -100,7 +114,7 @@
 
 <section id="gallery" class="mb-10 scroll-mt-24">
 <div class="flex items-center justify-between mb-4"><h2 class="text-2xl font-bold text-navy">Campaign Gallery</h2><span class="text-2xl">📷</span></div>
-<p class="text-sm text-slate-500 mb-4">Auto-plays media · Videos & audio advance when finished · Photos every 5s</p>
+<p class="text-sm text-slate-500 mb-4">Auto-plays media · Videos &amp; audio advance when finished · Photos every 5s</p>
 <div class="relative mb-2">
 <div class="overflow-hidden rounded-2xl bg-slate-200 aspect-[16/10]"><div id="galleryTrack" class="flex h-full transition-transform duration-500 ease-in-out"></div></div>
 <button id="galPrev" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">‹</button>
@@ -113,9 +127,8 @@
 <div class="flex items-center justify-between mb-2"><h3 class="text-xl font-bold text-navy">OK-Coins Leaderboard</h3><span class="text-3xl">🏆</span></div>
 <p class="text-sm text-slate-500 mb-6" id="weekLabel">Lifetime coins · Top advocates</p>
 <div id="leaderboard" class="space-y-3"><p class="text-slate-500 text-sm">Loading rankings…</p></div>
-<div class="mt-8 pt-6 border-t"><h4 class="font-bold text-navy mb-3">Your recent logs (this device)</h4><ul id="localActs" class="text-sm text-slate-600 space-y-2"></ul></div>
 </div>
-<p class="text-xs text-slate-400 text-center mt-8">OK-Coins measure campaign effort for December recognition. Not money or investment.</p>
+<p class="text-xs text-slate-400 text-center mt-8">OK-Coins measure campaign effort for awards. Not money or investment until a claim is approved.</p>
 </div>
 </main>
 <footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p><p class="text-white/50 text-sm mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p></footer>
@@ -127,13 +140,12 @@ if(menuBtn) menuBtn.onclick=()=>mobileMenu.classList.toggle('hidden');
 mobileMenu.querySelectorAll('a').forEach(a=>a.onclick=()=>mobileMenu.classList.add('hidden'));
 const SITE_ORIGIN=window.location.origin;
 const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzXqgFn1BZv4vcuetNv9J7vF0bmU-PhJ9QIiG2ayVSsVqFZRExrs1IM5tRM13mFXGtu/exec';
-const CAMPAIGN_IMAGE=SITE_ORIGIN+'/gallery/Campaign%20Sticker.jpeg';
 const MAX_DAILY=10;
 (function(){try{const u=new URL(location.href);const ref=u.searchParams.get('ref');if(ref)sessionStorage.setItem('ok_ref',ref);}catch(_){}})();
 function normPhone(p){let s=String(p||'').replace(/\D/g,'');if(s.length===13&&s.indexOf('234')===0)s='0'+s.slice(3);if(s.length===10&&s[0]!=='0')s='0'+s;return s;}
 function isNgPhone(v){return /^0[789][01]\d{8}$/.test(normPhone(v));}
 function loadSession(){try{return JSON.parse(localStorage.getItem('ok_session')||'null');}catch(_){return null;}}
-function saveSession(s){try{localStorage.setItem('ok_session',JSON.stringify(s));}catch(_){}try{localStorage.setItem('ok_last_volunteer',JSON.stringify({fullName:s.fullName,phone:s.phone,ts:Date.now()}));}catch(_){}}
+function saveSession(s){try{localStorage.setItem('ok_session',JSON.stringify(s));}catch(_){}}
 function clearSession(){try{localStorage.removeItem('ok_session');}catch(_){}}
 let session=loadSession();let me=null;let shareBody='';
 function tierClass(tier){const t=String(tier||'').toLowerCase();if(t==='star')return 'badge-star text-navy';if(t==='diamond')return 'badge-diamond text-white';if(t==='gold')return 'badge-gold text-white';if(t==='silver')return 'badge-silver text-white';if(t==='bronze')return 'badge-bronze text-white';return 'bg-slate-400 text-white';}
@@ -141,13 +153,10 @@ function shareLink(){if(me&&me.referralLink)return me.referralLink;if(session&&s
 function newsLink(){return SITE_ORIGIN+'/news.html';}
 const TASKS=[
 {title:'Share the Viral OK Campaign Video',desc:'Watch the viral campaign video, then share it on WhatsApp status, groups, Facebook or Instagram Reels so more people see Oluwadara Kehinde.',share:()=>`Watch & share this viral campaign video for Oluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n\n▶ Video: ${SITE_ORIGIN}/gallery/${encodeURIComponent('Viral video.mp4')}\n\nOK is Okay | NDC is Okay\nJoin: ${shareLink()}\n#OKisOkay #NDC2027 #ViralOK`},
-{title:'Share Peter Obi Port Harcourt Town Hall',desc:'Watch and share the NDC town hall video from Port Harcourt in at least two WhatsApp groups or on your status.',share:()=>`Watch Peter Obi and Senator Kwankwaso at the NDC town hall in Port Harcourt.\nFull video: https://youtu.be/-zXVE1fG0nM\nMore: ${newsLink()}\nJoin: ${shareLink()}\n#OKisOkay #NDC2027`},
-{title:"Amplify Today's NDC News",desc:'Open the News page, pick a recent story, and share the link with five people.',share:()=>`Stay informed on NDC.\nRead: ${newsLink()}\nJoin: ${shareLink()}\n#OKisOkay`},
+{title:"Amplify Today's Campaign News",desc:'Open the News page and share a recent story with five people.',share:()=>`Stay informed.\nRead: ${newsLink()}\nJoin: ${shareLink()}\n#OKisOkay`},
 {title:'WhatsApp Status Drive',desc:'Post today’s campaign message on your WhatsApp status for 24 hours.',share:()=>`OK is Okay!\nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`},
 {title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Please support Oluwadara Kehinde (Akan) — NDC for Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`},
-{title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:()=>`I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`},
-{title:'Engage Campaign Posts',desc:'Like and leave a meaningful comment on the latest campaign posts.',share:()=>`Commented in support of Oluwadara Kehinde (Akan) today. #OKisOkay\n${shareLink()}`},
-{title:'Youth Voter Reminder',desc:'Remind three young people to check their PVC / registration.',share:()=>`Young people of Yewa North & Imeko-Afon: confirm your PVC. OK is Okay!\n${shareLink()}`}
+{title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:()=>`I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`}
 ];
 function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floor((d-start)/86400000);}
 function pickDailyTask(){return TASKS[dayOfYear(new Date())%TASKS.length];}
@@ -174,7 +183,19 @@ if(nt.next){document.getElementById('dashNext').textContent=nt.next+' at '+Numbe
 else{document.getElementById('dashNext').textContent='Star tier';document.getElementById('dashProgLabel').textContent='Max';document.getElementById('dashProgBar').style.width='100%';}
 document.getElementById('dashRef').value=m.referralLink||(SITE_ORIGIN+'/?ref='+encodeURIComponent(m.referralCode||session.phone||''));
 const capped=today>=MAX_DAILY;document.getElementById('capMsg').classList.toggle('hidden',!capped);
-const shareBtn=document.getElementById('shareBtn');if(shareBtn){shareBtn.disabled=capped;shareBtn.textContent=capped?'Daily limit reached':'Share now · +10 OK-Coins';}
+const shareBtn=document.getElementById('shareBtn');if(shareBtn){shareBtn.disabled=capped;shareBtn.textContent=capped?'Daily limit reached':'Share now · +100 OK-Coins';}
+const awardsPanel=document.getElementById('awardsPanel');
+if(awardsPanel){
+  awardsPanel.classList.remove('hidden');
+  const box=document.getElementById('claimButtons');
+  const claimable=(m.claimable||[]).length?m.claimable:(m.awards||[]).filter(a=>a.earned&&!a.claimed).map(a=>({tier:a.tier,reward:a.reward}));
+  if(!claimable.length){
+    box.innerHTML='<p class="text-sm text-slate-500">No unclaimed awards yet. Keep sharing to unlock Bronze at 1,000 OK-Coins.</p>';
+  }else{
+    box.innerHTML=claimable.map(a=>'<button type="button" data-tier="'+a.tier+'" class="claimBtn w-full py-2.5 rounded-xl bg-brand-gold text-navy font-bold text-sm">Claim '+a.tier+' — '+(a.reward||'')+'</button>').join('');
+    box.querySelectorAll('.claimBtn').forEach(btn=>{btn.onclick=()=>submitClaim(btn.getAttribute('data-tier'));});
+  }
+}
 }
 async function fetchMe(phone){
 try{const res=await fetch(GOOGLE_SCRIPT_URL+'?action=me&phone='+encodeURIComponent(phone)+'&_='+Date.now());const data=await res.json();
@@ -188,20 +209,31 @@ document.getElementById('idConfirm').onclick=async()=>{
 const name=document.getElementById('idName').value.trim();const phone=normPhone(document.getElementById('idPhone').value);const err=document.getElementById('idError');
 if(!isNgPhone(phone)){err.textContent='Enter a valid Nigerian phone.';err.classList.remove('hidden');return;}
 err.classList.add('hidden');session={fullName:name,phone:phone,coins:0};saveSession(session);
-const ok=await fetchMe(phone);if(!ok){me={fullName:name,phone:phone,coins:0,tasksToday:0,tasksLifetime:0,tier:'Advocate',nextTier:{next:'Bronze',need:1000,progress:0},referralCode:'',referralLink:SITE_ORIGIN+'/?ref='+phone};renderDash();}
+const ok=await fetchMe(phone);if(!ok){me={fullName:name,phone:phone,coins:0,tasksToday:0,tasksLifetime:0,tier:'Advocate',nextTier:{next:'Bronze',need:1000,progress:0},referralCode:'',referralLink:SITE_ORIGIN+'/?ref='+phone,claimable:[],awards:[]};renderDash();}
 showModal(false);refreshShareBody();
 };
 document.getElementById('copyRef').onclick=async()=>{try{await navigator.clipboard.writeText(document.getElementById('dashRef').value);}catch(_){};document.getElementById('copyRef').textContent='Copied!';setTimeout(()=>document.getElementById('copyRef').textContent='Copy',1500);};
+async function submitClaim(tier){
+if(!session||!session.phone){requireIdentity();return;}
+const msg=document.getElementById('claimMsg');
+msg.classList.remove('hidden');msg.className='text-sm mt-2 text-slate-600';msg.textContent='Submitting claim…';
+const payload={type:'claim',fullName:(me&&me.fullName)||session.fullName||'',phone:session.phone,tier:tier,timestamp:new Date().toISOString()};
+try{
+await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+msg.className='text-sm mt-2 text-brand-green font-semibold';
+msg.textContent='Claim submitted for '+tier+'. You will be contacted on your registered phone after verification.';
+setTimeout(async()=>{await fetchMe(session.phone);},1500);
+}catch(e){msg.className='text-sm mt-2 text-red-600';msg.textContent='Could not submit claim. Try again.';}
+}
 async function creditTask(){
 if(!session||!session.phone)return;if(me&&me.tasksToday>=MAX_DAILY){document.getElementById('capMsg').classList.remove('hidden');return;}
 const payload={type:'activity',fullName:(me&&me.fullName)||session.fullName||'',phone:session.phone,task:document.getElementById('taskValue').value,note:'',timestamp:new Date().toISOString()};
 const msg=document.getElementById('actMsg');const btn=document.getElementById('shareBtn');
 btn.disabled=true;btn.textContent='Crediting…';
 try{await fetch(GOOGLE_SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-const local=JSON.parse(localStorage.getItem('ok_acts')||'[]');local.unshift({...payload,at:new Date().toLocaleString('en-NG')});localStorage.setItem('ok_acts',JSON.stringify(local.slice(0,30)));
-msg.textContent='+10 OK-Coins credited!';msg.className='text-sm mt-2 text-brand-green font-semibold';msg.classList.remove('hidden');
-renderLocalActs();setTimeout(async()=>{await fetchMe(session.phone);loadLeaderboard();btn.disabled=false;btn.textContent='Share now · +10 OK-Coins';},1500);
-}catch(err){msg.textContent='Saved on device.';msg.className='text-sm mt-2 text-amber-300';msg.classList.remove('hidden');btn.disabled=false;btn.textContent='Share now · +10 OK-Coins';}
+msg.textContent='+100 OK-Coins credited!';msg.className='text-sm mt-2 text-brand-green font-semibold';msg.classList.remove('hidden');
+setTimeout(async()=>{await fetchMe(session.phone);loadLeaderboard();btn.disabled=false;btn.textContent='Share now · +100 OK-Coins';},1500);
+}catch(err){msg.textContent='Saved on device.';msg.className='text-sm mt-2 text-amber-300';msg.classList.remove('hidden');btn.disabled=false;btn.textContent='Share now · +100 OK-Coins';}
 }
 document.getElementById('shareBtn').onclick=async()=>{
 if(!requireIdentity())return;if(me&&me.tasksToday>=MAX_DAILY){document.getElementById('capMsg').classList.remove('hidden');return;}
@@ -210,8 +242,6 @@ try{if(navigator.share){await navigator.share(data);shared=true;}}catch(err){if(
 if(!shared){try{window.open('https://wa.me/?text='+encodeURIComponent(shareBody),'_blank','noopener');shared=true;}catch(_){}}
 if(shared)await creditTask();
 };
-function renderLocalActs(){const ul=document.getElementById('localActs');try{const list=JSON.parse(localStorage.getItem('ok_acts')||'[]');if(!list.length){ul.innerHTML='<li class="text-slate-400">No logs yet.</li>';return;}ul.innerHTML=list.slice(0,8).map(a=>'<li><span class="font-medium text-navy">'+(a.task||'Task')+'</span> · '+(a.at||'')+'</li>').join('');}catch(e){ul.innerHTML='';}}
-renderLocalActs();
 
 let galItems=[], gIdx=0, gTimer=null;
 const IMG_SLIDE_MS=5000;
@@ -244,7 +274,7 @@ try{const res=await fetch('/gallery/gallery.json?_='+Date.now());galItems=await 
 if(!Array.isArray(galItems)||!galItems.length){track.innerHTML='<div class="min-w-full flex items-center justify-center text-slate-500 p-8">Gallery loading…</div>';return;}
 track.innerHTML=galItems.map(g=>{
 const src='/gallery/'+encodeURIComponent(g.file);
-const alt=String(g.caption||g.file||'').replace(/"/g,'"');
+const alt=String(g.caption||g.file||'').replace(/"/g,'&quot;');
 if(isVideoFile(g.file))return '<div class="min-w-full h-full relative bg-black flex items-center justify-center"><video class="w-full h-full object-contain" src="'+src+'" controls playsinline preload="metadata"></video></div>';
 if(isAudioFile(g.file))return '<div class="min-w-full h-full relative bg-navy flex flex-col items-center justify-center gap-4 px-6 text-white"><div class="text-5xl">♪</div><p class="text-sm font-semibold text-center">'+alt+'</p><audio class="w-full max-w-md" src="'+src+'" controls preload="metadata"></audio></div>';
 return '<div class="min-w-full h-full relative"><img class="w-full h-full object-cover" src="'+src+'" alt="'+alt+'" loading="lazy"/></div>';
