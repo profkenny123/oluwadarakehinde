@@ -1,1 +1,101 @@
-SEE_FILE_/tmp/news_full.json
+[
+  {
+    "id": "ok-teachers-day-2026",
+    "title": "Teachers Shape Our Future, Deserve Better Welfare, Says NDC Candidate Kehinde",
+    "url": "https://readership.ng/teachers-shape-our-future-deserve-better-welfare-says-ndc-candidate-kehinde/",
+    "source": "Readership.ng",
+    "date": "2026-10-05",
+    "summary": "On World Teachers' Day 2026, Oluwadara Kehinde felicitates teachers across Yewa North/Imeko-Afon and Nigeria, calling them critical nation builders and urging better welfare, tools, professional development and investment in education, especially for rural teachers.",
+    "category": "oluwadara"
+  },
+  {
+    "id": "ok-ebute-30sept",
+    "title": "OK team on the ground: grassroots engagement at Ita Abisekan Ebute, Ebute Ward",
+    "url": "https://www.oluwadarakehinde.com/tasks.html#gallery",
+    "source": "NDC Ogun / campaign gallery",
+    "date": "2026-09-30",
+    "summary": "Hon. Oluwadara Kehinde’s team drew support at Ita Abisekan Ebute polling unit, Ebute Ward, Yewa North, on 30 September.",
+    "category": "oluwadara"
+  },
+  {
+    "id": "ok-education-2026-27",
+    "title": "2026/27 Session: Oluwadara Kehinde Calls For Greater Focus On Education In Yewa North, Imeko-Afon",
+    "url": "https://readership.ng/2026-27-session-oluwadara-kehinde-calls-for-greater-focus-on-education-in-yewa-north-imeko-afon/",
+    "source": "Readership.ng",
+    "date": "2026-09-15",
+    "summary": "NDC candidate Oluwadara Kehinde welcomes students, teachers and parents back for the 2026/27 session and pledges to prioritise education if elected in 2027.",
+    "category": "oluwadara"
+  },
+  {
+    "id": "News1",
+    "title": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon",
+    "url": "https://readership.ng/2027-oluwadara-kehinde-unveils-development-agenda-for-yewa-north-imeko-afon/",
+    "source": "Readership.ng",
+    "date": "2026-09-01",
+    "summary": "Oluwadara Kehinde Unveils Development Agenda For Yewa North/Imeko-Afon.",
+    "category": "oluwadara"
+  },
+  {
+    "id": "News2",
+    "title": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "url": "https://www.amebo9jafeed.com.ng/2026/08/why-ndcs-oluwadara-kehinde-is-man-to.html",
+    "source": "amebo9jafeed",
+    "date": "2026-08-31",
+    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "category": "oluwadara"
+  },
+  {
+    "id": "News3",
+    "title": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon",
+    "url": "https://theencounter.com.ng/why-ndcs-oluwadara-kehinde-is-the-man-to-represent-yewa-north-imeko-afon/",
+    "source": "theencounter.com.ng",
+    "date": "2026-08-31",
+    "summary": "Why NDC's Oluwadara Kehinde Is The Man To Represent Yewa North/Imeko-Afon.",
+    "category": "oluwadara"
+  },
+  {
+    "id": "obi-teachers-day-05oct",
+    "title": "World Teachers’ Day: Obi says the dignity of teachers must be restored",
+    "url": "https://www.naijanews.com/",
+    "source": "Naija News",
+    "date": "2026-10-05",
+    "summary": "Peter Obi marks World Teachers’ Day, stressing teacher welfare and quality education.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-townhall-replay-05oct",
+    "title": "NDC town hall replay — votes must count",
+    "url": "https://www.youtube.com/",
+    "source": "NDC",
+    "date": "2026-10-05",
+    "summary": "Replay and share NDC town hall messages on votes counting and service.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-idp-indep-01oct",
+    "title": "Independence Day: as long as one Nigerian is in an IDP camp, we are all displaced — Obi",
+    "url": "https://punchng.com/?p=2258023",
+    "source": "Punch",
+    "date": "2026-10-01",
+    "summary": "Peter Obi’s Independence Day message after visiting Ramin Kura IDP Camp in Sokoto.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-sokoto-idp-30sept",
+    "title": "We’re all internally displaced — Obi after tour of Sokoto IDP camp",
+    "url": "https://pmnewsnigeria.com/2026/09/30/were-all-internally-displaced-obi-laments-after-tour-of-sokoto-idp-camp/",
+    "source": "P.M. News",
+    "date": "2026-09-30",
+    "summary": "Obi closes Sokoto tour at Ramin Kura IDP camp, highlighting lack of healthcare and schools.",
+    "category": "movement"
+  },
+  {
+    "id": "ndc-uk-launch-28sept",
+    "title": "Dickson, Obi and Kwankwaso to launch NDC-UK chapter before December",
+    "url": "https://thenationonlineng.net/dickson-obi-kwankwaso-to-launch-ndc-uk-chapter-by-december/",
+    "source": "The Nation",
+    "date": "2026-09-28",
+    "summary": "NDC National Leader Seriake Dickson announces formal NDC-UK launch with Obi and Kwankwaso.",
+    "category": "movement"
+  }
+]
