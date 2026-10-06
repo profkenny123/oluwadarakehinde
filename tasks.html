@@ -99,6 +99,7 @@
 <p class="text-brand-gold text-sm font-semibold uppercase mb-2">Task of the day · +100 OK-Coins</p>
 <h2 id="taskTitle" class="text-2xl font-bold mb-3">Loading…</h2>
 <p id="taskDesc" class="text-white/80 mb-4"></p>
+<img id="taskImage" alt="Today’s share card" class="hidden w-full max-w-md rounded-xl mb-4 border border-white/20"/>
 <div class="bg-white/10 rounded-xl p-4 mb-5 border border-white/20">
 <p class="text-xs text-brand-gold font-semibold mb-2 uppercase">Share this message</p>
 <p id="shareText" class="text-white/95 text-sm whitespace-pre-wrap"></p>
@@ -133,6 +134,7 @@
 </main>
 <footer class="bg-navy-dark py-8 text-center text-white"><p class="font-extrabold">OK is Okay | NDC is Okay</p><p class="text-white/50 text-sm mt-1">Oluwadara Kehinde (Akan) — Yewa North / Imeko-Afon 2027</p></footer>
 
+<script src="today-task.js"></script>
 <script>
 const menuBtn=document.getElementById('menuBtn');
 const mobileMenu=document.getElementById('mobileMenu');
@@ -159,8 +161,24 @@ const TASKS=[
 {title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:()=>`I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`}
 ];
 function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floor((d-start)/86400000);}
-function pickDailyTask(){return TASKS[dayOfYear(new Date())%TASKS.length];}
-function refreshShareBody(){const daily=pickDailyTask();shareBody=typeof daily.share==='function'?daily.share():String(daily.share||'');document.getElementById('shareText').textContent=shareBody;document.getElementById('taskTitle').textContent=daily.title;document.getElementById('taskDesc').textContent=daily.desc;document.getElementById('taskValue').value=daily.title;}
+function lagosISO(){return new Date(Date.now()+3600000).toISOString().slice(0,10);}
+function pickDailyTask(){
+  if(window.TODAY_TASK && window.TODAY_TASK.date===lagosISO()) return window.TODAY_TASK;
+  return TASKS[dayOfYear(new Date())%TASKS.length];
+}
+function refreshShareBody(){
+  const daily=pickDailyTask();
+  shareBody=typeof daily.share==='function'?daily.share():String(daily.share||'');
+  document.getElementById('shareText').textContent=shareBody;
+  document.getElementById('taskTitle').textContent=daily.title;
+  document.getElementById('taskDesc').textContent=daily.desc;
+  document.getElementById('taskValue').value=daily.title;
+  const img=document.getElementById('taskImage');
+  if(img){
+    if(daily.image){ img.src=daily.image; img.classList.remove('hidden'); }
+    else { img.classList.add('hidden'); img.removeAttribute('src'); }
+  }
+}
 refreshShareBody();
 document.getElementById('dateLabel').textContent=new Date().toLocaleDateString('en-NG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 function showModal(show){document.getElementById('idModal').classList.toggle('hidden',!show);}
