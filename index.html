@@ -208,6 +208,7 @@ setTimeout(()=>{window.location.href='tasks.html';},900);
     var note = document.getElementById('cdMilestone');
     if(note){
       if(days === 100) note.textContent = '100 days. Protect the vote. OK is Okay.';
+      else if(days === 101) note.textContent = '101 days to election morning. Share today’s Walk to School task.';
       else if(days === 90 || days === 60 || days === 30 || days === 14 || days === 7 || days === 1) note.textContent = days + ' days to go. Stay ready in every ward.';
       else note.textContent = days + ' days until polls open. Share today’s task and your referral link.';
     }
