@@ -70,7 +70,7 @@
 </div>
 
 <div id="awardsPanel" class="bg-white rounded-2xl border shadow-lg p-5 mb-6 hidden">
-  <h3 class="text-lg font-bold text-navy mb-1">Awards &amp; Claims</h3>
+  <h3 class="text-lg font-bold text-navy mb-1">Awards & Claims</h3>
   <p class="text-xs text-slate-500 mb-3">Reach a tier, then claim your reward. Claims are verified and fulfilled by the campaign team.</p>
   <ul class="text-xs text-slate-600 mb-3 space-y-1">
     <li><strong>Bronze</strong> (1,000) — 1GB data</li>
@@ -115,13 +115,16 @@
 
 <section id="gallery" class="mb-10 scroll-mt-24">
 <div class="flex items-center justify-between mb-4"><h2 class="text-2xl font-bold text-navy">Campaign Gallery</h2><span class="text-2xl">📷</span></div>
-<p class="text-sm text-slate-500 mb-4">Auto-plays media · Videos &amp; audio advance when finished · Photos every 5s</p>
+<p class="text-sm text-slate-500 mb-4">Auto-plays media · Videos & audio advance when finished · Photos every 5s</p>
 <div class="relative mb-2">
 <div class="overflow-hidden rounded-2xl bg-slate-200 aspect-[16/10]"><div id="galleryTrack" class="flex h-full transition-transform duration-500 ease-in-out"></div></div>
 <button id="galPrev" type="button" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">‹</button>
 <button id="galNext" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-navy/80 text-white z-10">›</button>
 </div>
-<p id="galCaption" class="text-center text-sm text-slate-600 mt-2"></p>
+<div class="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2">
+<p id="galCaption" class="text-center text-sm text-slate-600"></p>
+<button type="button" id="galShareBtn" class="px-4 py-2 rounded-full bg-brand-green text-white text-sm font-semibold shrink-0">Share this media</button>
+</div>
 </section>
 
 <div class="bg-white rounded-2xl p-6 shadow-lg border">
@@ -154,11 +157,11 @@ function tierClass(tier){const t=String(tier||'').toLowerCase();if(t==='star')re
 function shareLink(){if(me&&me.referralLink)return me.referralLink;if(session&&session.referralCode)return SITE_ORIGIN+'/?ref='+encodeURIComponent(session.referralCode);const ref=sessionStorage.getItem('ok_ref');return ref?SITE_ORIGIN+'/?ref='+encodeURIComponent(ref):SITE_ORIGIN;}
 function newsLink(){return SITE_ORIGIN+'/news.html';}
 const TASKS=[
-{title:'Share the Viral OK Campaign Video',desc:'Watch the viral campaign video, then share it on WhatsApp status, groups, Facebook or Instagram Reels so more people see Oluwadara Kehinde.',share:()=>`Watch & share this viral campaign video for Oluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.\n\n▶ Video: ${SITE_ORIGIN}/gallery/${encodeURIComponent('Viral video.mp4')}\n\nOK is Okay | NDC is Okay\nJoin: ${shareLink()}\n#OKisOkay #NDC2027 #ViralOK`},
-{title:"Amplify Today's Campaign News",desc:'Open the News page and share a recent story with five people.',share:()=>`Stay informed.\nRead: ${newsLink()}\nJoin: ${shareLink()}\n#OKisOkay`},
-{title:'WhatsApp Status Drive',desc:'Post today’s campaign message on your WhatsApp status for 24 hours.',share:()=>`OK is Okay!\nOluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`},
-{title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>`Please support Oluwadara Kehinde (Akan) — NDC for Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`},
-{title:'Facebook / Instagram Post',desc:'Post a photo or short write-up about why you support OK.',share:()=>`I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.\n#OKisOkay\n${shareLink()}`}
+{title:'Share the Viral OK Campaign Video',desc:'Watch the viral campaign video, then share with one personal referral link so more people see Oluwadara Kehinde.',share:()=>['Watch the viral OK campaign video for Oluwadara Kehinde (Akan) — Yewa North/Imeko-Afon 2027.','','OK is Okay | NDC is Okay','Join: '+shareLink(),'#OKisOkay #NDC2027'].join('\n')},
+{title:"Amplify Today's Campaign News",desc:'Share today’s campaign message with five people using only your referral link.',share:()=>['Stay informed. Support Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.','','Join: '+shareLink(),'#OKisOkay #NDC2027'].join('\n')},
+{title:'WhatsApp Status Drive',desc:'Post today’s campaign message on your WhatsApp status for 24 hours.',share:()=>['OK is Okay!','Oluwadara Kehinde (Akan) for Yewa North/Imeko-Afon 2027.','','Join: '+shareLink(),'#OKisOkay'].join('\n')},
+{title:'Share in 2 WhatsApp Groups',desc:'Send a respectful campaign update to two community or family groups.',share:()=>['Please support Oluwadara Kehinde (Akan) — NDC for Yewa North/Imeko-Afon 2027.','','Join: '+shareLink(),'#OKisOkay'].join('\n')},
+{title:'Facebook / Instagram Post',desc:'Post a short write-up about why you support OK with your referral link.',share:()=>['I stand with Oluwadara Kehinde (Akan) for House of Reps — Yewa North/Imeko-Afon 2027.','','Join: '+shareLink(),'#OKisOkay'].join('\n')}
 ];
 function dayOfYear(d){const start=new Date(d.getFullYear(),0,0);return Math.floor((d-start)/86400000);}
 function lagosISO(){return new Date(Date.now()+3600000).toISOString().slice(0,10);}
@@ -195,7 +198,7 @@ document.getElementById('dashCoins').textContent=(m.coins!=null?m.coins:0).toLoc
 document.getElementById('dashLifetime').textContent=(m.tasksLifetime!=null?m.tasksLifetime:0).toLocaleString();
 const today=m.tasksToday!=null?m.tasksToday:0;
 document.getElementById('dashToday').textContent=today;
-const tier=m.tier||'Advocate';const tierEl=document.getElementById('dashTier');tierEl.textContent=tier;tierEl.className='inline-block px-3 py-1 rounded-full text-xs font-bold '+tierClass(tier);
+const tier=m.tier||'Advocate';const tierEl=document.getElementById('dashTier');tierEl.className='inline-block px-3 py-1 rounded-full text-xs font-bold '+tierClass(tier);tierEl.textContent=tier;
 const nt=m.nextTier||{};
 if(nt.next){document.getElementById('dashNext').textContent=nt.next+' at '+Number(nt.need).toLocaleString();document.getElementById('dashProgLabel').textContent=(nt.progress||0).toLocaleString()+' / '+Number(nt.need).toLocaleString();document.getElementById('dashProgBar').style.width=Math.min(100,Math.round(100*(nt.progress||0)/nt.need))+'%';}
 else{document.getElementById('dashNext').textContent='Star tier';document.getElementById('dashProgLabel').textContent='Max';document.getElementById('dashProgBar').style.width='100%';}
@@ -253,12 +256,53 @@ msg.textContent='+100 OK-Coins credited!';msg.className='text-sm mt-2 text-brand
 setTimeout(async()=>{await fetchMe(session.phone);loadLeaderboard();btn.disabled=false;btn.textContent='Share now · +100 OK-Coins';},1500);
 }catch(err){msg.textContent='Saved on device.';msg.className='text-sm mt-2 text-amber-300';msg.classList.remove('hidden');btn.disabled=false;btn.textContent='Share now · +100 OK-Coins';}
 }
+async function sharePlain(text, imageUrl){
+  text = String(text||'').replace(/\\n/g,'\n').trim();
+  let shared=false;
+  try{
+    if(navigator.share){
+      const payload={title:'OK is Okay — Oluwadara Kehinde',text:text};
+      if(imageUrl){
+        try{
+          const res=await fetch(imageUrl,{mode:'cors'});
+          const blob=await res.blob();
+          const fname=(imageUrl.split('/').pop()||'ok-card.jpg').split('?')[0];
+          const file=new File([blob],fname,{type:blob.type||'image/jpeg'});
+          if(!navigator.canShare || navigator.canShare({files:[file]})){
+            payload.files=[file];
+          }
+        }catch(_){}
+      }
+      await navigator.share(payload);
+      shared=true;
+    }
+  }catch(err){
+    if(err && err.name==='AbortError') return false;
+  }
+  if(!shared){
+    try{window.open('https://wa.me/?text='+encodeURIComponent(text),'_blank','noopener');shared=true;}catch(_){}
+  }
+  return shared;
+}
 document.getElementById('shareBtn').onclick=async()=>{
 if(!requireIdentity())return;if(me&&me.tasksToday>=MAX_DAILY){document.getElementById('capMsg').classList.remove('hidden');return;}
-refreshShareBody();const data={title:'OK is Okay — Oluwadara Kehinde',text:shareBody,url:shareLink()};let shared=false;
-try{if(navigator.share){await navigator.share(data);shared=true;}}catch(err){if(err&&err.name==='AbortError')return;}
-if(!shared){try{window.open('https://wa.me/?text='+encodeURIComponent(shareBody),'_blank','noopener');shared=true;}catch(_){}}
+refreshShareBody();
+const daily=pickDailyTask();
+const imgUrl=daily && daily.image ? daily.image : null;
+const shared=await sharePlain(shareBody, imgUrl);
 if(shared)await creditTask();
+};
+document.getElementById('galShareBtn').onclick=async()=>{
+  if(!galItems.length)return;
+  const item=galItems[gIdx]||{};
+  const caption=item.caption||item.file||'Campaign media';
+  const text=['OK Campaign — '+caption,'','Oluwadara Kehinde (Akan) | Yewa North / Imeko-Afon 2027','','Join: '+shareLink(),'#OKisOkay #NDC2027'].join('\n');
+  let imageUrl=null;
+  const f=item.file||'';
+  if(f && !isVideoFile(f) && !isAudioFile(f)){
+    imageUrl='/gallery/'+encodeURIComponent(f);
+  }
+  await sharePlain(text, imageUrl);
 };
 
 let galItems=[], gIdx=0, gTimer=null;
@@ -292,9 +336,9 @@ try{const res=await fetch('/gallery/gallery.json?_='+Date.now());galItems=await 
 if(!Array.isArray(galItems)||!galItems.length){track.innerHTML='<div class="min-w-full flex items-center justify-center text-slate-500 p-8">Gallery loading…</div>';return;}
 track.innerHTML=galItems.map(g=>{
 const src='/gallery/'+encodeURIComponent(g.file);
-const alt=String(g.caption||g.file||'').replace(/"/g,'&quot;');
+const alt=String(g.caption||g.file||'').replace(/"/g,'"');
 if(isVideoFile(g.file))return '<div class="min-w-full h-full relative bg-black flex items-center justify-center"><video class="w-full h-full object-contain" src="'+src+'" controls playsinline preload="metadata"></video></div>';
-if(isAudioFile(g.file))return '<div class="min-w-full h-full relative bg-navy flex flex-col items-center justify-center gap-4 px-6 text-white"><div class="text-5xl">♪</div><p class="text-sm font-semibold text-center">'+alt+'</p><audio class="w-full max-w-md" src="'+src+'" controls preload="metadata"></audio></div>';
+if(isAudioFile(g.file))return '<div class="min-w-full h-full relative bg-navy flex flex-col items-center justify-center gap-4 px-6 text-white"><div class="text-5xl">♪</div><p class="text-sm font-semibold text-center">'+alt+'</p><audio class="w-full max-w-md" src="'+src+'" type="audio/mpeg" controls preload="auto" playsinline></audio></div>';
 return '<div class="min-w-full h-full relative"><img class="w-full h-full object-cover" src="'+src+'" alt="'+alt+'" loading="lazy"/></div>';
 }).join('');
 goGal(0);
@@ -314,7 +358,7 @@ if(!session){try{const last=JSON.parse(localStorage.getItem('ok_last_volunteer')
 if(session&&session.phone){await fetchMe(session.phone);if(!me)renderDash();}else renderDash();
 })();
 </script>
-<audio id="bgMusic" src="/gallery/campaign%20music.mpeg" loop preload="auto"></audio>
+<audio id="bgMusic" src="/gallery/campaign%20music.mpeg" type="audio/mpeg" loop preload="auto" playsinline></audio>
 <button type="button" id="musicToggle" class="fixed bottom-4 right-4 z-[60] px-4 py-2.5 rounded-full bg-navy text-white text-sm font-semibold shadow-lg border border-white/20">♪ Music</button>
 <script>
 (function(){
