@@ -1,27 +1,24 @@
 window.TODAY_TASK = {
-  date: '2026-10-10',
-  title: 'Talk to one neighbour about education',
-  desc: 'Saturday’s task is a conversation, not another poster. Reach one friend, one family member, and one neighbour. Tell them Oluwadara Kehinde (Akan) is prioritising education and skills for Yewa North and Imeko-Afon — vocational training, digital skills, and support for teachers and learners. Ask them to get a PVC and stay until votes are counted on 16 January 2027.',
+  date: '2026-10-11',
+  title: '97 days to go – mobilize one voter',
+  desc: 'Election morning is 97 days away — 16 January 2027 at 9:00am. Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, is ready. Today’s task is simple: talk to one friend, family member or neighbour who may not have a PVC. Help them understand why getting registered and voting matters. Share this reminder so more people in Yewa North and Imeko-Afon are ready.',
   image: '/assets/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'EDUCATION FIRST FOR YEWA NORTH AND IMEKO-AFON.',
+      '97 DAYS TO ELECTION DAY.',
       '',
-      'Oluwadara Kehinde (Akan), NDC candidate for Yewa North / Imeko-Afon, is a Chartered Accountant who knows public finance.',
-      'His people-centred agenda puts youth empowerment, skills acquisition, and education at the centre.',
+      '16 January 2027 · 9:00am Nigerian time',
+      'Yewa North / Imeko-Afon',
       '',
-      'Today, talk to one friend, one family member, and one neighbour:',
-      'Young people need vocational training and digital skills.',
-      'Teachers need tools, welfare, and professional support.',
-      'Get your PVC. Vote NDC on 16 January 2027. Stay until the votes are counted.',
+      'Oluwadara Kehinde (Akan) — NDC candidate.',
+      'Homegrown. Experienced. Chartered Accountant. Ready to represent.',
       '',
-      'See the full agenda:',
-      'https://www.oluwadarakehinde.com/',
+      'Today: talk to one person. Help them get a PVC. Stay until votes are counted.',
       '',
-      'OK is Okay | NDC is Okay | Nigeria will be Okay',
-      'Join: ' + link,
-      '#OKisOkay #NDC2027 #Education #Skills #YewaNorth #ImekoAfon'
+      'OK is Okay · NDC is Okay · Nigeria will be Okay',
+      'Join the movement: ' + link,
+      '#OKisOkay #NDC2027 #97Days #YewaNorth #ImekoAfon'
     ].join('\n');
   }
 };
