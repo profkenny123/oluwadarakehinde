@@ -1,38 +1,24 @@
 [
   {
-    "id": "obi-bbc-13oct-2026",
-    "title": "BBC Africa: Peter Obi defends 2023, outlines NDC path and subsidy position",
-    "youtubeId": "3FYsJj438wU",
-    "source": "BBC News Africa",
-    "tag": "Today · Fresh interview · Share"
-  },
-  {
-    "id": "obi-indep-cursed-12oct",
-    "title": "Are we cursed, or are we the cause? — Peter Obi’s Independence message (still trending)",
-    "youtubeId": "PwVFzVCgS04",
-    "source": "SYMFONI",
-    "tag": "Trending · Share"
+    "id": "obi-townhall-nedmedia-04oct",
+    "title": "Peter Obi live: NDC Global Digital Townhall — questions from home and diaspora",
+    "youtubeId": "Mh7EtJAXlIg",
+    "source": "NedMedia",
+    "tag": "Townhall · Share"
   },
   {
     "id": "obi-channels-indep-pledge",
     "title": "Peter Obi pledges measurable governance and to tackle insecurity — Independence message",
     "youtubeId": "n4y9zxgX0OA",
     "source": "Channels Television",
-    "tag": "Independence · Share"
+    "tag": "Independence · Trending · Share"
   },
   {
-    "id": "obi-arise-full",
-    "title": "Peter Obi exclusive: one-term presidency, alliance talk, votes must count",
-    "youtubeId": "X-fE8nigmV8",
-    "source": "Arise News",
-    "tag": "Viral · 650k+ views · Share"
-  },
-  {
-    "id": "obi-townhall-nedmedia-04oct",
-    "title": "Peter Obi live: NDC Global Digital Townhall — questions from home and diaspora",
-    "youtubeId": "Mh7EtJAXlIg",
-    "source": "NedMedia",
-    "tag": "Townhall live · Share"
+    "id": "obi-bbc-13oct-2026",
+    "title": "BBC Africa: Peter Obi defends 2023, outlines NDC path and subsidy position",
+    "youtubeId": "3FYsJj438wU",
+    "source": "BBC News Africa",
+    "tag": "Fresh interview · Share"
   },
   {
     "id": "obi-ramin-kura-30sept",
@@ -40,5 +26,19 @@
     "youtubeId": "m6E9rtpRvYQ",
     "source": "Peter Obi (CON)",
     "tag": "Viral · IDP camp · Share"
+  },
+  {
+    "id": "obi-arise-full",
+    "title": "Peter Obi exclusive: one-term presidency, alliance talk, votes must count",
+    "youtubeId": "X-fE8nigmV8",
+    "source": "Arise News",
+    "tag": "Viral · Share"
+  },
+  {
+    "id": "obi-indep-cursed-12oct",
+    "title": "Are we cursed, or are we the cause? — Peter Obi’s Independence message (still trending)",
+    "youtubeId": "PwVFzVCgS04",
+    "source": "SYMFONI",
+    "tag": "Trending · Share"
   }
 ]
