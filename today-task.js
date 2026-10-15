@@ -1,24 +1,23 @@
 window.TODAY_TASK = {
-  date: '2026-10-14',
-  title: 'Share the education agenda and NDC momentum',
-  desc: 'Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, prioritises education and skills so young people can thrive. Today, tell one friend or family member about his commitment to vocational training, digital education and support for teachers and learners. Also share that the NDC will inaugurate its presidential campaign council for Peter Obi and Rabiu Kwankwaso on October 20 — our local candidate is ready to deliver year-round representation.',
+  date: '2026-10-15',
+  title: 'Support our farmers — agriculture is the backbone of Yewa North and Imeko-Afon',
+  desc: 'Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, prioritises agriculture and value addition so farmers can earn more and food is available. With World Food Day tomorrow (16 October), today share with one friend or family member why supporting local farmers, processing and modern practices matters. Homegrown leadership means year-round attention to rural livelihoods.',
   image: '/gallery/Igan%20Okoto%20Engagement.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'EDUCATION & SKILLS FOR YEWA NORTH / IMEKO-AFON.',
+      'AGRICULTURE & FOOD FOR YEWA NORTH / IMEKO-AFON.',
       '',
       'Oluwadara Kehinde (Akan) — NDC candidate.',
       'Homegrown leadership. Transparent representation. Tech-driven solutions.',
       '',
-      'Today’s task: share with one person why education must come first — vocational training, digital skills, and support for teachers so our youth can build the future.',
-      'The NDC is preparing fully: campaign council inauguration set for 20 October for Peter Obi and Rabiu Kwankwaso. Our candidate is ready.',
+      'Today’s task: tell one person why we must support our farmers — better practices, value addition, and opportunities so rural communities thrive. Tomorrow is World Food Day; let’s start now.',
       '',
-      '“The people must not only hear from their representative during elections; they must feel represented throughout the tenure.”',
+      '“Farming remains a major livelihood. Advocate for modern practices, processing, value addition, and better opportunities for grassroots farmers and agribusiness.”',
       '',
       'OK is Okay · NDC is Okay · Nigeria will be Okay',
       'Join, volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #EducationFirst #YewaNorth #ImekoAfon #PeterObi'
+      '#OKisOkay #NDC2027 #AgricultureFirst #YewaNorth #ImekoAfon #PeterObi #WorldFoodDay'
     ].join('\n');
   }
 };
