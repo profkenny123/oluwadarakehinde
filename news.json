@@ -1,12 +1,30 @@
 [
   {
-    "id": "ok-agri-food-15oct",
-    "title": "Today’s task: support farmers and food security in Yewa North / Imeko-Afon",
+    "id": "ok-world-food-day-16oct",
+    "title": "World Food Day 2026: Innovate today, nourish tomorrow — Oluwadara Kehinde prioritises agriculture",
     "url": "https://www.oluwadarakehinde.com/tasks.html",
     "source": "OK Campaign",
-    "date": "2026-10-15",
-    "summary": "Oluwadara Kehinde (Akan), NDC candidate, focuses on agriculture and value addition. With World Food Day on 16 October, supporters are asked to share why modern farming, processing and rural opportunities matter for the constituency.",
+    "date": "2026-10-16",
+    "summary": "On World Food Day (theme: Innovate Today, Nourish Tomorrow), Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, renews his call for modern farming practices, value addition, reduced post-harvest losses and better opportunities for grassroots farmers so communities can feed themselves and thrive.",
     "category": "oluwadara"
+  },
+  {
+    "id": "kwankwaso-sleepless-nights-16oct",
+    "title": "Kwankwaso: Peter Obi is giving Tinubu sleepless nights ahead of 2027",
+    "url": "https://dailypost.ng/2026/10/16/peter-obi-giving-tinubu-sleepless-nights-kwankwaso/",
+    "source": "Daily Post",
+    "date": "2026-10-16",
+    "summary": "NDC Vice-Presidential candidate Rabiu Kwankwaso says Peter Obi’s popularity in the South and strong mobilisation in the North has the President concerned. The Obi-Kwankwaso ticket is described as a formidable team.",
+    "category": "movement"
+  },
+  {
+    "id": "kwankwaso-fuel-subsidy-15oct",
+    "title": "Kwankwaso: NDC will do whatever is necessary, including subsidy, to bring down fuel price",
+    "url": "https://www.channelstv.com/2026/10/15/well-consider-fuel-subsidy-to-bring-down-petrol-price-kwankwaso/",
+    "source": "Channels Television",
+    "date": "2026-10-15",
+    "summary": "On Politics Today, Kwankwaso confirmed that he, Peter Obi and NDC National Leader Seriake Dickson are aligned: energy prices are too high. The party will consider all options, including restoring fuel subsidy, to reduce the burden on Nigerians.",
+    "category": "movement"
   },
   {
     "id": "ndc-campaign-council-20oct",
@@ -33,15 +51,6 @@
     "source": "BBC News Africa",
     "date": "2026-10-12",
     "summary": "NDC presidential candidate Peter Obi speaks to BBC Africa about the 2023 election, his current NDC platform, and his position on restoring fuel subsidy without the corruption that plagued the old system. Watch and share.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-inec-upload-12oct",
-    "title": "NDC uploads Peter Obi’s name to INEC portal amid appeal",
-    "url": "https://businessday.ng/politics/article/access-code-peter-obis-name-uploaded-on-inec-portal-ndc-leader-dickson/",
-    "source": "BusinessDay",
-    "date": "2026-10-12",
-    "summary": "NDC National Leader Seriake Dickson says the party has uploaded Peter Obi’s name to the INEC candidate portal and filed an appeal against a court ruling, assuring supporters the process continues.",
     "category": "movement"
   }
 ]
