@@ -1,23 +1,23 @@
 window.TODAY_TASK = {
-  date: '2026-10-16',
-  title: 'World Food Day: Innovate today, nourish tomorrow — support our farmers',
-  desc: 'Today is World Food Day 2026 (theme: Innovate Today, Nourish Tomorrow). Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, has made agriculture and value addition a core pillar of his people-centred agenda. Share with one friend or family member why modern practices, processing, reduced waste and better opportunities for grassroots farmers matter for food security and rural livelihoods in our constituency. 92 days to election day — let’s keep building.',
-  image: '/gallery/Igan%20Okoto%20Engagement.jpg',
+  date: '2026-10-17',
+  title: '91 days to election: Share why Oluwadara Kehinde’s year-round representation matters',
+  desc: '91 days until 16 January 2027. Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, is committed to people-centred, accessible representation. Share with one friend or family member why his focus on youth empowerment, education and skills, accountable representation and rural welfare will make a difference in our constituency. OK is Okay.',
+  image: '/gallery/Engagement%20at%20Ilara%2020260905.jpeg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'WORLD FOOD DAY 2026 — INNOVATE TODAY, NOURISH TOMORROW.',
+      '91 DAYS TO ELECTION DAY — 16 JANUARY 2027.',
       '',
       'Oluwadara Kehinde (Akan) — NDC candidate for Yewa North/Imeko-Afon.',
-      'Homegrown leadership. Transparent representation. Tech-driven solutions.',
+      'Homegrown. Experienced. Chartered Accountant. Committed to people-centred representation.',
       '',
-      'Today’s task: tell one person why we must support our farmers — better practices, value addition, less waste, and opportunities so rural communities thrive and food is available.',
+      'Today’s task: Tell one person why we need a representative who stays accessible, listens in the wards, and delivers on youth empowerment, education, agriculture, small business and rural welfare every day — not only during campaigns.',
       '',
-      '“Farming remains a major livelihood. Advocate for modern practices, processing, value addition, and better opportunities for grassroots farmers and agribusiness.”',
+      '“The people must not only hear from their representative during elections; they must feel represented throughout the tenure.”',
       '',
       'OK is Okay · NDC is Okay · Nigeria will be Okay',
       'Join, volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #WorldFoodDay #InnovateTodayNourishTomorrow #AgricultureFirst #YewaNorth #ImekoAfon #PeterObi'
+      '#OKisOkay #NDC2027 #91Days #YewaNorth #ImekoAfon #PeterObi #AccountableRepresentation'
     ].join('\n');
   }
 };
