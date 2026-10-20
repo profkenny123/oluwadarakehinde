@@ -1,5 +1,23 @@
 [
   {
+    "id": "ndc-campaign-council-postponed-20oct",
+    "title": "NDC postpones Obi-Kwankwaso Presidential Campaign Council inauguration to 26 October",
+    "url": "https://www.thecable.ng/ndc-shifts-unveiling-of-obi-kwankwaso-campaign-council-to-october-26/",
+    "source": "TheCable",
+    "date": "2026-10-20",
+    "summary": "The NDC has shifted the unveiling and inauguration of its National Campaign Council from 20 October to 26 October because of Peter Obi’s important overseas engagement. The party apologises for any inconvenience and urges members and supporters to stay focused on securing victory for the Obi-Kwankwaso ticket and all NDC candidates, including Oluwadara Kehinde (Akan) in Yewa North/Imeko-Afon.",
+    "category": "movement"
+  },
+  {
+    "id": "obi-paris-ecfr-19oct",
+    "title": "Peter Obi at Paris ECFR roundtable: Move from consumption to production with competent leadership",
+    "url": "https://x.com/PeterObi/status/2112255733093810475",
+    "source": "Peter Obi / X",
+    "date": "2026-10-19",
+    "summary": "NDC presidential candidate Peter Obi took part in a roundtable discussion at the European Council on Foreign Relations office in Paris. Talks covered development cooperation, bilateral partnerships, and the need for accountable leadership that invests in people, education, healthcare and strong institutions. “A New Nigeria is Possible.” Pair this national vision with Oluwadara Kehinde’s people-centred agenda at home.",
+    "category": "movement"
+  },
+  {
     "id": "obi-manchester-birmingham-19oct",
     "title": "Peter Obi engages Nigerians in Manchester and Birmingham: Building a New Nigeria is our collective responsibility",
     "url": "https://x.com/PeterObi/status/2111881498416877651",
@@ -10,20 +28,11 @@
   },
   {
     "id": "90-days-campaign-council-18oct",
-    "title": "90 days to election: NDC Campaign Council inaugurates 20 October — Oluwadara Kehinde ready in Yewa North/Imeko-Afon",
+    "title": "90 days to election: NDC Campaign Council (now rescheduled) — Oluwadara Kehinde ready in Yewa North/Imeko-Afon",
     "url": "https://www.oluwadarakehinde.com/ndc",
     "source": "OK Campaign",
     "date": "2026-10-18",
-    "summary": "With 90 days until 16 January 2027, the NDC will formally inaugurate the Obi-Kwankwaso Presidential Campaign Council on 20 October. Local candidate Oluwadara Kehinde (Akan) continues ward engagements so constituents see national momentum matched by accessible, people-centred representation at home.",
-    "category": "oluwadara"
-  },
-  {
-    "id": "91-days-election-17oct",
-    "title": "91 days to election: Oluwadara Kehinde (Akan) ready for year-round, people-centred representation",
-    "url": "https://www.oluwadarakehinde.com/",
-    "source": "OK Campaign",
-    "date": "2026-10-17",
-    "summary": "With 91 days until the 16 January 2027 polls open in Yewa North/Imeko-Afon, NDC candidate Oluwadara Kehinde continues ward-level engagement. His agenda prioritises youth empowerment, agriculture and value addition, education and skills, accountable representation, and infrastructure and rural welfare so communities feel represented every day, not only at election time.",
+    "summary": "With roughly 88 days until 16 January 2027, local candidate Oluwadara Kehinde (Akan) continues ward engagements so constituents see national momentum matched by accessible, people-centred representation at home. The formal campaign council inauguration is now set for 26 October.",
     "category": "oluwadara"
   },
   {
@@ -34,32 +43,5 @@
     "date": "2026-10-16",
     "summary": "On World Food Day (theme: Innovate Today, Nourish Tomorrow), Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon, renews his call for modern farming practices, value addition, reduced post-harvest losses and better opportunities for grassroots farmers so communities can feed themselves and thrive.",
     "category": "oluwadara"
-  },
-  {
-    "id": "kwankwaso-sleepless-nights-16oct",
-    "title": "Kwankwaso: Peter Obi is giving Tinubu sleepless nights ahead of 2027",
-    "url": "https://dailypost.ng/2026/10/16/peter-obi-giving-tinubu-sleepless-nights-kwankwaso/",
-    "source": "Daily Post",
-    "date": "2026-10-16",
-    "summary": "NDC Vice-Presidential candidate Rabiu Kwankwaso says Peter Obi’s popularity in the South and strong mobilisation in the North has the President concerned. The Obi-Kwankwaso ticket is described as a formidable team.",
-    "category": "movement"
-  },
-  {
-    "id": "ndc-campaign-council-20oct",
-    "title": "NDC to inaugurate Obi-Kwankwaso presidential campaign council on October 20",
-    "url": "https://guardian.ng/news/ndc-fixes-october-20-for-campaign-council-inauguration-explains-delay/",
-    "source": "The Guardian",
-    "date": "2026-10-10",
-    "summary": "NDC National Chairman announces October 20 NEC meeting to formally inaugurate the presidential campaign council for Peter Obi and Rabiu Kwankwaso, issue certificates of return, and strengthen structures. Local candidates like Oluwadara Kehinde are ready.",
-    "category": "movement"
-  },
-  {
-    "id": "obi-bbc-13oct",
-    "title": "BBC Africa: Peter Obi on 2023 claims, NDC platform and fuel subsidy",
-    "url": "https://www.youtube.com/watch?v=3FYsJj438wU",
-    "source": "BBC News Africa",
-    "date": "2026-10-12",
-    "summary": "NDC presidential candidate Peter Obi speaks to BBC Africa about the 2023 election, his current NDC platform, and his position on restoring fuel subsidy without the corruption that plagued the old system. Watch and share.",
-    "category": "movement"
   }
 ]

@@ -1,19 +1,19 @@
 window.TODAY_TASK = {
-  date: '2026-10-19',
-  title: 'Share why Oluwadara Kehinde is the right candidate — paired with Peter Obi’s New Nigeria call',
-  desc: 'Peter Obi spent the weekend with Nigerians in Manchester and Birmingham talking about our collective responsibility to build a New Nigeria that tackles corruption and elects competent, compassionate leaders. Today, share with one friend or family member why Oluwadara Kehinde (Akan) — homegrown chartered accountant focused on youth, agriculture, education, small business and accountable representation — is the person who will deliver that vision right here in Yewa North/Imeko-Afon. OK is Okay.',
+  date: '2026-10-20',
+  title: 'Tell one person why Oluwadara Kehinde is ready — even as the national campaign council date shifts to 26 October',
+  desc: 'The NDC has postponed the formal inauguration of the Obi-Kwankwaso Presidential Campaign Council to 26 October because of Peter Obi’s overseas engagements (including the Paris roundtable). Meanwhile, work continues on the ground. Today’s task: share with a friend or family member in Yewa North or Imeko-Afon why Oluwadara Kehinde (Akan) — the homegrown chartered accountant already listening in the wards — is the representative who will deliver competent, people-centred leadership right here. OK is Okay.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'BUILDING A NEW NIGERIA STARTS AT HOME.',
+      'WHILE THE NATIONAL STRUCTURE IS FINALISED, THE WORK AT HOME CONTINUES.',
       '',
-      'Peter Obi just met Nigerians in Manchester and Birmingham. He said the task of building a New Nigeria is our collective responsibility — tackling corruption and electing leaders of capacity, character, compassion and commitment.',
+      'The NDC has moved the Obi-Kwankwaso Presidential Campaign Council inauguration to 26 October so Peter Obi can complete important overseas engagements (including his Paris roundtable on building a production-focused Nigeria).',
       '',
-      'In Yewa North / Imeko-Afon, that leader is Oluwadara Kehinde (Akan).',
-      'Homegrown. Chartered Accountant (ICAN). Experienced in public finance. Focused on youth empowerment, agriculture & value addition, education & skills, entrepreneurship, and rural welfare.',
+      'In Yewa North / Imeko-Afon, Oluwadara Kehinde (Akan) is already on the ground.',
+      'Homegrown. Chartered Accountant (ICAN). Decade of public-finance experience. Focused on youth empowerment, agriculture & value addition, education & skills, small business, and rural welfare.',
       '',
-      'Today’s task: Tell one person why our constituency needs a representative who is already listening in the wards — not only during elections.',
+      'Today’s task: Tell one person why our constituency needs a representative who is accessible every day — not only when the cameras arrive.',
       '',
       '“OK is Okay · NDC is Okay · Nigeria will be Okay.”',
       '',
