@@ -102,6 +102,20 @@
 <div class="pillar-card bg-white rounded-2xl p-6 shadow-md border"><div class="text-3xl mb-4">🛣️</div><h3 class="text-xl font-bold text-navy mb-2">Infrastructure & Rural Welfare</h3><p class="text-slate-600 text-sm">Push for roads, water, power access and community welfare so rural and peri-urban communities share in development gains.</p></div>
 </div></div></section>
 
+<section id="campaign-video" class="py-16 md:py-20 bg-navy">
+<div class="max-w-4xl mx-auto px-4">
+<div class="text-center mb-8">
+<p class="text-brand-gold text-sm font-bold uppercase tracking-wide mb-2">Campaign video</p>
+<h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Watch & Share</h2>
+<div class="w-20 h-1.5 bg-brand-red mx-auto rounded-full"></div>
+<p class="mt-4 text-white/70 max-w-2xl mx-auto">Hear from Oluwadara Kehinde (Akan) — then join the movement below.</p>
+</div>
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video">
+<iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Q2HRyHB7leI" title="Oluwadara Kehinde (Akan) Campaign Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+</div>
+</div>
+</section>
+
 <section id="join" class="py-20 bg-white">
 <div class="max-w-xl mx-auto px-4">
 <div class="text-center mb-8">
@@ -171,6 +185,22 @@ try{localStorage.setItem('ok_last_volunteer',JSON.stringify({fullName:data.fullN
 setTimeout(()=>{window.location.href='tasks.html';},900);
 }catch(err){formMessage.textContent='Something went wrong. Please try again.';formMessage.className='text-center text-sm text-red-600 font-medium';formMessage.classList.remove('hidden');}
 });
+(function(){
+  var target=new Date('2027-01-16T09:00:00+01:00').getTime();
+  function tick(){
+    var now=Date.now(), d=Math.max(0,target-now);
+    var days=Math.floor(d/86400000), hours=Math.floor((d%86400000)/3600000), mins=Math.floor((d%3600000)/60000), secs=Math.floor((d%60000)/1000);
+    var el=function(id,v){var n=document.getElementById(id);if(n)n.textContent=String(v).padStart(2,'0');};
+    el('cdDays',days);el('cdHours',hours);el('cdMins',mins);el('cdSecs',secs);
+    var m=document.getElementById('cdMilestone');
+    if(m){
+      if(d<=0)m.textContent='Election morning — stay at the polling unit until votes are counted.';
+      else if(days<=100)m.textContent=days+' days to go. Get your PVC. Vote NDC.';
+      else m.textContent='Register. Collect your PVC. Stay until the votes are counted.';
+    }
+  }
+  tick();setInterval(tick,1000);
+})();
 </script>
 <audio id="bgMusic" src="/gallery/campaign%20music.mpeg" loop preload="auto"></audio>
 <button type="button" id="musicToggle" class="fixed bottom-4 right-4 z-[60] px-4 py-2.5 rounded-full bg-navy text-white text-sm font-semibold shadow-lg border border-white/20">♪ Music</button>
@@ -183,40 +213,9 @@ setTimeout(()=>{window.location.href='tasks.html';},900);
   function setUI(){ btn.textContent=on?'♪ Music on':'♪ Music'; btn.classList.toggle('bg-brand-green',on); btn.classList.toggle('bg-navy',!on); }
   async function start(){ try{ audio.volume=0.45; await audio.play(); on=true; setUI(); }catch(e){ on=false; setUI(); } }
   function stop(){ audio.pause(); on=false; setUI(); }
-  btn.onclick=()=>{ if(on) stop(); else start(); };
+  btn.onclick=function(){ if(on) stop(); else start(); };
   setUI();
 })();
 </script>
-
-<script>
-(function(){
-  var target = new Date('2027-01-16T09:00:00+01:00').getTime();
-  function pad(n){ return String(n).padStart(2,'0'); }
-  function tick(){
-    var diff = target - Date.now();
-    if(diff < 0) diff = 0;
-    var days = Math.floor(diff / 86400000);
-    var hours = Math.floor((diff % 86400000) / 3600000);
-    var mins = Math.floor((diff % 3600000) / 60000);
-    var secs = Math.floor((diff % 60000) / 1000);
-    var el = document.getElementById('cdDays');
-    if(!el) return;
-    el.textContent = days;
-    document.getElementById('cdHours').textContent = pad(hours);
-    document.getElementById('cdMins').textContent = pad(mins);
-    document.getElementById('cdSecs').textContent = pad(secs);
-    var note = document.getElementById('cdMilestone');
-    if(note){
-      if(days === 100) note.textContent = '100 days. Protect the vote. OK is Okay.';
-      else if(days === 101) note.textContent = '101 days to election morning. Share today’s Walk to School task.';
-      else if(days === 90 || days === 60 || days === 30 || days === 14 || days === 7 || days === 1) note.textContent = days + ' days to go. Stay ready in every ward.';
-      else note.textContent = days + ' days until polls open. Share today’s task and your referral link.';
-    }
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
-</script>
-
 </body>
 </html>
