@@ -1,24 +1,25 @@
 window.TODAY_TASK = {
-  date: '2026-10-20',
-  title: 'Tell one person why Oluwadara Kehinde is ready — even as the national campaign council date shifts to 26 October',
-  desc: 'The NDC has postponed the formal inauguration of the Obi-Kwankwaso Presidential Campaign Council to 26 October because of Peter Obi’s overseas engagements (including the Paris roundtable). Meanwhile, work continues on the ground. Today’s task: share with a friend or family member in Yewa North or Imeko-Afon why Oluwadara Kehinde (Akan) — the homegrown chartered accountant already listening in the wards — is the representative who will deliver competent, people-centred leadership right here. OK is Okay.',
+  date: '2026-10-21',
+  title: 'Share that NDC stays focused — fresh congresses for any gaps, work continues in Yewa North/Imeko-Afon',
+  desc: 'The NDC has announced it will hold fresh congresses to replace any candidates who defected after alleged inducements. The party says those who left lacked commitment; preparations for the Obi-Kwankwaso ticket and all other candidates continue. Today’s task: tell one friend or family member in the constituency that Oluwadara Kehinde (Akan) remains fully committed on the ground — homegrown, accessible, and focused on youth, agriculture, education and rural welfare. OK is Okay.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'WHILE THE NATIONAL STRUCTURE IS FINALISED, THE WORK AT HOME CONTINUES.',
+      'NDC STAYS FOCUSED. THE WORK CONTINUES.',
       '',
-      'The NDC has moved the Obi-Kwankwaso Presidential Campaign Council inauguration to 26 October so Peter Obi can complete important overseas engagements (including his Paris roundtable on building a production-focused Nigeria).',
+      'Some candidates may have left after alleged inducements. The NDC will hold fresh congresses under the Electoral Act to fill any gaps with credible people.',
       '',
-      'In Yewa North / Imeko-Afon, Oluwadara Kehinde (Akan) is already on the ground.',
-      'Homegrown. Chartered Accountant (ICAN). Decade of public-finance experience. Focused on youth empowerment, agriculture & value addition, education & skills, small business, and rural welfare.',
+      'In Yewa North / Imeko-Afon, Oluwadara Kehinde (Akan) is still here — listening in the wards, pushing people-centred representation.',
+      'Homegrown. Chartered Accountant (ICAN). Decade of public-finance experience.',
+      'Youth empowerment. Agriculture & value addition. Education & skills. Small business. Rural welfare.',
       '',
-      'Today’s task: Tell one person why our constituency needs a representative who is accessible every day — not only when the cameras arrive.',
+      'Today’s task: Tell one person why we need a representative who stays accessible every day.',
       '',
       '“OK is Okay · NDC is Okay · Nigeria will be Okay.”',
       '',
       'Join, volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #AccountableRepresentation'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria'
     ].join('\n');
   }
 };
