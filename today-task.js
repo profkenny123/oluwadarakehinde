@@ -1,26 +1,29 @@
 window.TODAY_TASK = {
-  date: '2026-10-22',
-  title: 'Share the rebuilding message: Peter Obi in London + Oluwadara Kehinde ready at home',
-  desc: 'Yesterday Peter Obi arrived in London and met British officials and Nigerian diaspora on our collective responsibility to rebuild Nigeria free from bad leadership and corruption. A New Nigeria is Possible. Today’s task: tell one friend or family member that while the national ticket is engaging the world, Oluwadara Kehinde (Akan) is already on the ground in Yewa North / Imeko-Afon with a clear people-centred agenda — youth, agriculture, education, small business and rural welfare. Share this and your referral link.',
-  image: '/gallery/candidate-profile.jpg',
+  date: '2026-10-23',
+  title: '85 days to election: Share Oluwadara Kehinde’s people-centred agenda with one friend or family member',
+  desc: 'With 85 days left until 16 January 2027, and the NDC Campaign Council inauguration set for Monday 26 October, today’s task is local and personal. Tell one friend or family member about Oluwadara Kehinde (Akan)’s clear agenda for Yewa North / Imeko-Afon: youth empowerment, agriculture & value addition, education & skills, entrepreneurship & small business, accountable representation, and infrastructure & rural welfare. Homegrown leadership that stays accessible year-round. Share your referral link and invite them to join the movement.',
+  image: '/gallery/Joga-Iboro ward Oct 2026.jpeg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'A NEW NIGERIA IS POSSIBLE — STARTING AT HOME.',
+      '85 DAYS TO ELECTION — THE WORK CONTINUES AT HOME.',
       '',
-      'Peter Obi is in London meeting diaspora and officials on rebuilding Nigeria with competent, accountable leadership.',
-      '“The child of nobody can become somebody without knowing anybody.”',
+      'While the NDC prepares to inaugurate the Obi-Kwankwaso Campaign Council on 26 October, Oluwadara Kehinde (Akan) is already on the ground in Yewa North / Imeko-Afon.',
       '',
-      'In Yewa North / Imeko-Afon, Oluwadara Kehinde (Akan) is already doing the work:',
-      'Homegrown. ICAN Chartered Accountant. Decade of public-finance experience in Ogun State.',
-      'Youth empowerment · Agriculture & value addition · Education & skills · Entrepreneurship · Accountable representation · Rural welfare.',
+      'His people-centred agenda:',
+      '• Youth empowerment & skills',
+      '• Agriculture & value addition',
+      '• Education & digital skills',
+      '• Entrepreneurship & small business',
+      '• Accountable, year-round representation',
+      '• Infrastructure & rural welfare',
       '',
-      'Today’s task: Tell one person why we need a representative who stays accessible every day, not only at election time.',
+      'Today’s task: Tell one friend or family member why a homegrown, accessible representative matters. Invite them to join.',
       '',
       '“OK is Okay · NDC is Okay · Nigeria will be Okay.”',
       '',
-      'Join, volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #86Days'
+      'Volunteer and share: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #85Days #PeterObi #NewNigeria'
     ].join('\n');
   }
 };
