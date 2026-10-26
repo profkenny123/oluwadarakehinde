@@ -1,18 +1,23 @@
 window.TODAY_TASK = {
-  date: '2026-10-24',
-  title: 'United Nations Day: Share why accountable representation matters for Yewa North / Imeko-Afon',
-  desc: 'Today is United Nations Day, marking the anniversary of the UN Charter and the ideals of peace, cooperation and accountable governance. Oluwadara Kehinde (Akan) believes representation must go beyond election season — the people must feel represented throughout the tenure through transparency, continuous engagement and delivery on youth empowerment, agriculture, education, entrepreneurship and rural welfare. Share this message with one friend or family member and invite them to join the movement.',
-  image: '/gallery/Igan Okoto Engagement.jpg',
+  date: '2026-10-26',
+  title: 'NDC National Campaign Council inaugurated today — share the national momentum with one friend',
+  desc: 'Today the Nigeria Democratic Congress inaugurates its National Campaign Council in Abuja, chaired by Senator Henry Seriake Dickson with Peter Obi as Co-Chairman. The council will coordinate campaigns for every NDC candidate, from the presidential ticket to National Assembly and state assemblies. While leaders align in Abuja, Oluwadara Kehinde (Akan) continues people-centred mobilisation across Yewa North and Imeko-Afon. Share this update and invite one friend or family member to join the movement.',
+  image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'UNITED NATIONS DAY — ACCOUNTABLE REPRESENTATION STARTS AT HOME.',
+      'NDC NATIONAL CAMPAIGN COUNCIL INAUGURATED TODAY.',
       '',
-      'On this United Nations Day, we remember that good governance and accountable leadership are the foundation of peace and progress.',
+      'On 26 October 2026 the Nigeria Democratic Congress inaugurates its National Campaign Council in Abuja.',
       '',
-      'Oluwadara Kehinde (Akan), NDC candidate for Yewa North / Imeko-Afon, says: “The people must not only hear from their representative during elections; they must feel represented throughout the tenure.”',
+      'Chairman: Senator Henry Seriake Dickson',
+      'Co-Chairman: Peter Obi (Presidential Candidate)',
+      'Co-Vice Chairman: Rabiu Musa Kwankwaso',
+      'Vice Chairman: Senator Cleopas Zuwoghe',
       '',
-      'His people-centred agenda:',
+      'The council coordinates campaigns for all NDC candidates — presidential, National Assembly, governorship and state assemblies.',
+      '',
+      'Locally, Oluwadara Kehinde (Akan) remains focused on Yewa North / Imeko-Afon with a people-centred agenda:',
       '• Youth empowerment',
       '• Agriculture & value addition',
       '• Education & skills',
@@ -20,12 +25,12 @@ window.TODAY_TASK = {
       '• Accountable representation',
       '• Infrastructure & rural welfare',
       '',
-      'Today’s task: Tell one friend or family member why year-round, transparent representation matters. Invite them to join.',
+      'Today’s task: Share this national step with one friend or family member and invite them to join the OK Campaign.',
       '',
       '“OK is Okay · NDC is Okay · Nigeria will be Okay.”',
       '',
       'Volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #UnitedNationsDay #PeterObi #NewNigeria'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #CampaignCouncil'
     ].join('\n');
   }
 };
