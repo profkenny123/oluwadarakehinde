@@ -1,23 +1,20 @@
 window.TODAY_TASK = {
-  date: '2026-10-26',
-  title: 'NDC National Campaign Council inaugurated today — share the national momentum with one friend',
-  desc: 'Today the Nigeria Democratic Congress inaugurates its National Campaign Council in Abuja, chaired by Senator Henry Seriake Dickson with Peter Obi as Co-Chairman. The council will coordinate campaigns for every NDC candidate, from the presidential ticket to National Assembly and state assemblies. While leaders align in Abuja, Oluwadara Kehinde (Akan) continues people-centred mobilisation across Yewa North and Imeko-Afon. Share this update and invite one friend or family member to join the movement.',
+  date: '2026-10-27',
+  title: 'Share Peter Obi’s post-inauguration message: A New and Productive Nigeria is Possible',
+  desc: 'Yesterday the NDC National Campaign Council was inaugurated. Today Peter Obi posted that a new and productive Nigeria is possible and Nigeria will be OK. He highlighted the challenges of poverty, corruption, insecurity and low productivity, and called on Nigerians to join the crusade with Kwankwaso. While the national ticket advances, Oluwadara Kehinde (Akan) continues people-centred work in Yewa North / Imeko-Afon. Share this message with one friend or family member and invite them to join the OK Campaign.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'NDC NATIONAL CAMPAIGN COUNCIL INAUGURATED TODAY.',
+      'A NEW AND PRODUCTIVE NIGERIA IS POSSIBLE. NIGERIA WILL BE OK.',
       '',
-      'On 26 October 2026 the Nigeria Democratic Congress inaugurates its National Campaign Council in Abuja.',
+      'Yesterday the NDC National Campaign Council was inaugurated in Abuja.',
       '',
-      'Chairman: Senator Henry Seriake Dickson',
-      'Co-Chairman: Peter Obi (Presidential Candidate)',
-      'Co-Vice Chairman: Rabiu Musa Kwankwaso',
-      'Vice Chairman: Senator Cleopas Zuwoghe',
+      'Today Peter Obi said: over 140 million Nigerians are multidimensionally poor. Corruption, insecurity, unemployment and inequality persist. Revenue has not translated into productivity.',
       '',
-      'The council coordinates campaigns for all NDC candidates — presidential, National Assembly, governorship and state assemblies.',
+      'Obi and Kwankwaso call on all Nigerians to join the crusade of rebuilding our nation on fairness, justice, equity, productivity, inclusion and development.',
       '',
-      'Locally, Oluwadara Kehinde (Akan) remains focused on Yewa North / Imeko-Afon with a people-centred agenda:',
+      'Locally, Oluwadara Kehinde (Akan) is already mobilising for Yewa North / Imeko-Afon with a clear agenda:',
       '• Youth empowerment',
       '• Agriculture & value addition',
       '• Education & skills',
@@ -25,12 +22,12 @@ window.TODAY_TASK = {
       '• Accountable representation',
       '• Infrastructure & rural welfare',
       '',
-      'Today’s task: Share this national step with one friend or family member and invite them to join the OK Campaign.',
+      'Today’s task: Share this national message with one friend or family member and invite them to join the movement.',
       '',
       '“OK is Okay · NDC is Okay · Nigeria will be Okay.”',
       '',
       'Volunteer and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #CampaignCouncil'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK'
     ].join('\n');
   }
 };
