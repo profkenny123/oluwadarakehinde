@@ -1,18 +1,20 @@
 window.TODAY_TASK = {
-  date: '2026-11-01',
-  title: '76 days to election: Share Oluwadara Kehinde’s recent grassroots engagement in Joga-Iboro ward',
-  desc: 'With 76 days until 16 January 2027, today’s task is to amplify the ongoing ground work. Oluwadara Kehinde (Akan) continues direct engagement with communities across Yewa North and Imeko-Afon. Share this recent image from Joga-Iboro ward with friends and family, and invite them to support the people-centred agenda for our constituency.',
-  image: '/gallery/Joga-Iboro ward Oct 2026.jpeg',
+  date: '2026-11-02',
+  title: '75 days to election: Share Oluwadara Kehinde’s people-centred agenda for Yewa North / Imeko-Afon',
+  desc: 'With 75 days until 16 January 2027, today’s task is to promote the local agenda. Oluwadara Kehinde (Akan) brings homegrown leadership focused on youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure. Share this message and the candidate profile with friends and family in the constituency and beyond.',
+  image: '/assets/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '76 DAYS TO ELECTION — GRASSROOTS ENGAGEMENT CONTINUES',
+      '75 DAYS TO ELECTION — PEOPLE-CENTRED AGENDA FOR YEWA NORTH / IMEKO-AFON',
       '',
-      'Oluwadara Kehinde (Akan) is on the ground in Yewa North / Imeko-Afon. Recent engagement in Joga-Iboro ward shows the commitment to year-round representation, not just election-time visits.',
+      'Oluwadara Kehinde (Akan) is the NDC candidate bringing homegrown, transparent and tech-driven representation to our constituency.',
       '',
-      'Homegrown leadership focused on:',
-      '• Youth empowerment and skills',
+      'His agenda focuses on:',
+      '• Youth empowerment and skills development',
       '• Agriculture and value addition',
+      '• Entrepreneurship and small business',
+      '• Education and skills',
       '• Accountable representation',
       '• Infrastructure and rural welfare',
       '',
@@ -23,7 +25,7 @@ window.TODAY_TASK = {
       'OK is Okay · NDC is Okay · Nigeria will be Okay.',
       '',
       'Join and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #JogaIboro #PeterObi #NewNigeria #NigeriaWillBeOK #76Days #Grassroots'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK #75Days #PeopleCentred'
     ].join('\n');
   }
 };
