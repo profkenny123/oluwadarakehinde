@@ -1,31 +1,23 @@
 window.TODAY_TASK = {
-  date: '2026-11-04',
-  title: 'Promote the candidacy: Share Oluwadara Kehinde’s people-centred agenda with friends and family',
-  desc: 'With 73 days to go, today’s task is a simple call to action. Use the excerpt from the about section and agenda pillars to engage one friend or family member. Let them know why OK is the right choice for Yewa North / Imeko-Afon and why NDC offers a path to a New Nigeria.',
-  image: '/assets/candidate-profile.jpg',
+  date: '2026-11-05',
+  title: 'Share recent ground mobilisation: Joga-Iboro ward engagement with Oluwadara Kehinde',
+  desc: 'With 72 days to the election, today\'s task highlights ongoing ward-level work. Share this recent image from Joga-Iboro ward engagement in October 2026. Oluwadara Kehinde (Akan) continues listening and mobilising across Yewa North / Imeko-Afon. Pair it with the national NDC vision of a New Nigeria.',
+  image: '/gallery/Joga-Iboro ward Oct 2026.jpeg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '73 DAYS TO ELECTION — SUPPORT OLUWADARA KEHINDE (AKAN) FOR YEWA NORTH / IMEKO-AFON',
+      '72 DAYS TO ELECTION — YEWA NORTH / IMEKO-AFON MOBILISATION CONTINUES',
       '',
-      'Homegrown leadership. Transparent representation. Tech-driven solutions.',
+      'Recent engagement at Joga-Iboro ward with Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon Federal Constituency.',
       '',
-      'Oluwadara Kehinde (Akan) is the NDC candidate. Chartered Accountant (ICAN), NIM member, with a decade in Ogun State civil service and experience in cybersecurity governance. Deeply rooted in Owode Ketu and Ayetoro.',
+      'Homegrown leadership that shows up in the wards, not only on campaign days. Listening to farmers, traders, youth and families.',
       '',
-      'His people-centred agenda focuses on:',
-      '• Youth empowerment and skills',
-      '• Agriculture and value addition',
-      '• Entrepreneurship and small business',
-      '• Education and skills',
-      '• Accountable representation',
-      '• Infrastructure and rural welfare',
+      'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
-      '“The people must not only hear from their representative during elections; they must feel represented throughout the tenure.”',
+      'Support the people-centred agenda: youth empowerment, agriculture, education, accountable representation and infrastructure.',
       '',
-      'Today’s task: Share this with one friend or family member. Invite them to join the movement. OK is Okay. NDC is Okay. Nigeria will be Okay.',
-      '',
-      'Join and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK #73Days'
+      'Join the movement and share: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #JogaIboro #PeterObi #NewNigeria #NigeriaWillBeOK #72Days'
     ].join('\n');
   }
 };
