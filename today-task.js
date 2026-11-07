@@ -1,12 +1,12 @@
 window.TODAY_TASK = {
-  date: '2026-11-06',
-  title: 'Share Oluwadara Kehinde\'s people-centred agenda with 71 days to election',
-  desc: 'With 71 days until 16 January 2027, today\'s task is to engage friends and family on the local agenda. Oluwadara Kehinde (Akan) focuses on youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure across Yewa North / Imeko-Afon. Pair it with the national NDC vision of a New Nigeria under Peter Obi and Kwankwaso. A New Nigeria is Possible.',
+  date: '2026-11-07',
+  title: '70 days to election: Engage friends and family on the people-centred agenda',
+  desc: 'With 70 days until 16 January 2027, today\'s task is to share Oluwadara Kehinde (Akan)\'s homegrown agenda for Yewa North / Imeko-Afon with friends and family. Focus on youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure. Pair it with Peter Obi and Kwankwaso\'s national vision for a New Nigeria. Get your PVC and vote NDC.',
   image: '/assets/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '71 DAYS TO ELECTION — PEOPLE-CENTRED AGENDA FOR YEWA NORTH / IMEKO-AFON',
+      '70 DAYS TO ELECTION — PEOPLE-CENTRED AGENDA FOR YEWA NORTH / IMEKO-AFON',
       '',
       'Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon Federal Constituency 2027.',
       '',
@@ -22,7 +22,7 @@ window.TODAY_TASK = {
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
       'Join and share the movement: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK #71Days #PeopleCentred'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK #70Days #PeopleCentred'
     ].join('\n');
   }
 };
