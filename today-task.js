@@ -1,28 +1,28 @@
 window.TODAY_TASK = {
-  date: '2026-11-07',
-  title: '70 days to election: Engage friends and family on the people-centred agenda',
-  desc: 'With 70 days until 16 January 2027, today\'s task is to share Oluwadara Kehinde (Akan)\'s homegrown agenda for Yewa North / Imeko-Afon with friends and family. Focus on youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure. Pair it with Peter Obi and Kwankwaso\'s national vision for a New Nigeria. Get your PVC and vote NDC.',
-  image: '/assets/candidate-profile.jpg',
+  date: '2026-11-08',
+  title: '69 days to election: Share Joga-Iboro ward engagement from the gallery',
+  desc: 'With 69 days until 16 January 2027, today\'s task uses a recent gallery photo of ward-level engagement in Joga-Iboro. Oluwadara Kehinde (Akan) continues people-centred mobilisation across Yewa North / Imeko-Afon. Share the image with friends and family, highlight the local agenda on youth, agriculture, education and infrastructure, and invite them to join the NDC movement. A New Nigeria is Possible.',
+  image: '/gallery/Joga-Iboro ward Oct 2026.jpeg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '70 DAYS TO ELECTION — PEOPLE-CENTRED AGENDA FOR YEWA NORTH / IMEKO-AFON',
+      '69 DAYS TO ELECTION — JOGA-IBORO WARD ENGAGEMENT',
       '',
-      'Oluwadara Kehinde (Akan), NDC candidate for Yewa North/Imeko-Afon Federal Constituency 2027.',
+      'Oluwadara Kehinde (Akan) is on the ground in Yewa North / Imeko-Afon. See the recent engagement in Joga-Iboro ward.',
       '',
-      'Homegrown leadership focused on:',
-      '• Youth empowerment & skills',
+      'Homegrown leadership. Transparent representation. People-centred agenda:',
+      '• Youth empowerment',
       '• Agriculture & value addition',
-      '• Entrepreneurship & small business',
-      '• Education & accountable representation',
+      '• Education & skills',
+      '• Accountable representation',
       '• Infrastructure & rural welfare',
       '',
-      'Representation that listens year-round, not only at election time. Pair this local agenda with Peter Obi’s national vision for unity, security, education and productivity.',
+      'Pair this local work with Peter Obi and Kwankwaso\'s national vision. Get your PVC and vote NDC.',
       '',
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
-      'Join and share the movement: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #NigeriaWillBeOK #70Days #PeopleCentred'
+      'Join and share: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #JogaIboro #PeterObi #NewNigeria #69Days'
     ].join('\n');
   }
 };
