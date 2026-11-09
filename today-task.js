@@ -1,28 +1,31 @@
 window.TODAY_TASK = {
-  date: '2026-11-08',
-  title: '69 days to election: Share Joga-Iboro ward engagement from the gallery',
-  desc: 'With 69 days until 16 January 2027, today\'s task uses a recent gallery photo of ward-level engagement in Joga-Iboro. Oluwadara Kehinde (Akan) continues people-centred mobilisation across Yewa North / Imeko-Afon. Share the image with friends and family, highlight the local agenda on youth, agriculture, education and infrastructure, and invite them to join the NDC movement. A New Nigeria is Possible.',
-  image: '/gallery/Joga-Iboro ward Oct 2026.jpeg',
+  date: '2026-11-09',
+  title: '68 days to election: Share Oluwadara Kehinde’s people-centred agenda',
+  desc: 'With 68 days until 16 January 2027, today’s task is to engage friends and family with Oluwadara Kehinde (Akan)’s clear local agenda for Yewa North / Imeko-Afon. Homegrown, transparent, tech-driven solutions focused on youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure. Pair it with Peter Obi and Kwankwaso’s national vision. A New Nigeria is Possible.',
+  image: '/assets/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '69 DAYS TO ELECTION — JOGA-IBORO WARD ENGAGEMENT',
+      '68 DAYS TO ELECTION — OLUWADARA KEHINDE (AKAN)’S AGENDA',
       '',
-      'Oluwadara Kehinde (Akan) is on the ground in Yewa North / Imeko-Afon. See the recent engagement in Joga-Iboro ward.',
+      'Homegrown leadership for Yewa North / Imeko-Afon.',
+      'Transparent representation. People-centred development.',
       '',
-      'Homegrown leadership. Transparent representation. People-centred agenda:',
+      'Our focus:',
       '• Youth empowerment',
       '• Agriculture & value addition',
+      '• Entrepreneurship & small business',
       '• Education & skills',
       '• Accountable representation',
       '• Infrastructure & rural welfare',
       '',
-      'Pair this local work with Peter Obi and Kwankwaso\'s national vision. Get your PVC and vote NDC.',
+      'Join the NDC movement. Get your PVC. Vote Oluwadara Kehinde (Akan).',
+      'Pair the local agenda with Peter Obi & Kwankwaso’s national vision.',
       '',
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
-      'Join and share: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #JogaIboro #PeterObi #NewNigeria #69Days'
+      'Learn more and join: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #68Days'
     ].join('\n');
   }
 };
