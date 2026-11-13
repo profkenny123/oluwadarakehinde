@@ -1,14 +1,14 @@
 window.TODAY_TASK = {
-  date: '2026-11-12',
-  title: '65 days to election: Share the hunger-free vision and Oluwadara Kehinde’s agenda',
-  desc: 'With 65 days until 16 January 2027, today’s task is to share Peter Obi’s pledge from Makurdi that no Nigerian will go to bed hungry, paired with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Focus on youth empowerment, agriculture, education, accountable representation and rural welfare. Engage friends and family. A New Nigeria is Possible.',
+  date: '2026-11-13',
+  title: '64 days to election: Share Peter Obi’s Lagos assurance and Oluwadara Kehinde’s agenda',
+  desc: 'With 64 days until 16 January 2027, today’s task is to share Peter Obi’s message from the Lagos town hall that your sacrifice for a New Nigeria will not be in vain, paired with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Engage friends and family. A New Nigeria is Possible.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '65 DAYS TO ELECTION — NO NIGERIAN GOES TO BED HUNGRY',
+      '64 DAYS TO ELECTION — YOUR SACRIFICE WON’T BE IN VAIN',
       '',
-      'Peter Obi in Makurdi: We seek office so people can go to bed without being hungry. We will unite and secure Nigeria.',
+      'Peter Obi in Lagos: Your sacrifice for a New Nigeria will not be in vain. We will unite Nigeria, secure the country, fight corruption, deliver 10,000 MW of power, and put a functional primary healthcare centre in every ward.',
       '',
       'Pair the national vision with Oluwadara Kehinde (Akan)’s local agenda for Yewa North / Imeko-Afon:',
       '• Youth Empowerment',
@@ -18,13 +18,11 @@ window.TODAY_TASK = {
       '• Accountable Representation',
       '• Infrastructure & Rural Welfare',
       '',
-      'The people must not only hear from their representative during elections; they must feel represented throughout the tenure.',
-      '',
       'Get your PVC. Engage friends and family. Vote Oluwadara Kehinde (Akan).',
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
       'See more and join: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #65Days #HungerFreeNigeria'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #64Days'
     ].join('\n');
   }
 };
