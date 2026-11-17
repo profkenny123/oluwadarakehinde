@@ -1,18 +1,16 @@
 window.TODAY_TASK = {
-  date: '2026-11-16',
-  title: '61 days to election: Share Obi’s condemnation of violence against Kwankwaso’s convoy',
-  desc: 'With 61 days until 16 January 2027, today’s task is to share Peter Obi’s strong condemnation of the attack on NDC running mate Rabiu Kwankwaso’s convoy in Kano and his call for immediate investigation and arrests. Pair it with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Democracy is not warfare. Engage friends and family. A New Nigeria is Possible.',
+  date: '2026-11-17',
+  title: '60 days to election: Share Obi’s 10,000 MW electricity pledge and local agenda',
+  desc: 'With 60 days until 16 January 2027, today’s task is to share Peter Obi’s commitment to generating, transmitting and distributing at least 10,000 megawatts of electricity, securing the nation, making basic education free and compulsory, and putting primary healthcare in every ward. Pair it with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Engage friends and family. A New Nigeria is Possible.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '61 DAYS TO ELECTION — DEMOCRACY IS NOT WARFARE',
+      '60 DAYS TO ELECTION — 10,000 MW AND A NEW NIGERIA',
       '',
-      'Peter Obi has strongly condemned the reported attack on his brother and running mate Rabiu Kwankwaso’s convoy in Bichi, Kano. Several were injured and vehicles vandalised. He has called for an immediate investigation and arrests of those responsible, including any sponsors.',
+      'Peter Obi has pledged that under an NDC government Nigeria will generate, transmit and distribute at least 10,000 megawatts of electricity. He has also committed to securing the nation so no mother loses her child, making basic education free and compulsory, and ensuring every ward has functional primary healthcare.',
       '',
-      'Political differences must never justify violence. Every Nigerian has the right to participate without fear.',
-      '',
-      'Pair the national stand with Oluwadara Kehinde (Akan)’s local agenda for Yewa North / Imeko-Afon:',
+      'Pair the national vision with Oluwadara Kehinde (Akan)’s local agenda for Yewa North / Imeko-Afon:',
       '• Youth Empowerment',
       '• Agriculture & Value Addition',
       '• Entrepreneurship & Small Business',
@@ -24,7 +22,7 @@ window.TODAY_TASK = {
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
       'See more and join: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #61Days'
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #60Days #10000MW'
     ].join('\n');
   }
 };
