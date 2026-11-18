@@ -1,16 +1,16 @@
 window.TODAY_TASK = {
-  date: '2026-11-17',
-  title: '60 days to election: Share Obi’s 10,000 MW electricity pledge and local agenda',
-  desc: 'With 60 days until 16 January 2027, today’s task is to share Peter Obi’s commitment to generating, transmitting and distributing at least 10,000 megawatts of electricity, securing the nation, making basic education free and compulsory, and putting primary healthcare in every ward. Pair it with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Engage friends and family. A New Nigeria is Possible.',
+  date: '2026-11-18',
+  title: 'Engage friends and family: Share why Oluwadara Kehinde (Akan) is the right choice for Yewa North/Imeko-Afon',
+  desc: 'With 59 days to the 16 January 2027 election, today’s task is to share a simple message about Oluwadara Kehinde (Akan)’s people-centred agenda. Talk to friends, family and neighbours about youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure and rural welfare. Pair it with the national NDC vision of a New Nigeria. Get your PVC and invite others to join the OK-Coins campaign.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      '60 DAYS TO ELECTION — 10,000 MW AND A NEW NIGERIA',
+      'WHY I SUPPORT OLUWADARA KEHINDE (AKAN) — NDC FOR YEWA NORTH / IMEKO-AFON 2027',
       '',
-      'Peter Obi has pledged that under an NDC government Nigeria will generate, transmit and distribute at least 10,000 megawatts of electricity. He has also committed to securing the nation so no mother loses her child, making basic education free and compulsory, and ensuring every ward has functional primary healthcare.',
+      'Homegrown leadership. Transparent representation. Tech-driven solutions.',
       '',
-      'Pair the national vision with Oluwadara Kehinde (Akan)’s local agenda for Yewa North / Imeko-Afon:',
+      'His agenda for our constituency:',
       '• Youth Empowerment',
       '• Agriculture & Value Addition',
       '• Entrepreneurship & Small Business',
@@ -18,11 +18,13 @@ window.TODAY_TASK = {
       '• Accountable Representation',
       '• Infrastructure & Rural Welfare',
       '',
-      'Get your PVC. Engage friends and family. Vote Oluwadara Kehinde (Akan).',
+      'Together with Peter Obi and the NDC, we can build a New Nigeria that works for everyone.',
+      '',
+      'Get your PVC. Engage one friend or family member today. Vote Oluwadara Kehinde (Akan).',
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
-      'See more and join: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #60Days #10000MW'
+      'Join and see more: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #AkanForHouse'
     ].join('\n');
   }
 };
