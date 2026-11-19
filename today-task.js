@@ -1,16 +1,16 @@
 window.TODAY_TASK = {
-  date: '2026-11-18',
-  title: 'Engage friends and family: Share why Oluwadara Kehinde (Akan) is the right choice for Yewa North/Imeko-Afon',
-  desc: 'With 59 days to the 16 January 2027 election, today’s task is to share a simple message about Oluwadara Kehinde (Akan)’s people-centred agenda. Talk to friends, family and neighbours about youth empowerment, agriculture and value addition, entrepreneurship, education and skills, accountable representation, and infrastructure and rural welfare. Pair it with the national NDC vision of a New Nigeria. Get your PVC and invite others to join the OK-Coins campaign.',
+  date: '2026-11-19',
+  title: 'Share Obi’s US visit clarification: Focus on democracy, credible elections and local agenda',
+  desc: 'With 58 days to the 16 January 2027 election, today’s task is to share Peter Obi’s clarification that his Washington, DC meetings with US lawmakers were about Nigeria’s development, stronger democratic institutions, and free, fair, transparent and credible elections — not to seek personal endorsement. Pair it with Oluwadara Kehinde (Akan)’s people-centred agenda for Yewa North / Imeko-Afon. Engage friends and family. Get your PVC. A New Nigeria is Possible.',
   image: '/gallery/candidate-profile.jpg',
   share: function () {
     var link = (typeof shareLink === 'function') ? shareLink() : (window.location.origin + '/');
     return [
-      'WHY I SUPPORT OLUWADARA KEHINDE (AKAN) — NDC FOR YEWA NORTH / IMEKO-AFON 2027',
+      '58 DAYS TO ELECTION — OBI FOCUSES ON DEMOCRACY AND CREDIBLE ELECTIONS',
       '',
-      'Homegrown leadership. Transparent representation. Tech-driven solutions.',
+      'Peter Obi clarified that his recent US visit and meetings with lawmakers were not to seek endorsement, but to discuss Nigeria’s development, citizens’ welfare, stronger democratic institutions, and free, fair, transparent and credible elections that reflect the will of the people.',
       '',
-      'His agenda for our constituency:',
+      'Pair the national vision with Oluwadara Kehinde (Akan)’s local agenda for Yewa North / Imeko-Afon:',
       '• Youth Empowerment',
       '• Agriculture & Value Addition',
       '• Entrepreneurship & Small Business',
@@ -18,13 +18,11 @@ window.TODAY_TASK = {
       '• Accountable Representation',
       '• Infrastructure & Rural Welfare',
       '',
-      'Together with Peter Obi and the NDC, we can build a New Nigeria that works for everyone.',
-      '',
-      'Get your PVC. Engage one friend or family member today. Vote Oluwadara Kehinde (Akan).',
+      'Get your PVC. Engage friends and family. Vote Oluwadara Kehinde (Akan).',
       'OK is Okay. NDC is Okay. Nigeria will be Okay.',
       '',
-      'Join and see more: ' + link,
-      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #AkanForHouse'
+      'See more and join: ' + link,
+      '#OKisOkay #NDC2027 #YewaNorth #ImekoAfon #PeterObi #NewNigeria #58Days #CredibleElections'
     ].join('\n');
   }
 };
